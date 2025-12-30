@@ -1,0 +1,27 @@
+/* Default styling (mobile first approach) */
+.prefooter-container {
+  background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterMobile.jpg')
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tablet: 391px to 834px */
+@media screen and (min-width: 391px) and (max-width: 834px) {
+  .prefooter-container {
+    background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterTablet.jpg')
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Desktop: 835px and up */
+@media screen and (min-width: 835px) {
+  .prefooter-container {
+    background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterDesktop.jpg')
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

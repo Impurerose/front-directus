@@ -20,16 +20,18 @@ export default function SectionAccordion({ title, items }) {
           </div>
 
           {/* Accordion Items */}
-          <div className="flex flex-col gap-4 w-full">
+          <div className="flex flex-col gap-4 w-full" data-accordion-group>
             {items.map((item, index) => (
               <div
                 key={index}
+                data-accordion-item
                 className={`bg-white p-4 w-full flex flex-col rounded-lg ${
                   openIndex === index ? "border border-[#c2dfff]" : ""
                 }`}
               >
                 {/* Accordion Title */}
                 <button
+                  data-accordion-button
                   onClick={() => toggleAccordion(index)}
                   className="flex items-center gap-2 w-full text-left"
                 >
@@ -43,11 +45,13 @@ export default function SectionAccordion({ title, items }) {
                   </h3>
                   {openIndex === index ? (
                     <CaretUp
+                      data-icon-up
                       size={20}
                       className="text-[#006fe8] shrink-0 transition-transform duration-300 flex-none"
                     />
                   ) : (
                     <CaretDown
+                      data-icon-down
                       size={20}
                       className="text-[#006fe8] shrink-0 transition-transform duration-300 flex-none"
                     />
@@ -56,6 +60,7 @@ export default function SectionAccordion({ title, items }) {
 
                 {/* Accordion Content */}
                 <div
+                  data-accordion-content
                   className={`grid transition-all duration-300 ease-in-out ${
                     openIndex === index
                       ? "grid-rows-[1fr] opacity-100"

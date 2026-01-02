@@ -8,7 +8,8 @@ import SectionCards from "./components/SectionCards";
 import SectionPlans from "./components/SectionPlans";
 import SectionRequirements from "./components/SectionRequirements";
 
-const accordionItems = [
+// Data por defecto para desarrollo (modo dev)
+const defaultAccordionItems = [
   {
     title: "Item requisito",
     content:
@@ -31,7 +32,7 @@ const accordionItems = [
   },
 ];
 
-const faqItems = [
+const defaultFaqItems = [
   {
     title: "Pregunta frecuente destino",
     content:
@@ -59,12 +60,13 @@ const faqItems = [
   },
 ];
 
-function App() {
+function App({ destino = "[Destino]", accordionItems = defaultAccordionItems, faqItems = defaultFaqItems } = {}) {
+  // Usar data recibida por props o fallback a defaults
   return (
     <>
-      <HeroLandings />
+      <HeroLandings destino={destino} />
       <SectionImageText
-        title="¿Qué necesito para viajar a [Destino]?"
+        title={`¿Qué necesito para viajar a ${destino}?`}
         description="Lorem ipsum dolor sit amet consectetur. Dictum molestie in tellus vitae. At amet tortor viverra mi faucibus feugiat aliquet vitae sed. Ipsum urna amet facilisis lectus mauris mi nisl risus. Donec nibh metus luctus massa eget nulla sit odio nibh. Quisque dignissim imperdiet id senectus quis volutpat porttitor eu. Viverra bibendum pellentesque nunc ut. Fames diam quam viverra eu dui nec nam blandit vestibulum. At cum aliquam nibh nunc at cras. Viverra commodo nisl volutpat et netus. Ut cursus pretium mi at. Eget odio nunc ullamcorper commodo. Mauris dictum duis luctus non. Phasellus in fringilla massa adipiscing volutpat mauris maecenas."
         imageSrc="https://placehold.co/486x360"
         titleSize="large"
@@ -72,36 +74,36 @@ function App() {
       />
 
       <SectionAccordion
-        title="Documentos necesarios para ingresar a [Destino]"
+        title={`Documentos necesarios para ingresar a ${destino}`}
         items={accordionItems}
       />
 
       <SectionImageText
-        title="¿Es obligatorio el seguro de viaje para [Destino]?"
+        title={`¿Es obligatorio el seguro de viaje para ${destino}?`}
         description="Lorem ipsum dolor sit amet consectetur. A nibh dolor at mollis nunc platea at. Varius morbi amet viverra lectus turpis a odio ipsum habitasse. Sed tortor vel egestas ut. Lobortis in varius sed nunc sodales id. Lorem arcu sollicitudin imperdiet urna blandit non turpis scelerisque massa. Sed tristique erat viverra."
         imageSrc="https://placehold.co/256x256"
         reverse={true}
       />
       <SectionImageText
-        title="¿Necesitas Visa para ingresar a [Destino]?"
+        title={`¿Necesitas Visa para ingresar a ${destino}?`}
         description="Lorem ipsum dolor sit amet consectetur. Ipsum tristique sit pellentesque facilisis id. Morbi iaculis at ut mi duis. Porta fringilla ut massa molestie sed. Imperdiet aliquam elit ut malesuada aliquam nisi enim sed. Laoreet ultrices quis etiam amet ut augue eget cursus. Sapien leo elit euismod cursus condimentum morbi."
         imageSrc="https://placehold.co/256x256"
         reverse={false}
       />
       <SectionImageText
-        title="¿Qué vacunas son obligatorias para viajar a [Destino]?"
+        title={`¿Qué vacunas son obligatorias para viajar a ${destino}?`}
         description="Lorem ipsum dolor sit amet consectetur. A nibh dolor at mollis nunc platea at. Varius morbi amet viverra lectus turpis a odio ipsum habitasse. Sed tortor vel egestas ut. Lobortis in varius sed nunc sodales id. Lorem arcu sollicitudin imperdiet urna blandit non turpis scelerisque massa. Sed tristique erat viverra."
         imageSrc="https://placehold.co/256x256"
         reverse={true}
       />
 
       <SectionAccordion
-        title="¿Qué debes saber de las aduanas y artículos prohibidos para viajar a [Destino]?"
+        title={`¿Qué debes saber de las aduanas y artículos prohibidos para viajar a ${destino}?`}
         items={accordionItems}
       />
 
       <SectionFaqs
-        title="Todo lo que necesitás saber para viajar a [Destino]"
+        title={`Todo lo que necesitás saber para viajar a ${destino}`}
         items={faqItems}
       />
       <SectionBlog />

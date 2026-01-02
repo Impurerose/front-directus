@@ -1,0 +1,43 @@
+{
+  "destino": "México",
+  "accordionItems": [
+    {
+      "title": "Item requisito",
+      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+    },
+    {
+      "title": "Item requisito",
+      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+    },
+    {
+      "title": "Item requisito",
+      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+    },
+    {
+      "title": "Item requisito",
+      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+    }
+  ],
+  "faqItems": [
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam. Tincidunt ac massa fames nibh pharetra molestie tellus. Nibh sed suspendisse morbi felis lacus congue commodo bibendum at. Tortor dolor quis elit leo. Pharetra fames diam viverra felis aliquam. Posuere interdum sed."
+    },
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam. Tincidunt ac massa fames nibh pharetra molestie tellus."
+    },
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam."
+    },
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi."
+    },
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam."
+    }
+  ]
+}

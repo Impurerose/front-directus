@@ -33,10 +33,11 @@ export default function SectionFaqs({ title, items }) {
 
           {/* Right Column - FAQs */}
           <div className="w-full md:max-w-[548px] max-w-[690px] 2xl:min-w-[690px] mt-2 2xl:mt-0">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4" data-accordion-group>
               {items.map((item, index) => (
                 <div
                   key={index}
+                  data-accordion-item
                   className={`p-4 w-full flex flex-col gap-2 rounded-lg transition-all ${
                     openIndex === index
                       ? "bg-white border border-[#c2dfff]"
@@ -45,6 +46,7 @@ export default function SectionFaqs({ title, items }) {
                 >
                   {/* Accordion Title */}
                   <button
+                    data-accordion-button
                     onClick={() => toggleAccordion(index)}
                     className="flex items-center justify-between gap-2 w-full text-left"
                   >
@@ -53,11 +55,13 @@ export default function SectionFaqs({ title, items }) {
                     </p>
                     {openIndex === index ? (
                       <CaretUp
+                        data-icon-up
                         size={20}
                         className="text-[#006fe8] shrink-0 transition-transform duration-300"
                       />
                     ) : (
                       <CaretDown
+                        data-icon-down
                         size={20}
                         className="text-[#006fe8] shrink-0 transition-transform duration-300"
                       />
@@ -66,6 +70,7 @@ export default function SectionFaqs({ title, items }) {
 
                   {/* Accordion Content */}
                   <div
+                    data-accordion-content
                     className={`grid transition-all duration-300 ease-in-out ${
                       openIndex === index
                         ? "grid-rows-[1fr] opacity-100"

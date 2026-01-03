@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "🚀 Generador de Landing Pages Estáticas"
+echo "========================================"
+echo ""
+echo "Generando todas las secciones..."
+echo ""
+
+node scripts/build-complete.mjs && \
+node scripts/build-complete-part2.mjs && \
+node scripts/build-complete-part3.mjs && \
+node scripts/build-complete-final.mjs
+
+echo ""
+echo "✅ ¡Listo! Revisa el archivo: dist/brasil.html"
+echo ""
+echo "Para generar otro país:"
+echo "1. Edita los scripts y cambia 'Brasil' por el país deseado"
+echo "2. Ejecuta: npm run build:html"

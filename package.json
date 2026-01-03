@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "export": "node scripts/generate-template.mjs",
     "export:mexico": "node scripts/generate-template.mjs",
-    "help": "bash scripts/help.sh"
+    "help": "bash scripts/help.sh",
+    "build:html": "bash scripts/generate-all.sh"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

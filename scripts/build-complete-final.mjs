@@ -220,6 +220,111 @@ const javascript = `
     });
   });
 </script>
+
+<script>
+  // Fetch y renderizado del blog desde WordPress API
+  (async function loadBlogPosts() {
+    const geo = 'br'; // Brasil
+    const blogContainer = document.querySelector('[data-blog-section]');
+    
+    if (!blogContainer) {
+      console.warn('Blog section not found');
+      return;
+    }
+    
+    try {
+      const url = 'https://assist-365.com/blog/' + geo + '/wp-json/wp/v2/posts?per_page=3';
+      const response = await fetch(url);
+      
+      if (!response.ok) throw new Error('Error fetching posts');
+      
+      const posts = await response.json();
+      
+      // Procesar posts
+      const processedPosts = posts.map(post => {
+        // Buscar thumbnail en schema.@graph
+        let thumbnailUrl = '';
+        if (post.schema && post.schema['@graph']) {
+          const graphItem = post.schema['@graph'].find(
+            item => item.thumbnailUrl
+          );
+          if (graphItem) thumbnailUrl = graphItem.thumbnailUrl;
+        }
+        
+        // Truncar descripción a 100 caracteres
+        let description = post.yoast_head_json?.description || '';
+        if (description.length > 100) {
+          description = description.substring(0, 100) + '...';
+        } else if (description.length > 0 && !description.endsWith('...')) {
+          description = description + '...';
+        }
+        
+        return {
+          title: post.title?.rendered || '',
+          description,
+          link: post.link || '',
+          thumbnailUrl: thumbnailUrl || 'https://placehold.co/328x184'
+        };
+      });
+      
+      // Actualizar post principal (imagen grande) - índice 2
+      const mainPost = blogContainer.querySelector('[data-blog-main]');
+      if (mainPost && processedPosts[2]) {
+        const img = mainPost.querySelector('img');
+        const title = mainPost.querySelector('[data-blog-title]');
+        const desc = mainPost.querySelector('[data-blog-desc]');
+        const link = mainPost.querySelector('[data-blog-link]');
+        
+        if (img) {
+          img.src = processedPosts[2].thumbnailUrl;
+          img.alt = processedPosts[2].title;
+        }
+        if (title) title.textContent = processedPosts[2].title;
+        if (desc) desc.textContent = processedPosts[2].description;
+        if (link) link.href = processedPosts[2].link;
+      }
+      
+      // Actualizar post secundario 1 - índice 1
+      const secondaryPost1 = blogContainer.querySelector('[data-blog-secondary-1]');
+      if (secondaryPost1 && processedPosts[1]) {
+        const title = secondaryPost1.querySelector('[data-blog-title]');
+        const desc = secondaryPost1.querySelector('[data-blog-desc]');
+        const link = secondaryPost1.querySelector('[data-blog-link]');
+        
+        if (title) title.textContent = processedPosts[1].title;
+        if (desc) desc.textContent = processedPosts[1].description;
+        if (link) link.href = processedPosts[1].link;
+      }
+      
+      // Actualizar post secundario 2 - índice 0
+      const secondaryPost2 = blogContainer.querySelector('[data-blog-secondary-2]');
+      if (secondaryPost2 && processedPosts[0]) {
+        const title = secondaryPost2.querySelector('[data-blog-title]');
+        const desc = secondaryPost2.querySelector('[data-blog-desc]');
+        const link = secondaryPost2.querySelector('[data-blog-link]');
+        
+        if (title) title.textContent = processedPosts[0].title;
+        if (desc) desc.textContent = processedPosts[0].description;
+        if (link) link.href = processedPosts[0].link;
+      }
+      
+      // Actualizar botones "Ir al blog"
+      const blogLinks = blogContainer.querySelectorAll('[data-blog-cta]');
+      const blogUrl = geo === 'br' 
+        ? 'https://assist-365.com/blog/br' 
+        : 'https://assist-365.com/blog';
+      blogLinks.forEach(link => {
+        link.href = blogUrl;
+      });
+      
+      console.log('✅ Blog posts loaded successfully');
+      
+    } catch (error) {
+      console.error('❌ Error loading blog posts:', error);
+      // Mantener placeholders si falla el fetch
+    }
+  })();
+</script>
 </body>
 </html>`;
 

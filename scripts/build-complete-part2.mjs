@@ -40,24 +40,37 @@ console.log('✅ Sección 3 (Accordion Aduanas) guardada');
 
 // SECCIÓN 4: FAQs
 const section4 = `
-<div class="bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/BackgroundLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/BackgroundLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/BackgroundLandingIndividualDesktop.svg')] bg-no-repeat bg-cover w-full py-8 2xl:py-16 px-4 2xl:px-[185px]">
-  <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[792px] flex flex-col mx-auto">
-    <div class="flex flex-col gap-10 w-full">
-      <div class="flex items-center gap-2 justify-center">
+<div class="relative w-full z-50 px-4 md:px-0 pb-12 2xl:pb-0 2xl:h-[520px] my-12 2xl:my-28">
+  <!-- Background Shape - SHAPE VIOLETA -->
+  <div class="absolute w-full h-[646px] right-0 top-0 z-[1] mt-32 2xl:mt-0" style="background-image: url(https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/home/img/faq_background.svg); background-repeat: no-repeat; background-position: top right;"></div>
+
+  <!-- Content -->
+  <div class="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] relative z-10">
+    <div class="flex flex-col 2xl:flex-row items-center 2xl:items-start justify-between mx-auto max-w-[1200px] w-full">
+      <!-- Left Column - Title -->
+      <div class="flex flex-col items-start justify-start md:max-w-[548px] 2xl:max-w-full md:mt-12 lg:mt-0">
         <i class="ph-duotone ph-info text-[#7BD0C2]" style="font-size: 48px;"></i>
-        <h2 class="text-3xl 2xl:text-4xl leading-[40px] font-semibold text-white">Preguntas frecuentes</h2>
+        <h2 class="text-[29px] pb-6 leading-9 2xl:text-4xl font-semibold text-[#0059ba] 2xl:max-w-[384px] sm:max-w-full mt-6 2xl:mt-8">
+          Todo lo que necesitás saber para viajar a ${destino}
+        </h2>
       </div>
-      <div class="flex flex-col gap-4 w-full" data-accordion-group>
-${data.faqItems.map(item => `        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
-          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">${item.title}</h3>
-            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
-          </button>
-          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">${item.content}</p></div>
-          </div>
-        </div>`).join('\n')}
+
+      <!-- Right Column - FAQs -->
+      <div class="w-full md:max-w-[548px] max-w-[690px] 2xl:min-w-[690px] mt-2 2xl:mt-0">
+        <div class="flex flex-col gap-4" data-accordion-group>
+${data.faqItems.map(item => `          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">${item.title}</p>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0" style="font-size: 20px;"></i>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 hidden" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-in-out">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">${item.content}</p>
+              </div>
+            </div>
+          </div>`).join('\n')}
+        </div>
       </div>
     </div>
   </div>

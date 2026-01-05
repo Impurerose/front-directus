@@ -106,7 +106,7 @@ function App({ destino = "[Destino]", accordionItems = defaultAccordionItems, fa
         title={`Todo lo que necesitás saber para viajar a ${destino}`}
         items={faqItems}
       />
-      <SectionBlog />
+      <SectionBlog geo="ar" />
       <SectionCards />
       <SectionRequirements />
       <SectionPlans />

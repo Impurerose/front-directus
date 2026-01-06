@@ -116,8 +116,8 @@ const htmlContent = `<!DOCTYPE html>
 `;
 
 // Guardar parte 1
-const outputPath = path.join(__dirname, '..', 'dist', 'brasil-part1.html');
+const outputPath = path.join(__dirname, '..', 'a365', 'brasil-part1.html');
 fs.writeFileSync(outputPath, htmlContent, 'utf-8');
 
-console.log('✅ Parte 1 generada: dist/brasil-part1.html');
+console.log('✅ Parte 1 generada: a365/brasil-part1.html');
 console.log('\n📋 Ejecuta: node scripts/build-brasil-part2.mjs para continuar');

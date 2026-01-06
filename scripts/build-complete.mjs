@@ -74,7 +74,7 @@ ${accordionItems.map(item => `        <div data-accordion-item class="bg-white p
   </div>
 </div>`;
 
-fs.writeFileSync(path.join(__dirname, '..', 'dist', 'brasil-section1.txt'), section1);
+fs.writeFileSync(path.join(__dirname, '..', 'a365', 'brasil-section1.txt'), section1);
 console.log('✅ Sección 1 guardada');
 
 // SECCIÓN 2: ImageText #2, #3, #4
@@ -113,7 +113,7 @@ const section2 = `
   </div>
 </div>`;
 
-fs.writeFileSync(path.join(__dirname, '..', 'dist', 'brasil-section2.txt'), section2);
+fs.writeFileSync(path.join(__dirname, '..', 'a365', 'brasil-section2.txt'), section2);
 console.log('✅ Sección 2 guardada');
 
 console.log('\n📋 Ejecuta: node scripts/build-complete-part2.mjs');

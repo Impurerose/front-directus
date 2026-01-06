@@ -329,23 +329,23 @@ const javascript = `
 </html>`;
 
 // Leer todas las secciones
-const section1 = fs.readFileSync(path.join(__dirname, '..', 'dist', 'brasil-section1.txt'), 'utf-8');
-const section2 = fs.readFileSync(path.join(__dirname, '..', 'dist', 'brasil-section2.txt'), 'utf-8');
-const section3 = fs.readFileSync(path.join(__dirname, '..', 'dist', 'brasil-section3.txt'), 'utf-8');
-const section4 = fs.readFileSync(path.join(__dirname, '..', 'dist', 'brasil-section4.txt'), 'utf-8');
-const section5 = fs.readFileSync(path.join(__dirname, '..', 'dist', 'brasil-section5.txt'), 'utf-8');
-const section6 = fs.readFileSync(path.join(__dirname, '..', 'dist', 'brasil-section6.txt'), 'utf-8');
-const section7 = fs.readFileSync(path.join(__dirname, '..', 'dist', 'brasil-section7.txt'), 'utf-8');
+const section1 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section1.txt'), 'utf-8');
+const section2 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section2.txt'), 'utf-8');
+const section3 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section3.txt'), 'utf-8');
+const section4 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section4.txt'), 'utf-8');
+const section5 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section5.txt'), 'utf-8');
+const section6 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section6.txt'), 'utf-8');
+const section7 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section7.txt'), 'utf-8');
 
 // Combinar todo
 const completeHTML = section1 + section2 + section3 + section4 + section5 + section6 + section7 + section8 + section9 + javascript;
 
 // Guardar archivo completo
-fs.writeFileSync(path.join(__dirname, '..', 'dist', 'brasil.html'), completeHTML, 'utf-8');
+fs.writeFileSync(path.join(__dirname, '..', 'a365', 'brasil.html'), completeHTML, 'utf-8');
 
 console.log('✅ Sección 8 (Plans) generada');
 console.log('✅ Sección 9 (PreFooter) generada');
 console.log('✅ JavaScript de accordions incluido');
-console.log('\n🎉 ¡Archivo completo generado: dist/brasil.html!\n');
+console.log('\n🎉 ¡Archivo completo generado: a365/brasil.html!\n');
 console.log('📁 Archivo listo para usar en Directus');
 console.log('🔧 Incluye todas las secciones con accordions funcionales');

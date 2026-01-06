@@ -72,7 +72,7 @@ const section6 = `
   </div>
 </section>`;
 
-fs.writeFileSync(path.join(__dirname, '..', 'dist', 'brasil-section6.txt'), section6);
+fs.writeFileSync(path.join(__dirname, '..', 'a365', 'brasil-section6.txt'), section6);
 console.log('✅ Sección 6 (Cards) guardada');
 
 // SECCIÓN 7: Requirements
@@ -136,7 +136,7 @@ const section7 = `
   </div>
 </section>`;
 
-fs.writeFileSync(path.join(__dirname, '..', 'dist', 'brasil-section7.txt'), section7);
+fs.writeFileSync(path.join(__dirname, '..', 'a365', 'brasil-section7.txt'), section7);
 console.log('✅ Sección 7 (Requirements) guardada');
 
 console.log('\n📋 Ejecuta: node scripts/build-complete-final.mjs');

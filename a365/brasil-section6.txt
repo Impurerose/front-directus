@@ -1,0 +1,63 @@
+
+<section class="w-full bg-[#F2F2F2] py-8 pb-12 lg:py-16">
+  <div class="px-4 lg:px-0 mx-auto max-w-[358px] md:max-w-[548px] lg:max-w-[792px]">
+    <!-- Título -->
+    <h2 class="lg:text-center text-[#0059BA] font-semibold leading-9 lg:leading-10 text-3xl lg:text-4xl p-0 mt-0 mb-6 lg:mb-10">
+      ¿Qué debe incluir tu seguro de viaje para [Destino]?
+    </h2>
+
+    <!-- Grid 2x4 con 8 coverage cards -->
+    <div class="w-full">
+      <div class="grid grid-cols-2 lg:grid-cols-4 text-center gap-x-4 gap-y-2 lg:gap-x-6 lg:gap-y-8">
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-first-aid text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Asistencia médica</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-heartbeat text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Enfermedades preexistentes</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-suitcase text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Pérdida de equipaje</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-pill text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Medicamentos</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-stethoscope text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Hospitalización</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-globe-hemisphere-west text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Cobertura mundial</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-tooth text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Odontología</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-hospital text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Internaciones</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

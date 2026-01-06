@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguro de viaje a México - Assist 365</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            '2xl': '1440px'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <style>
+    /* PreFooter Background */
+    .prefooter-container {
+      background-image: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/home/img/pre_footer_background.svg');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    /* Accordion Animations */
+    .accordion-content {
+      transition: grid-template-rows 300ms ease-in-out, opacity 300ms ease-in-out;
+      display: grid;
+    }
+    
+    /* Grid rows utilities */
+    .grid-rows-\[0fr\] {
+      grid-template-rows: 0fr;
+    }
+    
+    .grid-rows-\[1fr\] {
+      grid-template-rows: 1fr;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 
+  ========================================
+  PASO 1: COPIAR HTML AQUÍ
+  ========================================
+  
+  Instrucciones:
+  1. Ejecuta: npm run dev
+  2. Abre http://localhost:5173 en tu navegador
+  3. Inspecciona el elemento <body>
+  4. Copia TODO el contenido renderizado dentro del body
+  5. Pégalo AQUÍ (reemplazando este comentario)
+  
+  Debe verse algo así:
+  
+  <div>
+    <div class="w-full max-w-[390px]...">Hero content</div>
+    <div class="bg-white w-full...">Sections...</div>
+    ...
+  </div>
+-->
+
+  
+  <!-- Accordion Interactive Logic -->
+  <script>
+    // Data del destino (en caso de necesitarla)
+    window.__DESTINATION_DATA__ = {
+  "destino": "México",
+  "accordionItems": [
+    {
+      "title": "Item requisito",
+      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+    },
+    {
+      "title": "Item requisito",
+      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+    },
+    {
+      "title": "Item requisito",
+      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+    },
+    {
+      "title": "Item requisito",
+      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+    }
+  ],
+  "faqItems": [
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam. Tincidunt ac massa fames nibh pharetra molestie tellus. Nibh sed suspendisse morbi felis lacus congue commodo bibendum at. Tortor dolor quis elit leo. Pharetra fames diam viverra felis aliquam. Posuere interdum sed."
+    },
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam. Tincidunt ac massa fames nibh pharetra molestie tellus."
+    },
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam."
+    },
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi."
+    },
+    {
+      "title": "Pregunta frecuente destino",
+      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam."
+    }
+  ]
+};
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('✅ Inicializando accordions...');
+      initAccordions();
+    });
+    
+    function initAccordions() {
+      // Buscar todos los botones de accordion por sus atributos data
+      const accordionButtons = document.querySelectorAll('[data-accordion-button]');
+      
+      console.log(`📌 Encontrados ${accordionButtons.length} accordions`);
+      
+      accordionButtons.forEach((button, index) => {
+        const item = button.closest('[data-accordion-item]');
+        const content = item.querySelector('[data-accordion-content]');
+        
+        // Estado inicial: primer item de cada grupo abierto
+        const group = item.closest('[data-accordion-group]');
+        const groupItems = group.querySelectorAll('[data-accordion-item]');
+        const itemIndex = Array.from(groupItems).indexOf(item);
+        
+        if (itemIndex === 0) {
+          openAccordionItem(item);
+        } else {
+          closeAccordionItem(item);
+        }
+        
+        // Click handler
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleAccordionItem(item);
+        });
+      });
+    }
+    
+    function toggleAccordionItem(item) {
+      const content = item.querySelector('[data-accordion-content]');
+      const isOpen = content.classList.contains('grid-rows-[1fr]');
+      
+      if (isOpen) {
+        closeAccordionItem(item);
+      } else {
+        openAccordionItem(item);
+      }
+    }
+    
+    function openAccordionItem(item) {
+      const content = item.querySelector('[data-accordion-content]');
+      const iconUp = item.querySelector('[data-icon-up]');
+      const iconDown = item.querySelector('[data-icon-down]');
+      
+      content.classList.remove('grid-rows-[0fr]', 'opacity-0');
+      content.classList.add('grid-rows-[1fr]', 'opacity-100');
+      
+      if (iconUp) iconUp.classList.remove('hidden');
+      if (iconDown) iconDown.classList.add('hidden');
+      
+      item.classList.add('border', 'border-[#c2dfff]');
+    }
+    
+    function closeAccordionItem(item) {
+      const content = item.querySelector('[data-accordion-content]');
+      const iconUp = item.querySelector('[data-icon-up]');
+      const iconDown = item.querySelector('[data-icon-down]');
+      
+      content.classList.remove('grid-rows-[1fr]', 'opacity-100');
+      content.classList.add('grid-rows-[0fr]', 'opacity-0');
+      
+      if (iconUp) iconUp.classList.add('hidden');
+      if (iconDown) iconDown.classList.remove('hidden');
+      
+      item.classList.remove('border', 'border-[#c2dfff]');
+    }
+  </script>
+</body>
+</html>

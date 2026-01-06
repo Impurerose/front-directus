@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguro de viaje a Brasil - Assist 365</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    tailwind.config = { theme: { extend: { screens: { '2xl': '1440px' } } } }
+  </script>
+  <style>
+    .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterMobile.jpg') no-repeat; background-size: cover; background-position: center; }
+    @media screen and (min-width: 391px) and (max-width: 834px) { .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterTablet.jpg') no-repeat; background-size: cover; } }
+    @media screen and (min-width: 835px) { .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterDesktop.jpg') no-repeat; background-size: cover; } }
+    .accordion-content { transition: grid-template-rows 300ms, opacity 300ms; display: grid; }
+    .grid-rows-\[0fr\] { grid-template-rows: 0fr; }
+    .grid-rows-\[1fr\] { grid-template-rows: 1fr; }
+  </style>
+</head>
+<body>
+<div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200">
+  <div class="bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
+    <h1 class="flex flex-row 2xl:flex-col gap-3 text-4xl 2xl:text-7xl text-white pl-4 md:pl-[142px] 2xl:pl-[84px] py-16 2xl:py-[118px]">
+      <span>Seguro de viaje a</span><span class="font-semibold">Brasil</span>
+    </h1>
+  </div>
+</div>
+<div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
+  <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+    <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
+      <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+    </div>
+    <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
+      <h2 class="2xl:text-5xl leading-[56px] font-semibold text-[#0059ba] text-3xl pt-8 pb-4">¿Qué necesito para viajar a Brasil?</h2>
+      <p class="text-base leading-6 text-[#70777c]">Lorem ipsum dolor sit amet consectetur. Dictum molestie in tellus vitae.</p>
+    </div>
+  </div>
+</div>
+<div class="bg-[#f2f2f2] w-full py-8 2xl:py-16 px-4 2xl:px-[185px]">
+  <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[792px] flex flex-col mx-auto">
+    <div class="flex flex-col gap-10 w-full">
+      <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba]">Documentos necesarios para ingresar a Brasil</h2>
+      <div class="flex flex-col gap-4 w-full" data-accordion-group>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
+          </div>
+        </div>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
+          </div>
+        </div>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
+          </div>
+        </div>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-white w-full py-9 2xl:py-16">
+  <div class="flex flex-col 2xl:flex-row-reverse 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+    <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
+      <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+    </div>
+    <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
+      <h2 class="text-3xl leading-10 font-semibold text-[#0059ba] pt-8 pb-4">Título sección 2</h2>
+      <p class="text-base leading-6 text-[#70777c]">Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+  </div>
+</div>
+<div class="bg-white w-full py-9 2xl:py-16">
+  <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+    <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
+      <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+    </div>
+    <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
+      <h2 class="text-3xl leading-10 font-semibold text-[#0059ba] pt-8 pb-4">Título sección 3</h2>
+      <p class="text-base leading-6 text-[#70777c]">Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+  </div>
+</div>
+<div class="bg-white w-full py-9 2xl:py-16">
+  <div class="flex flex-col 2xl:flex-row-reverse 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+    <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
+      <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+    </div>
+    <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
+      <h2 class="text-3xl leading-10 font-semibold text-[#0059ba] pt-8 pb-4">Título sección 4</h2>
+      <p class="text-base leading-6 text-[#70777c]">Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+  </div>
+</div>
+<div class="bg-[#f2f2f2] w-full py-8 2xl:py-16 px-4 2xl:px-[185px]">
+  <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[792px] flex flex-col mx-auto">
+    <div class="flex flex-col gap-10 w-full">
+      <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba]">Aduanas y requisitos de entrada a Brasil</h2>
+      <div class="flex flex-col gap-4 w-full" data-accordion-group>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
+          </div>
+        </div>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
+          </div>
+        </div>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
+          </div>
+        </div>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="relative w-full z-50 px-4 md:px-0 pb-12 2xl:pb-0 2xl:h-[520px] my-12 2xl:my-28">
+  <!-- Background Shape - SHAPE VIOLETA -->
+  <div class="absolute w-full h-[646px] right-0 top-0 z-[1] mt-32 2xl:mt-0" style="background-image: url(https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/home/img/faq_background.svg); background-repeat: no-repeat; background-position: top right;"></div>
+
+  <!-- Content -->
+  <div class="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] relative z-10">
+    <div class="flex flex-col 2xl:flex-row items-center 2xl:items-start justify-between mx-auto max-w-[1200px] w-full">
+      <!-- Left Column - Title -->
+      <div class="flex flex-col items-start justify-start md:max-w-[548px] 2xl:max-w-full md:mt-12 lg:mt-0">
+        <i class="ph-duotone ph-info text-[#7BD0C2]" style="font-size: 48px;"></i>
+        <h2 class="text-[29px] pb-6 leading-9 2xl:text-4xl font-semibold text-[#0059ba] 2xl:max-w-[384px] sm:max-w-full mt-6 2xl:mt-8">
+          Todo lo que necesitás saber para viajar a Brasil
+        </h2>
+      </div>
+
+      <!-- Right Column - FAQs -->
+      <div class="w-full md:max-w-[548px] max-w-[690px] 2xl:min-w-[690px] mt-2 2xl:mt-0">
+        <div class="flex flex-col gap-4" data-accordion-group>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Pregunta frecuente destino</p>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0" style="font-size: 20px;"></i>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 hidden" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-in-out">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam. Tincidunt ac massa fames nibh pharetra molestie tellus. Nibh sed suspendisse morbi felis lacus congue commodo bibendum at. Tortor dolor quis elit leo. Pharetra fames diam viverra felis aliquam. Posuere interdum sed.</p>
+              </div>
+            </div>
+          </div>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Pregunta frecuente destino</p>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0" style="font-size: 20px;"></i>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 hidden" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-in-out">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam. Tincidunt ac massa fames nibh pharetra molestie tellus.</p>
+              </div>
+            </div>
+          </div>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Pregunta frecuente destino</p>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0" style="font-size: 20px;"></i>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 hidden" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-in-out">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam.</p>
+              </div>
+            </div>
+          </div>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Pregunta frecuente destino</p>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0" style="font-size: 20px;"></i>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 hidden" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-in-out">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi.</p>
+              </div>
+            </div>
+          </div>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Pregunta frecuente destino</p>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0" style="font-size: 20px;"></i>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 hidden" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-in-out">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-full flex items-center justify-center py-16">
+  <div class="w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[1296px]">
+    <div class="bg-[#CFF6FF] rounded-3xl p-6 2xl:p-12 flex flex-col 2xl:flex-row gap-8 2xl:gap-[86px]">
+      
+      <!-- Left section - Title and CTA -->
+      <div class="flex flex-col justify-center 2xl:w-[282px] flex-shrink-0">
+        <h2 class="text-4xl font-semibold text-[#0059BA] mb-3">
+          Guías y consejos para viajeros
+        </h2>
+        <p class="text-2xl text-[#31363A] leading-8 2xl:mb-6">
+          Explorá nuestro blog para descubrir destinos y prepararte mejor para cada aventura.
+        </p>
+        <div class="hidden 2xl:flex">
+          <button class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-lg py-[10px] h-[48px] bg-[#006FE8] focus:bg-[#0059BA] text-white hover:bg-[#0059BA] active:bg-[#004A9C] focus:ring-[#C2DFFF] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
+            Ir al blog
+            <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 16px; font-weight: bold;"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right section - Blog cards -->
+      <div class="flex flex-col 2xl:flex-row gap-4 flex-1">
+        
+        <!-- Primary card - First post with IMAGE -->
+        <div class="bg-white rounded-xl p-6 flex flex-col gap-6 2xl:max-w-[376px] flex-1">
+          <div class="w-full h-[184px] overflow-hidden rounded-lg">
+            <img src="https://placehold.co/328x184" alt="Última entrada del blog" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl font-semibold text-[#31363A]">Última entrada del blog</h3>
+              <p class="text-base text-[#70777C] leading-6">
+                Lorem ipsum dolor sit amet consectetur. Neque augue venenatis et risus pellentesque donec tellus vel tortor. Laoreet augue faucibus.
+              </p>
+            </div>
+            <div class="w-fit">
+              <button class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-base py-[6px] h-[36px] bg-white border-2 border-[#006FE8] text-[#006FE8] hover:border-[#0059BA] hover:text-[#0059BA] active:border-[#004A9C] active:text-[#004A9C] focus:border-[#0059BA] focus:text-[#0059BA] focus:border-transparent focus:ring-[#006FE8] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
+                Leer más
+                <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 16px; font-weight: bold;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary cards container with ICONS -->
+        <div class="flex flex-col gap-4 2xl:w-[440px]">
+          
+          <!-- Secondary card 2 -->
+          <div class="bg-white border border-[#E7F2FF] rounded-xl p-6 flex gap-6">
+            <div class="flex-shrink-0">
+              <i class="ph-duotone ph-airplane-tilt text-[#7BD0C2]" style="font-size: 40px;"></i>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-xl font-semibold text-[#31363A]">Entrada del blog 2</h3>
+                <p class="text-base text-[#70777C] leading-6">
+                  Lorem ipsum dolor sit amet consectetur. Neque augue venenatis et risus pellentesque donec tellus vel tortor. Laoreet augue faucibus.
+                </p>
+              </div>
+              <div class="w-fit">
+                <button class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-base py-[6px] h-[36px] bg-white border-2 border-[#006FE8] text-[#006FE8] hover:border-[#0059BA] hover:text-[#0059BA] active:border-[#004A9C] active:text-[#004A9C] focus:border-[#0059BA] focus:text-[#0059BA] focus:border-transparent focus:ring-[#006FE8] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
+                  Leer más
+                  <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 16px; font-weight: bold;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary card 3 -->
+          <div class="bg-white border border-[#E7F2FF] rounded-xl p-6 flex gap-6">
+            <div class="flex-shrink-0">
+              <i class="ph-duotone ph-mountains text-[#7BD0C2]" style="font-size: 40px;"></i>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-xl font-semibold text-[#31363A]">Entrada del blog 3</h3>
+                <p class="text-base text-[#70777C] leading-6">
+                  Lorem ipsum dolor sit amet consectetur. Neque augue venenatis et risus pellentesque donec tellus vel tortor. Laoreet augue faucibus.
+                </p>
+              </div>
+              <div class="w-fit">
+                <button class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-base py-[6px] h-[36px] bg-white border-2 border-[#006FE8] text-[#006FE8] hover:border-[#0059BA] hover:text-[#0059BA] active:border-[#004A9C] active:text-[#004A9C] focus:border-[#0059BA] focus:text-[#0059BA] focus:border-transparent focus:ring-[#006FE8] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
+                  Leer más
+                  <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 16px; font-weight: bold;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile CTA button -->
+      <div class="2xl:hidden w-full">
+        <button class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-lg py-[10px] h-[48px] bg-[#006FE8] focus:bg-[#0059BA] text-white hover:bg-[#0059BA] active:bg-[#004A9C] focus:ring-[#C2DFFF] focus:ring-opacity-100 px-4 w-full flex items-center justify-center gap-2">
+          Ir al blog
+          <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 16px; font-weight: bold;"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<section class="w-full bg-[#F2F2F2] py-8 pb-12 lg:py-16">
+  <div class="px-4 lg:px-0 mx-auto max-w-[358px] md:max-w-[548px] lg:max-w-[792px]">
+    <!-- Título -->
+    <h2 class="lg:text-center text-[#0059BA] font-semibold leading-9 lg:leading-10 text-3xl lg:text-4xl p-0 mt-0 mb-6 lg:mb-10">
+      ¿Qué debe incluir tu seguro de viaje para [Destino]?
+    </h2>
+
+    <!-- Grid 2x4 con 8 coverage cards -->
+    <div class="w-full">
+      <div class="grid grid-cols-2 lg:grid-cols-4 text-center gap-x-4 gap-y-2 lg:gap-x-6 lg:gap-y-8">
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-first-aid text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Asistencia médica</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-heartbeat text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Enfermedades preexistentes</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-suitcase text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Pérdida de equipaje</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-pill text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Medicamentos</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-stethoscope text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Hospitalización</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-globe-hemisphere-west text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Cobertura mundial</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-tooth text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Odontología</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full lg:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 lg:gap-y-4">
+          <div class="size-10 lg:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-hospital text-[#7BD0C2]" style="font-size: 40px;"></i>
+          </div>
+          <span class="text-base lg:text-xl font-semibold text-[#31363A]">Internaciones</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="w-full bg-[#F2F2F2] py-8 lg:py-16">
+  <div class="mx-auto max-w-[358px] px-4 md:max-w-[548px] lg:max-w-[996px] lg:px-0">
+    <!-- Título -->
+    <h2 class="mb-6 mt-0 p-0 text-3xl font-semibold leading-9 text-[#0059BA] lg:mb-10 lg:text-4xl lg:leading-10">
+      Requisitos para viajar a [Destino]
+    </h2>
+
+    <!-- Grid 2x2 de requirement cards -->
+    <div class="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div class="flex flex-col gap-4 rounded-xl border border-[#E7F2FF] bg-white p-6">
+        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center">
+          <i class="ph-duotone ph-laptop" style="font-size: 40px; color: #31319B;"></i>
+        </div>
+        <div class="flex w-full flex-col gap-1">
+          <h3 class="text-xl font-semibold leading-7 text-[#31363A]">Requisito 1</h3>
+          <p class="text-base leading-6 text-[#70777C]">Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 rounded-xl border border-[#E7F2FF] bg-white p-6">
+        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center">
+          <i class="ph-duotone ph-hand-heart" style="font-size: 40px; color: #31319B;"></i>
+        </div>
+        <div class="flex w-full flex-col gap-1">
+          <h3 class="text-xl font-semibold leading-7 text-[#31363A]">Requisito 2</h3>
+          <p class="text-base leading-6 text-[#70777C]">Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 rounded-xl border border-[#E7F2FF] bg-white p-6">
+        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center">
+          <i class="ph-duotone ph-suitcase-rolling" style="font-size: 40px; color: #31319B;"></i>
+        </div>
+        <div class="flex w-full flex-col gap-1">
+          <h3 class="text-xl font-semibold leading-7 text-[#31363A]">Requisito 3</h3>
+          <p class="text-base leading-6 text-[#70777C]">Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 rounded-xl border border-[#E7F2FF] bg-white p-6">
+        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center">
+          <i class="ph-duotone ph-paw-print" style="font-size: 40px; color: #31319B;"></i>
+        </div>
+        <div class="flex w-full flex-col gap-1">
+          <h3 class="text-xl font-semibold leading-7 text-[#31363A]">Requisito 4</h3>
+          <p class="text-base leading-6 text-[#70777C]">Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="w-full lg:flex lg:justify-end">
+      <div class="w-full lg:w-auto">
+        <button class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-lg py-[10px] h-[48px] bg-[#BDEDE7] text-[#31363A] hover:bg-[#A8E5DD] active:bg-[#93DDD3] focus:bg-[#BDEDE7] focus:ring-[#7BD0C2] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
+          Ver todos los requisitos
+          <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 16px; font-weight: bold;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="w-full bg-[#E3DEF9] py-12 lg:py-20">
+  <div class="px-4 lg:px-0 mx-auto max-w-[358px] md:max-w-[548px] lg:max-w-[1200px]">
+    
+    <!-- Título -->
+    <h2 class="text-center text-[#0059BA] font-semibold text-3xl lg:text-4xl mb-8 lg:mb-12">
+      Nuestros planes para viajar a [Destino]
+    </h2>
+
+    <!-- Grid de 4 planes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Plan 1: World cover (sin badge) -->
+      <div class="flex flex-col relative">
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #0059BA;">
+          <h3 class="text-white font-semibold text-3xl">World cover</h3>
+        </div>
+        <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-shield-plus text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 200.000</span> de Asistencia medica
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-first-aid-kit text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 10.000</span> de Asistencia por enfermedad preexistente
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-suitcase-rolling text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 1.000</span> por pérdida de equipaje
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 2: Premium cover (con badge) -->
+      <div class="flex flex-col relative">
+        <div class="absolute left-4 -top-5 px-3 py-2 rounded-full z-10" style="background-color: #D3EFD4;">
+          <p class="text-sm font-semibold text-[#31363A]">El más elegido</p>
+        </div>
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #31319B;">
+          <h3 class="text-white font-semibold text-3xl">Premium cover</h3>
+        </div>
+        <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-shield-plus text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 200.000</span> de Asistencia medica
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-first-aid-kit text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 10.000</span> de Asistencia por enfermedad preexistente
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-suitcase-rolling text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 1.000</span> por pérdida de equipaje
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 3: World cover (sin badge) -->
+      <div class="flex flex-col relative">
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #0059BA;">
+          <h3 class="text-white font-semibold text-3xl">World cover</h3>
+        </div>
+        <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-shield-plus text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 200.000</span> de Asistencia medica
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-first-aid-kit text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 10.000</span> de Asistencia por enfermedad preexistente
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-suitcase-rolling text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 1.000</span> por pérdida de equipaje
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 4: World cover (con badge) -->
+      <div class="flex flex-col relative">
+        <div class="absolute left-4 -top-5 px-3 py-2 rounded-full z-10" style="background-color: #CFF6FF;">
+          <p class="text-sm font-semibold text-[#31363A]">Plan recomendado</p>
+        </div>
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #31319B;">
+          <h3 class="text-white font-semibold text-3xl">World cover</h3>
+        </div>
+        <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-shield-plus text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 200.000</span> de Asistencia medica
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-first-aid-kit text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 10.000</span> de Asistencia por enfermedad preexistente
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-suitcase-rolling text-[#7BD0C2]" style="font-size: 24px;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 1.000</span> por pérdida de equipaje
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="w-full flex justify-center">
+  <div class="w-full max-w-[1366px] prefooter-container h-[340px] flex flex-col items-center justify-end pb-8">
+    <div class="w-full max-w-[358px] lg:max-w-[998px] rounded-3xl bg-white bg-opacity-85 py-4 lg:py-8 px-4 lg:px-10 flex flex-col lg:flex-row items-center lg:justify-between">
+      
+      <img src="https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/logo.svg" alt="Assist 365 Logo" class="mb-4 lg:mb-0">
+      
+      <h2 class="text-2xl lg:text-4xl font-semibold text-[#0059BA] mb-4 lg:mb-0 text-center lg:text-left px-4 lg:px-0">
+        En tu viaje, <strong>a tu lado.</strong>
+      </h2>
+      
+      <div class="w-full lg:w-auto flex justify-start mt-4 lg:mt-0">
+        <button class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-lg py-[10px] h-[48px] bg-[#006FE8] focus:bg-[#0059BA] text-white hover:bg-[#0059BA] active:bg-[#004A9C] focus:ring-[#C2DFFF] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
+          Cotizá tu asistencia
+          <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 20px; font-weight: bold;"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+  // Inicializar accordions
+  document.addEventListener('DOMContentLoaded', function() {
+    const groups = document.querySelectorAll('[data-accordion-group]');
+    
+    groups.forEach(group => {
+      const items = group.querySelectorAll('[data-accordion-item]');
+      
+      items.forEach(item => {
+        const button = item.querySelector('[data-accordion-button]');
+        const content = item.querySelector('[data-accordion-content]');
+        const iconUp = item.querySelector('[data-icon-up]');
+        const iconDown = item.querySelector('[data-icon-down]');
+        
+        button.addEventListener('click', () => {
+          const isOpen = content.classList.contains('grid-rows-[1fr]');
+          
+          if (isOpen) {
+            content.classList.remove('grid-rows-[1fr]', 'opacity-100');
+            content.classList.add('grid-rows-[0fr]', 'opacity-0');
+            iconUp.classList.add('hidden');
+            iconDown.classList.remove('hidden');
+          } else {
+            content.classList.remove('grid-rows-[0fr]', 'opacity-0');
+            content.classList.add('grid-rows-[1fr]', 'opacity-100');
+            iconUp.classList.remove('hidden');
+            iconDown.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<script>
+  // Fetch y renderizado del blog desde WordPress API
+  (async function loadBlogPosts() {
+    const geo = 'br'; // Brasil
+    const blogContainer = document.querySelector('[data-blog-section]');
+    
+    if (!blogContainer) {
+      console.warn('Blog section not found');
+      return;
+    }
+    
+    try {
+      const url = 'https://assist-365.com/blog/' + geo + '/wp-json/wp/v2/posts?per_page=3';
+      const response = await fetch(url);
+      
+      if (!response.ok) throw new Error('Error fetching posts');
+      
+      const posts = await response.json();
+      
+      // Procesar posts
+      const processedPosts = posts.map(post => {
+        // Buscar thumbnail en schema.@graph
+        let thumbnailUrl = '';
+        if (post.schema && post.schema['@graph']) {
+          const graphItem = post.schema['@graph'].find(
+            item => item.thumbnailUrl
+          );
+          if (graphItem) thumbnailUrl = graphItem.thumbnailUrl;
+        }
+        
+        // Truncar descripción a 100 caracteres
+        let description = post.yoast_head_json?.description || '';
+        if (description.length > 100) {
+          description = description.substring(0, 100) + '...';
+        } else if (description.length > 0 && !description.endsWith('...')) {
+          description = description + '...';
+        }
+        
+        return {
+          title: post.title?.rendered || '',
+          description,
+          link: post.link || '',
+          thumbnailUrl: thumbnailUrl || 'https://placehold.co/328x184'
+        };
+      });
+      
+      // Actualizar post principal (imagen grande) - índice 2
+      const mainPost = blogContainer.querySelector('[data-blog-main]');
+      if (mainPost && processedPosts[2]) {
+        const img = mainPost.querySelector('img');
+        const title = mainPost.querySelector('[data-blog-title]');
+        const desc = mainPost.querySelector('[data-blog-desc]');
+        const link = mainPost.querySelector('[data-blog-link]');
+        
+        if (img) {
+          img.src = processedPosts[2].thumbnailUrl;
+          img.alt = processedPosts[2].title;
+        }
+        if (title) title.textContent = processedPosts[2].title;
+        if (desc) desc.textContent = processedPosts[2].description;
+        if (link) link.href = processedPosts[2].link;
+      }
+      
+      // Actualizar post secundario 1 - índice 1
+      const secondaryPost1 = blogContainer.querySelector('[data-blog-secondary-1]');
+      if (secondaryPost1 && processedPosts[1]) {
+        const title = secondaryPost1.querySelector('[data-blog-title]');
+        const desc = secondaryPost1.querySelector('[data-blog-desc]');
+        const link = secondaryPost1.querySelector('[data-blog-link]');
+        
+        if (title) title.textContent = processedPosts[1].title;
+        if (desc) desc.textContent = processedPosts[1].description;
+        if (link) link.href = processedPosts[1].link;
+      }
+      
+      // Actualizar post secundario 2 - índice 0
+      const secondaryPost2 = blogContainer.querySelector('[data-blog-secondary-2]');
+      if (secondaryPost2 && processedPosts[0]) {
+        const title = secondaryPost2.querySelector('[data-blog-title]');
+        const desc = secondaryPost2.querySelector('[data-blog-desc]');
+        const link = secondaryPost2.querySelector('[data-blog-link]');
+        
+        if (title) title.textContent = processedPosts[0].title;
+        if (desc) desc.textContent = processedPosts[0].description;
+        if (link) link.href = processedPosts[0].link;
+      }
+      
+      // Actualizar botones "Ir al blog"
+      const blogLinks = blogContainer.querySelectorAll('[data-blog-cta]');
+      const blogUrl = geo === 'br' 
+        ? 'https://assist-365.com/blog/br' 
+        : 'https://assist-365.com/blog';
+      blogLinks.forEach(link => {
+        link.href = blogUrl;
+      });
+      
+      console.log('✅ Blog posts loaded successfully');
+      
+    } catch (error) {
+      console.error('❌ Error loading blog posts:', error);
+      // Mantener placeholders si falla el fetch
+    }
+  })();
+</script>
+</body>
+</html>

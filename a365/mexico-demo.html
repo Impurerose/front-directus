@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguro de viaje a México - Assist 365</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            '2xl': '1440px'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <style>
+    /* PreFooter Background */
+    .prefooter-container {
+      background-image: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/home/img/pre_footer_background.svg');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    /* Accordion Animations */
+    .accordion-content {
+      transition: grid-template-rows 300ms ease-in-out, opacity 300ms ease-in-out;
+      display: grid;
+    }
+    
+    /* Grid rows utilities */
+    .grid-rows-\[0fr\] {
+      grid-template-rows: 0fr;
+    }
+    
+    .grid-rows-\[1fr\] {
+      grid-template-rows: 1fr;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HeroLandings -->
+  <div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200">
+    <div class="bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
+      <h1 class="flex flex-row 2xl:flex-col gap-3 text-4xl 2xl:text-7xl text-white pl-4 md:pl-[142px] 2xl:pl-[84px] py-16 2xl:py-[118px]">
+        <span>Seguro de viaje a</span>
+        <span class="font-semibold">México</span>
+      </h1>
+    </div>
+  </div>
+
+  <!-- SectionImageText #1 -->
+  <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
+    <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+      <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
+        <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+      </div>
+      <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
+        <h2 class="2xl:text-5xl leading-[56px] font-semibold text-[#0059ba] whitespace-pre-wrap text-3xl pt-8 pb-4">¿Qué necesito para viajar a México?</h2>
+        <div class="w-full">
+          <p class="text-base leading-6 text-[#70777c]">Lorem ipsum dolor sit amet consectetur. Dictum molestie in tellus vitae. At amet tortor viverra mi faucibus feugiat aliquet vitae sed. Ipsum urna amet facilisis lectus mauris mi nisl risus. Donec nibh metus luctus massa eget nulla sit odio nibh. Quisque dignissim imperdiet id senectus quis volutpat porttitor eu. Viverra bibendum pellentesque nunc ut. Fames diam quam viverra eu dui nec nam blandit vestibulum. At cum aliquam nibh nunc at cras. Viverra commodo nisl volutpat et netus. Ut cursus pretium mi at. Eget odio nunc ullamcorper commodo. Mauris dictum duis luctus non. Phasellus in fringilla massa adipiscing volutpat mauris maecenas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SectionAccordion #1 -->
+  <div class="bg-[#f2f2f2] w-full py-8 2xl:py-16 px-4 2xl:px-[185px]">
+    <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[792px] flex flex-col mx-auto">
+      <div class="flex flex-col gap-10 w-full">
+        <div class="w-full">
+          <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba] w-full">Documentos necesarios para ingresar a México</h2>
+        </div>
+        
+        <div class="flex flex-col gap-4 w-full" data-accordion-group>
+          <!-- Accordion Item 1 -->
+          <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+            <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+              <i class="ph-duotone ph-files text-[#7BD0C2] shrink-0 flex-none" style="font-size: 32px;"></i>
+              <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a] my-auto">Item requisito</h3>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 transition-transform duration-300 flex-none hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0 transition-transform duration-300 flex-none" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+            <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+              <i class="ph-duotone ph-files text-[#7BD0C2] shrink-0 flex-none" style="font-size: 32px;"></i>
+              <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a] my-auto">Item requisito</h3>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 transition-transform duration-300 flex-none hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0 transition-transform duration-300 flex-none" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div data-accordion-item class="bg-white p-4 w-full flex-col rounded-lg">
+            <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+              <i class="ph-duotone ph-files text-[#7BD0C2] shrink-0 flex-none" style="font-size: 32px;"></i>
+              <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a] my-auto">Item requisito</h3>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 transition-transform duration-300 flex-none hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0 transition-transform duration-300 flex-none" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 4 -->
+          <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+            <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+              <i class="ph-duotone ph-files text-[#7BD0C2] shrink-0 flex-none" style="font-size: 32px;"></i>
+              <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a] my-auto">Item requisito</h3>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] shrink-0 transition-transform duration-300 flex-none hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] shrink-0 transition-transform duration-300 flex-none" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden">
+                <p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE: Continúa con todas las demás secciones... -->
+  <!-- Este es un archivo parcial para demostración -->
+  <!-- El archivo completo tendría todas las secciones -->
+
+  <!-- Accordion Interactive Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('✅ Inicializando accordions...');
+      initAccordions();
+    });
+    
+    function initAccordions() {
+      const accordionButtons = document.querySelectorAll('[data-accordion-button]');
+      
+      console.log(`📌 Encontrados ${accordionButtons.length} accordions`);
+      
+      accordionButtons.forEach((button, index) => {
+        const item = button.closest('[data-accordion-item]');
+        const group = item.closest('[data-accordion-group]');
+        const groupItems = group.querySelectorAll('[data-accordion-item]');
+        const itemIndex = Array.from(groupItems).indexOf(item);
+        
+        // Estado inicial: primer item de cada grupo abierto
+        if (itemIndex === 0) {
+          openAccordionItem(item);
+        } else {
+          closeAccordionItem(item);
+        }
+        
+        // Click handler
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleAccordionItem(item);
+        });
+      });
+    }
+    
+    function toggleAccordionItem(item) {
+      const content = item.querySelector('[data-accordion-content]');
+      const isOpen = content.classList.contains('grid-rows-[1fr]');
+      
+      if (isOpen) {
+        closeAccordionItem(item);
+      } else {
+        openAccordionItem(item);
+      }
+    }
+    
+    function openAccordionItem(item) {
+      const content = item.querySelector('[data-accordion-content]');
+      const iconUp = item.querySelector('[data-icon-up]');
+      const iconDown = item.querySelector('[data-icon-down]');
+      
+      content.classList.remove('grid-rows-[0fr]', 'opacity-0');
+      content.classList.add('grid-rows-[1fr]', 'opacity-100');
+      
+      if (iconUp) iconUp.classList.remove('hidden');
+      if (iconDown) iconDown.classList.add('hidden');
+      
+      item.classList.add('border', 'border-[#c2dfff]');
+    }
+    
+    function closeAccordionItem(item) {
+      const content = item.querySelector('[data-accordion-content]');
+      const iconUp = item.querySelector('[data-icon-up]');
+      const iconDown = item.querySelector('[data-icon-down]');
+      
+      content.classList.remove('grid-rows-[1fr]', 'opacity-100');
+      content.classList.add('grid-rows-[0fr]', 'opacity-0');
+      
+      if (iconUp) iconUp.classList.add('hidden');
+      if (iconDown) iconDown.classList.remove('hidden');
+      
+      item.classList.remove('border', 'border-[#c2dfff]');
+    }
+  </script>
+</body>
+</html>

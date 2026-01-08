@@ -337,12 +337,10 @@ const section5 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-sect
 const section6 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section6.txt'), 'utf-8');
 const section7 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section7.txt'), 'utf-8');
 
-// Scripts de Single-SPA para el cotizador (LOCAL)
+// Scripts para montar el Cotizador (LOCAL)
 const singleSpaScripts = `
-  <!-- Single-SPA Stack para Cotizador (DEV MODE - Assets locales) -->
+  <!-- SystemJS para cargar módulos -->
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/single-spa-react@5.1.4/lib/system/single-spa-react.min.js"></script>
 
   <!-- SystemJS Import Map (LOCAL) -->
   <script type="systemjs-importmap">
@@ -351,6 +349,7 @@ const singleSpaScripts = `
       "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js",
       "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
       "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+      "react-router-dom": "https://cdn.jsdelivr.net/npm/react-router-dom@6.26.2/dist/umd/react-router-dom.production.min.js",
       "@a365/api": "http://localhost:5001/a365-api.js",
       "@a365/authorization-sdk": "http://localhost:4046/a365-authorization-sdk.js",
       "@a365/core": "http://localhost:5049/a365-core.js",
@@ -381,22 +380,42 @@ const singleSpaScripts = `
         console.log('🚀 Cargando cotizador para ${destino}... (DEV MODE)');
         console.log('📍 Geo:', geoConfig);
         
-        System.import('@a365/quoter').then(function() {
-          singleSpa.registerApplication({
-            name: '@a365/quoter',
-            app: function() { 
-              return System.import('@a365/quoter'); 
-            },
-            activeWhen: function() { 
-              return true; 
-            },
-            customProps: {
-              domElement: document.getElementById('quoter-mount')
-            }
-          });
+        // Cargar todas las dependencias necesarias
+        Promise.all([
+          System.import('react'),
+          System.import('react-dom'),
+          System.import('@a365/core'),
+          System.import('@a365/dsys'),
+          System.import('@a365/quoter')
+        ]).then(function(modules) {
+          var React = modules[0];
+          var ReactDOM = modules[1];
+          var quoterModule = modules[4];
           
-          singleSpa.start();
-          console.log('✅ Cotizador montado correctamente (assets locales)');
+          console.log('✅ Dependencias cargadas');
+          console.log('Quoter module:', quoterModule);
+          
+          // Obtener el componente Quoter
+          var Quoter = quoterModule.Quoter || quoterModule.default;
+          var container = document.getElementById('quoter-mount');
+          
+          if (!container) {
+            console.error('❌ No se encontró el contenedor #quoter-mount');
+            return;
+          }
+          
+          if (!Quoter) {
+            console.error('❌ No se encontró el componente Quoter en el módulo');
+            return;
+          }
+          
+          // Montar el componente directamente con ReactDOM
+          ReactDOM.render(
+            React.createElement(Quoter, { geo: 'BR' }),
+            container
+          );
+          
+          console.log('✅ Cotizador montado correctamente (localhost)');
         }).catch(function(err) {
           console.error('❌ Error cargando cotizador:', err);
         });

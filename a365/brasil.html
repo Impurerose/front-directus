@@ -821,8 +821,6 @@
 </html>
   <!-- Single-SPA Stack para Cotizador -->
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/single-spa-react@5.1.4/lib/system/single-spa-react.min.js"></script>
 
   <!-- SystemJS Import Map -->
   <script type="systemjs-importmap">
@@ -861,7 +859,13 @@
         console.log('🚀 Cargando cotizador para Brasil...');
         console.log('📍 Geo:', geoConfig);
         
-        System.import('@a365/quoter').then(function() {
+        // Cargar quoter y single-spa
+        Promise.all([
+          System.import('single-spa'),
+          System.import('@a365/quoter')
+        ]).then(function(modules) {
+          var singleSpa = modules[0];
+          
           singleSpa.registerApplication({
             name: '@a365/quoter',
             app: function() { 

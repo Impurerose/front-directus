@@ -57,9 +57,9 @@ const section1 = `<!DOCTYPE html>
 <body>
 <!-- Hero Section - Requisitos para viajar -->
 <div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200">
-  <div class="flex flex-col 2xl:items-start 2xl:justify-center pt-[44px] 2xl:pt-0 bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
-    <h1 class="flex flex-row 2xl:flex-col gap-3 text-4xl 2xl:text-7xl text-white pl-4 md:pl-[142px] 2xl:pl-[84px] py-16 2xl:py-[118px]">
-      <span>Requisitos para viajar a </span><span class="font-semibold">${destino}</span><span> en 2025</span>
+  <div class="flex flex-col md:items-start justify-start 2xl:justify-center pt-[44px] 2xl:pt-0 bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
+    <h1 class="text-4xl 2xl:text-7xl text-white pl-4 md:pl-[144px] max-w-full 2xl:max-w-[588px]">
+      Requisitos para viajar a <span class="font-semibold">${destino}</span> en 2025
     </h1>
   </div>
 </div>

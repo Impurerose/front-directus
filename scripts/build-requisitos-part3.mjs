@@ -16,8 +16,9 @@ console.log('🚀 Generando HTML de Requisitos - Sección 3...\n');
 // SECCIÓN 3: Accordion Aduanas
 const section3 = `
 <!-- Accordion - Aduanas y Artículos Prohibidos -->
-<div class="bg-[#f2f2f2] w-full py-8 2xl:py-16 px-4 2xl:px-[185px]">
-  <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[792px] flex flex-col mx-auto">
+<div class="w-full py-8 2xl:py-16">
+  <div class="bg-[#f2f2f2] max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] mx-auto px-4 2xl:px-[185px]">
+    <div class="max-w-[792px] flex flex-col mx-auto">
     <div class="flex flex-col gap-10 w-full">
       <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba]">¿Qué debes saber de las aduanas y artículos prohibidos para viajar a ${destino}?</h2>
       <div class="flex flex-col gap-4 w-full" data-accordion-group>
@@ -34,6 +35,7 @@ ${accordionAduanas.map(item => `        <div data-accordion-item class="bg-white
         </div>`).join('\n')}
       </div>
     </div>
+  </div>
   </div>
 </div>`;
 

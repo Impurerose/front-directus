@@ -148,17 +148,7 @@ const sectionBlog = `
     </div>
   </div>
 </div>
-
-    <!-- CTA: Ir al blog -->
-    <div class="mt-8 lg:mt-12 text-center">
-      <a href="http://localhost:3001/${geo}" data-blog-cta class="inline-flex items-center gap-2 px-6 py-3 bg-[#006FE8] text-white font-semibold rounded-xl hover:bg-[#0059BA] transition-colors">
-        Ver todas las guías
-        <i class="ph ph-arrow-right" style="font-size: 20px;"></i>
-      </a>
-    </div>
-
-  </div>
-</section>`;
+`;
 
 // SECCIÓN PreFooter (igual que producción)
 const sectionPreFooter = `

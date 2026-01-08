@@ -12,8 +12,8 @@ console.log('🎯 Generando sección del Cotizador...\n');
 // Sección del Cotizador - va después del Hero (sección 2)
 // Wrapper con bg-bg-alt-secondary para template Requisitos
 const sectionQuoter = `
-<section class="bg-bg-alt-secondary py-4">
-  <div class="container mx-auto px-4 lg:px-0 max-w-[358px] md:max-w-[548px] lg:max-w-[1200px]">
+<div class="w-full py-4">
+  <div class="bg-bg-alt-secondary max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto px-4 lg:px-0">
     
     <!-- Mount Point del Cotizador -->
     <div 
@@ -25,7 +25,7 @@ const sectionQuoter = `
     </div>
     
   </div>
-</section>
+</div>
 `;
 
 // Guardar sección

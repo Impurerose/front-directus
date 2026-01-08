@@ -1,0 +1,55 @@
+
+<!-- Accordion - Aduanas y Artículos Prohibidos -->
+<div class="bg-[#f2f2f2] w-full py-8 2xl:py-16 px-4 2xl:px-[185px]">
+  <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[792px] flex flex-col mx-auto">
+    <div class="flex flex-col gap-10 w-full">
+      <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba]">¿Qué debes saber de las aduanas y artículos prohibidos para viajar a Brasil?</h2>
+      <div class="flex flex-col gap-4 w-full" data-accordion-group>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-airplane-takeoff text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Productos prohibidos</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">No puedes ingresar a Brasil carnes, lácteos sin procesar, frutas frescas, ni productos de origen animal sin la documentación sanitaria correspondiente. También están prohibidos productos falsificados, drogas ilegales y armas sin los permisos necesarios.</p></div>
+          </div>
+        </div>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-airplane-takeoff text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Límites de efectivo</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Puedes ingresar hasta R$ 10,000 (reales brasileños) o su equivalente en otras monedas sin declarar. Cantidades superiores deben ser declaradas a la Receita Federal en el momento de tu llegada. No hay límite máximo, pero debes justificar el origen del dinero.</p></div>
+          </div>
+        </div>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-airplane-takeoff text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Electrónicos y tecnología</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Puedes ingresar hasta dos dispositivos electrónicos por categoría (laptop, tablet, celular, cámara) para uso personal sin pagar impuestos. Equipos profesionales o cantidades mayores pueden requerir documentación adicional y el pago de aranceles.</p></div>
+          </div>
+        </div>
+        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+            <i class="ph-duotone ph-airplane-takeoff text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Bebidas alcohólicas y tabaco</h3>
+            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+          </button>
+          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Se permite el ingreso de hasta 12 litros de bebidas alcohólicas y 10 cajetillas de cigarrillos (200 cigarrillos) o 25 puros para consumo personal. Cantidades superiores estarán sujetas al pago de impuestos.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seguro de viaje a Brasil - Assist 365</title>
+  <title>Requisitos para viajar a Brasil en 2025 - Assist 365</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   
-  <!-- Quoter CSS -->
-  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/core_tailwind.css">
-  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/quoter.min.css">
+  <!-- Quoter CSS (DEV - localhost) -->
+  <link rel="stylesheet" href="http://localhost:5057/core_tailwind.css">
+  <link rel="stylesheet" href="http://localhost:5007/quoter.min.css">
   
   <script>
-    tailwind.config = { theme: { extend: { screens: { '2xl': '1440px' } } } }
+    tailwind.config = { 
+      theme: { 
+        extend: { 
+          screens: { '2xl': '1440px' },
+          colors: {
+            'bg-alt-secondary': '#E3DEF9'
+          }
+        } 
+      } 
+    }
   </script>
   <style>
     .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterMobile.jpg') no-repeat; background-size: cover; background-position: center; }
@@ -24,24 +33,29 @@
   </style>
 </head>
 <body>
+<!-- Hero Section - Requisitos para viajar -->
 <div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200">
   <div class="bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
     <h1 class="flex flex-row 2xl:flex-col gap-3 text-4xl 2xl:text-7xl text-white pl-4 md:pl-[142px] 2xl:pl-[84px] py-16 2xl:py-[118px]">
-      <span>Seguro de viaje a</span><span class="font-semibold">Brasil</span>
+      <span>Requisitos para viajar a</span><span class="font-semibold">Brasil</span><span>en 2025</span>
     </h1>
   </div>
 </div>
+
+<!-- ImageText Principal - ¿Qué necesito para viajar? -->
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
   <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
-      <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+      <img alt="Viajar a Brasil" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
     </div>
     <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
       <h2 class="2xl:text-5xl leading-[56px] font-semibold text-[#0059ba] text-3xl pt-8 pb-4">¿Qué necesito para viajar a Brasil?</h2>
-      <p class="text-base leading-6 text-[#70777c]">Lorem ipsum dolor sit amet consectetur. Dictum molestie in tellus vitae.</p>
+      <p class="text-base leading-6 text-[#70777c]">Viajar a este destino abre las puertas a un universo de diversidad cultural, paisajes impresionantes y una energía contagiosa. Desde las playas paradisíacas hasta la selva exuberante, este país ofrece experiencias únicas para todos los gustos. Prepararte adecuadamente con un seguro de viaje te permitirá disfrutar al máximo de tu aventura.</p>
     </div>
   </div>
 </div>
+
+<!-- Accordion - Documentos Necesarios -->
 <div class="bg-[#f2f2f2] w-full py-8 2xl:py-16 px-4 2xl:px-[185px]">
   <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[792px] flex flex-col mx-auto">
     <div class="flex flex-col gap-10 w-full">
@@ -55,7 +69,7 @@
             <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
           </button>
           <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Tu pasaporte debe tener una validez mínima de 6 meses desde la fecha de ingreso a Brasil. Asegúrate de verificar la fecha de vencimiento antes de viajar.</p></div>
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Tu pasaporte debe tener una validez mínima de 6 meses desde la fecha de ingreso a Brasil. Asegúrate de verificar la fecha de vencimiento antes de viajar y que tenga al menos dos páginas en blanco para los sellos de entrada y salida.</p></div>
           </div>
         </div>
         <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
@@ -66,7 +80,7 @@
             <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
           </button>
           <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Es altamente recomendable contratar un seguro de viaje que cubra gastos médicos, cancelaciones y pérdida de equipaje durante tu estadía en Brasil.</p></div>
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Es altamente recomendable contratar un seguro de viaje que cubra gastos médicos, cancelaciones y pérdida de equipaje durante tu estadía en Brasil. Algunos seguros también incluyen asistencia legal y repatriación sanitaria.</p></div>
           </div>
         </div>
         <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
@@ -77,7 +91,7 @@
             <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
           </button>
           <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Reserva de hotel, Airbnb o carta de invitación si te hospedas con familiares o amigos en Brasil.</p></div>
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Reserva de hotel, Airbnb o carta de invitación si te hospedas con familiares o amigos en Brasil. Este documento debe incluir las fechas de tu estadía y la dirección completa del lugar donde te alojarás.</p></div>
           </div>
         </div>
         <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
@@ -88,7 +102,7 @@
             <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
           </button>
           <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Ticket aéreo o comprobante de viaje que demuestre tu fecha de salida de Brasil.</p></div>
+            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Ticket aéreo o comprobante de viaje que demuestre tu fecha de salida de Brasil. Esto garantiza a las autoridades migratorias que planeas abandonar el país dentro del período permitido de tu visa o exención de visa.</p></div>
           </div>
         </div>
       </div>

@@ -1,0 +1,61 @@
+{
+  "destino": "Brasil",
+  "accordionDocumentos": [
+    {
+      "title": "Pasaporte vigente",
+      "content": "Tu pasaporte debe tener una validez mínima de 6 meses desde la fecha de ingreso a Brasil. Asegúrate de verificar la fecha de vencimiento antes de viajar y que tenga al menos dos páginas en blanco para los sellos de entrada y salida."
+    },
+    {
+      "title": "Seguro de viaje",
+      "content": "Es altamente recomendable contratar un seguro de viaje que cubra gastos médicos, cancelaciones y pérdida de equipaje durante tu estadía en Brasil. Algunos seguros también incluyen asistencia legal y repatriación sanitaria."
+    },
+    {
+      "title": "Comprobante de alojamiento",
+      "content": "Reserva de hotel, Airbnb o carta de invitación si te hospedas con familiares o amigos en Brasil. Este documento debe incluir las fechas de tu estadía y la dirección completa del lugar donde te alojarás."
+    },
+    {
+      "title": "Pasaje de regreso",
+      "content": "Ticket aéreo o comprobante de viaje que demuestre tu fecha de salida de Brasil. Esto garantiza a las autoridades migratorias que planeas abandonar el país dentro del período permitido de tu visa o exención de visa."
+    }
+  ],
+  "accordionAduanas": [
+    {
+      "title": "Productos prohibidos",
+      "content": "No puedes ingresar a Brasil carnes, lácteos sin procesar, frutas frescas, ni productos de origen animal sin la documentación sanitaria correspondiente. También están prohibidos productos falsificados, drogas ilegales y armas sin los permisos necesarios."
+    },
+    {
+      "title": "Límites de efectivo",
+      "content": "Puedes ingresar hasta R$ 10,000 (reales brasileños) o su equivalente en otras monedas sin declarar. Cantidades superiores deben ser declaradas a la Receita Federal en el momento de tu llegada. No hay límite máximo, pero debes justificar el origen del dinero."
+    },
+    {
+      "title": "Electrónicos y tecnología",
+      "content": "Puedes ingresar hasta dos dispositivos electrónicos por categoría (laptop, tablet, celular, cámara) para uso personal sin pagar impuestos. Equipos profesionales o cantidades mayores pueden requerir documentación adicional y el pago de aranceles."
+    },
+    {
+      "title": "Bebidas alcohólicas y tabaco",
+      "content": "Se permite el ingreso de hasta 12 litros de bebidas alcohólicas y 10 cajetillas de cigarrillos (200 cigarrillos) o 25 puros para consumo personal. Cantidades superiores estarán sujetas al pago de impuestos."
+    }
+  ],
+  "faqItems": [
+    {
+      "title": "¿Necesito visa para viajar a Brasil?",
+      "content": "Depende de tu nacionalidad. Ciudadanos de Argentina, Chile, Paraguay, Uruguay y otros países del Mercosur no necesitan visa para turismo. Otros países latinoamericanos pueden tener acuerdos específicos. Consulta con el consulado brasileño en tu país para información actualizada."
+    },
+    {
+      "title": "¿Qué vacunas necesito para ingresar a Brasil?",
+      "content": "Se recomienda la vacuna contra la fiebre amarilla si viajas a zonas selváticas o del norte de Brasil. Para algunas regiones es obligatoria y debes presentar el certificado internacional de vacunación. También se recomiendan vacunas contra hepatitis A y B, tétanos y fiebre tifoidea."
+    },
+    {
+      "title": "¿Cuánto dinero puedo ingresar a Brasil sin declarar?",
+      "content": "Puedes ingresar hasta R$ 10,000 (reales brasileños) o su equivalente en otras monedas sin necesidad de declarar. Cantidades superiores deben ser declaradas a la aduana en el formulario correspondiente al momento de tu llegada."
+    },
+    {
+      "title": "¿Cuánto tiempo puedo permanecer en Brasil como turista?",
+      "content": "Como turista, puedes permanecer hasta 90 días en territorio brasileño, prorrogables por otros 90 días previa solicitud a la Policía Federal. El período total máximo es de 180 días en un año. Para estadías más largas necesitarás otro tipo de visa."
+    },
+    {
+      "title": "¿Necesito certificado de vacunación COVID-19 para ingresar a Brasil?",
+      "content": "Verifica los requisitos sanitarios actualizados antes de viajar, ya que las regulaciones sobre COVID-19 pueden cambiar. Consulta la página oficial del gobierno brasileño o con tu aerolínea para conocer los requisitos vigentes al momento de tu viaje."
+    }
+  ]
+}

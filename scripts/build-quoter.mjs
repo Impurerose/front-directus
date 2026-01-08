@@ -10,14 +10,10 @@ const destino = 'Brasil';
 console.log('🎯 Generando sección del Cotizador...\n');
 
 // Sección del Cotizador - va después del Hero (sección 2)
+// Wrapper con bg-bg-alt-secondary para template Requisitos
 const sectionQuoter = `
-<section id="quoter-section" class="bg-gradient-to-b from-gray-50 to-white py-12 lg:py-20">
+<section class="bg-bg-alt-secondary py-4">
   <div class="container mx-auto px-4 lg:px-0 max-w-[358px] md:max-w-[548px] lg:max-w-[1200px]">
-    
-    <!-- Título -->
-    <h2 class="text-center text-[#0059BA] font-semibold text-3xl lg:text-4xl mb-8 lg:mb-12">
-      Cotizá tu seguro de viaje a ${destino}
-    </h2>
     
     <!-- Mount Point del Cotizador -->
     <div 

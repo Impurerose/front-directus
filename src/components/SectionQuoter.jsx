@@ -12,13 +12,8 @@
 
 const SectionQuoter = ({ destino = "[Destino]", geo = "ar" }) => {
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-12 lg:py-20">
+    <section className="bg-bg-alt-secondary py-4">
       <div className="container mx-auto px-4 lg:px-0 max-w-[358px] md:max-w-[548px] lg:max-w-[1200px]">
-        
-        {/* Título */}
-        <h2 className="text-center text-[#0059BA] font-semibold text-3xl lg:text-4xl mb-8 lg:mb-12">
-          Cotizá tu seguro de viaje a {destino}
-        </h2>
         
         {/* 
           Mount Point del Cotizador

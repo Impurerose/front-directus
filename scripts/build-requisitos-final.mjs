@@ -326,7 +326,7 @@ const singleSpaScripts = `
   </script>
 
   <!-- Overlay del Cotizador -->
-  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[98] hidden"></div>
+  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[99] hidden"></div>
 
   <!-- Inicializar Cotizador -->
   <script>
@@ -345,7 +345,8 @@ const singleSpaScripts = `
         country_code: 'BR',
         entity_id: '3',
         country_id: '31',
-        language: 'pt'
+        language: 'pt',
+        redirection: true
       };
 
       Object.keys(geoConfig).forEach(function(key) {
@@ -398,7 +399,7 @@ const singleSpaScripts = `
           };
           
           var quoterProps = {
-            fetchProducts: function(e) { console.log('fetchProducts:', e); },
+            fetchProducts: null,
             init: geoConfig,
             mode: 'default',
             isOpen: quoterState.isOpen,

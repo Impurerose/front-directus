@@ -2,42 +2,42 @@
   "destino": "Brasil",
   "accordionItems": [
     {
-      "title": "Item requisito",
-      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+      "title": "Pasaporte vigente",
+      "content": "Tu pasaporte debe tener una validez mínima de 6 meses desde la fecha de ingreso a Brasil. Asegúrate de verificar la fecha de vencimiento antes de viajar."
     },
     {
-      "title": "Item requisito",
-      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+      "title": "Seguro de viaje",
+      "content": "Es altamente recomendable contratar un seguro de viaje que cubra gastos médicos, cancelaciones y pérdida de equipaje durante tu estadía en Brasil."
     },
     {
-      "title": "Item requisito",
-      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+      "title": "Comprobante de alojamiento",
+      "content": "Reserva de hotel, Airbnb o carta de invitación si te hospedas con familiares o amigos en Brasil."
     },
     {
-      "title": "Item requisito",
-      "content": "Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus."
+      "title": "Pasaje de regreso",
+      "content": "Ticket aéreo o comprobante de viaje que demuestre tu fecha de salida de Brasil."
     }
   ],
   "faqItems": [
     {
-      "title": "Pregunta frecuente destino",
-      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam. Tincidunt ac massa fames nibh pharetra molestie tellus. Nibh sed suspendisse morbi felis lacus congue commodo bibendum at. Tortor dolor quis elit leo. Pharetra fames diam viverra felis aliquam. Posuere interdum sed."
+      "title": "¿Necesito visa para viajar a Brasil?",
+      "content": "Depende de tu nacionalidad. Ciudadanos de Argentina, Chile, Paraguay y Uruguay no necesitan visa para turismo. Consulta con el consulado brasileño en tu país."
     },
     {
-      "title": "Pregunta frecuente destino",
-      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam. Tincidunt ac massa fames nibh pharetra molestie tellus."
+      "title": "¿Qué vacunas necesito para ingresar a Brasil?",
+      "content": "Se recomienda la vacuna contra la fiebre amarilla si viajas a zonas selváticas. Para algunas regiones es obligatoria."
     },
     {
-      "title": "Pregunta frecuente destino",
-      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam."
+      "title": "¿Cuánto dinero puedo ingresar a Brasil?",
+      "content": "Puedes ingresar hasta R$ 10,000 (reales brasileños) sin declarar. Cantidades superiores deben ser declaradas a la aduana."
     },
     {
-      "title": "Pregunta frecuente destino",
-      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi."
+      "title": "¿Cuánto tiempo puedo permanecer en Brasil?",
+      "content": "Como turista, puedes permanecer hasta 90 días, prorrogables por otros 90 días previa solicitud a la Policía Federal."
     },
     {
-      "title": "Pregunta frecuente destino",
-      "content": "Lorem ipsum dolor sit amet consectetur. Tortor sed non nec gravida in id at. Hendrerit dictum aliquet risus leo nullam morbi. Sit ipsum in arcu risus quam."
+      "title": "¿Necesito certificado de vacunación COVID-19?",
+      "content": "Verifica los requisitos actualizados sobre COVID-19 antes de viajar, ya que las regulaciones pueden cambiar."
     }
   ]
 }

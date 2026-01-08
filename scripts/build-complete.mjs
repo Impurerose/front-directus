@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const destino = 'Brasil';
 
 // Leer data
-const dataPath = path.join(__dirname, '..', 'src', 'data', 'mexico.json');
+const dataPath = path.join(__dirname, '..', 'src', 'data', 'brasil.json');
 const { accordionItems, faqItems } = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
 console.log('🚀 Generando HTML completo para Brasil...\n');
@@ -87,7 +87,7 @@ const section2 = `
 <div class="bg-white w-full py-9 2xl:py-16">
   <div class="flex flex-col 2xl:flex-row-reverse 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
-      <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+      <img alt="Brasil" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/products/seguro-viaje-brasil-800x600.jpg">
     </div>
     <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
       <h2 class="text-3xl leading-10 font-semibold text-[#0059ba] pt-8 pb-4">Título sección 2</h2>
@@ -98,7 +98,7 @@ const section2 = `
 <div class="bg-white w-full py-9 2xl:py-16">
   <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
-      <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+      <img alt="Brasil" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/landings/brasil.png">
     </div>
     <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
       <h2 class="text-3xl leading-10 font-semibold text-[#0059ba] pt-8 pb-4">Título sección 3</h2>
@@ -109,7 +109,7 @@ const section2 = `
 <div class="bg-white w-full py-9 2xl:py-16">
   <div class="flex flex-col 2xl:flex-row-reverse 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
-      <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+      <img alt="Brasil" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/products/seguro-viaje-brasil-800x600.jpg">
     </div>
     <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
       <h2 class="text-3xl leading-10 font-semibold text-[#0059ba] pt-8 pb-4">Título sección 4</h2>

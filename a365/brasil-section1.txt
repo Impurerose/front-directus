@@ -56,7 +56,7 @@
     
     <div class="border-b border-[#E7F2FF] px-4" data-accordion-item>
       <button class="w-full flex items-center justify-between py-4 text-left" data-accordion-button>
-        <h3 class="text-lg font-semibold text-[#31363A]">undefined</h3>
+        <h3 class="text-lg font-semibold text-[#31363A]">Pasaporte vigente</h3>
         <div class="flex-shrink-0 ml-4">
           <i class="ph ph-caret-down text-[#0059BA] hidden" style="font-size: 24px;" data-icon-down></i>
           <i class="ph ph-caret-up text-[#0059BA] " style="font-size: 24px;" data-icon-up></i>
@@ -65,7 +65,7 @@
       <div class="accordion-content overflow-hidden grid-rows-[1fr] opacity-100" data-accordion-content>
         <div class="overflow-hidden">
           <div class="pb-4">
-            <p class="text-[#70777C] text-base">undefined</p>
+            <p class="text-[#70777C] text-base">Tu pasaporte debe tener una validez mínima de 6 meses desde la fecha de ingreso a Brasil. Asegúrate de verificar la fecha de vencimiento antes de viajar.</p>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
     
     <div class="border-b border-[#E7F2FF] px-4" data-accordion-item>
       <button class="w-full flex items-center justify-between py-4 text-left" data-accordion-button>
-        <h3 class="text-lg font-semibold text-[#31363A]">undefined</h3>
+        <h3 class="text-lg font-semibold text-[#31363A]">Seguro de viaje</h3>
         <div class="flex-shrink-0 ml-4">
           <i class="ph ph-caret-down text-[#0059BA] " style="font-size: 24px;" data-icon-down></i>
           <i class="ph ph-caret-up text-[#0059BA] hidden" style="font-size: 24px;" data-icon-up></i>
@@ -82,7 +82,7 @@
       <div class="accordion-content overflow-hidden grid-rows-[0fr] opacity-0" data-accordion-content>
         <div class="overflow-hidden">
           <div class="pb-4">
-            <p class="text-[#70777C] text-base">undefined</p>
+            <p class="text-[#70777C] text-base">Es altamente recomendable contratar un seguro de viaje que cubra gastos médicos, cancelaciones y pérdida de equipaje durante tu estadía en Brasil.</p>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@
     
     <div class="border-b border-[#E7F2FF] px-4" data-accordion-item>
       <button class="w-full flex items-center justify-between py-4 text-left" data-accordion-button>
-        <h3 class="text-lg font-semibold text-[#31363A]">undefined</h3>
+        <h3 class="text-lg font-semibold text-[#31363A]">Comprobante de alojamiento</h3>
         <div class="flex-shrink-0 ml-4">
           <i class="ph ph-caret-down text-[#0059BA] " style="font-size: 24px;" data-icon-down></i>
           <i class="ph ph-caret-up text-[#0059BA] hidden" style="font-size: 24px;" data-icon-up></i>
@@ -99,7 +99,7 @@
       <div class="accordion-content overflow-hidden grid-rows-[0fr] opacity-0" data-accordion-content>
         <div class="overflow-hidden">
           <div class="pb-4">
-            <p class="text-[#70777C] text-base">undefined</p>
+            <p class="text-[#70777C] text-base">Reserva de hotel, Airbnb o carta de invitación si te hospedas con familiares o amigos en Brasil.</p>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@
     
     <div class="border-b border-[#E7F2FF] px-4" data-accordion-item>
       <button class="w-full flex items-center justify-between py-4 text-left" data-accordion-button>
-        <h3 class="text-lg font-semibold text-[#31363A]">undefined</h3>
+        <h3 class="text-lg font-semibold text-[#31363A]">Pasaje de regreso</h3>
         <div class="flex-shrink-0 ml-4">
           <i class="ph ph-caret-down text-[#0059BA] " style="font-size: 24px;" data-icon-down></i>
           <i class="ph ph-caret-up text-[#0059BA] hidden" style="font-size: 24px;" data-icon-up></i>
@@ -116,7 +116,7 @@
       <div class="accordion-content overflow-hidden grid-rows-[0fr] opacity-0" data-accordion-content>
         <div class="overflow-hidden">
           <div class="pb-4">
-            <p class="text-[#70777C] text-base">undefined</p>
+            <p class="text-[#70777C] text-base">Ticket aéreo o comprobante de viaje que demuestre tu fecha de salida de Brasil.</p>
           </div>
         </div>
       </div>

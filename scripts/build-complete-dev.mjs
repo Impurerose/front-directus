@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const destino = 'Brasil';
 
 // Leer data
-const dataPath = path.join(__dirname, '..', 'src', 'data', 'mexico.json');
+const dataPath = path.join(__dirname, '..', 'src', 'data', 'brasil.json');
 const { accordionItems, faqItems } = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
 console.log('🚀 Generando HTML completo para Brasil (DEV MODE)...\n');
@@ -72,7 +72,7 @@ const section1 = `<!DOCTYPE html>
     ${accordionItems.map((item, idx) => `
     <div class="border-b border-[#E7F2FF] px-4" data-accordion-item>
       <button class="w-full flex items-center justify-between py-4 text-left" data-accordion-button>
-        <h3 class="text-lg font-semibold text-[#31363A]">${item.question}</h3>
+        <h3 class="text-lg font-semibold text-[#31363A]">${item.title}</h3>
         <div class="flex-shrink-0 ml-4">
           <i class="ph ph-caret-down text-[#0059BA] ${idx === 0 ? 'hidden' : ''}" style="font-size: 24px;" data-icon-down></i>
           <i class="ph ph-caret-up text-[#0059BA] ${idx === 0 ? '' : 'hidden'}" style="font-size: 24px;" data-icon-up></i>
@@ -81,7 +81,7 @@ const section1 = `<!DOCTYPE html>
       <div class="accordion-content overflow-hidden ${idx === 0 ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}" data-accordion-content>
         <div class="overflow-hidden">
           <div class="pb-4">
-            <p class="text-[#70777C] text-base">${item.answer}</p>
+            <p class="text-[#70777C] text-base">${item.content}</p>
           </div>
         </div>
       </div>

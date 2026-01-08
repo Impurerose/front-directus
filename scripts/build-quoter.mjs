@@ -23,7 +23,7 @@ const sectionQuoter = `
     <div 
       id="quoter-mount"
       data-geo="BR"
-      class="max-w-4xl mx-auto"
+      class="max-w-4xl mx-auto relative z-[99]"
     >
       <!-- Este div será reemplazado por el cotizador real cuando se cargue Single-SPA -->
     </div>

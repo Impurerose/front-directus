@@ -16,7 +16,7 @@ export default function HeroLandings({
     <div className="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200">
       <div
         className="
-        flex flex-col 2xl:items-start 2xl:justify-center 2xl:pt-0 pt-[44px]
+        flex flex-col 2xl:items-start 2xl:justify-center pt-[44px] 2xl:pt-0
         bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')]
         md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')]
         2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')]

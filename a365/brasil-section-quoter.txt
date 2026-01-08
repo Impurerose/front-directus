@@ -6,7 +6,7 @@
     <div 
       id="quoter-mount"
       data-geo="BR"
-      class="mx-auto"
+      class="max-w-[926px] mx-auto"
     >
       <!-- Este div será reemplazado por el cotizador real cuando se cargue Single-SPA -->
     </div>

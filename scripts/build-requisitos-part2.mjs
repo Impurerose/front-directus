@@ -19,7 +19,7 @@ const section2 = `
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
   <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
-      <img alt="Viajar a ${destino}" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+      <img alt="Viajar a ${destino}" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/256x256">
     </div>
     <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
       <h2 class="2xl:text-5xl leading-[56px] font-semibold text-[#0059ba] text-3xl pt-8 pb-4">¿Qué necesito para viajar a ${destino}?</h2>
@@ -29,8 +29,8 @@ const section2 = `
 </div>
 
 <!-- Accordion - Documentos Necesarios -->
-<div class="w-full py-8 2xl:py-16">
-  <div class="bg-[#f2f2f2] max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] mx-auto px-4 2xl:px-[185px]">
+<div class="bg-[#f2f2f2] mx-auto w-full py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px]">
+  <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] mx-auto px-4 2xl:px-[185px]">
     <div class="max-w-[792px] flex flex-col mx-auto">
       <div class="flex flex-col gap-10 w-full">
         <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba]">Documentos necesarios para ingresar a ${destino}</h2>

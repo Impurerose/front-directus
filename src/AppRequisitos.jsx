@@ -104,7 +104,7 @@ function AppRequisitos({
       <SectionImageText
         title={`¿Qué necesito para viajar a ${destino}?`}
         description="Viajar a este destino abre las puertas a un universo de diversidad cultural, paisajes impresionantes y una energía contagiosa. Desde las playas paradisíacas hasta la selva exuberante, este país ofrece experiencias únicas para todos los gustos. Prepararte adecuadamente con un seguro de viaje te permitirá disfrutar al máximo de tu aventura."
-        imageSrc="https://placehold.co/486x360"
+        imageSrc="https://placehold.co/256x256"
         titleSize="large"
         reverse={false}
       />

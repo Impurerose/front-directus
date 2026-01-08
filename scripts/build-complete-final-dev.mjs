@@ -359,8 +359,28 @@ const singleSpaScripts = `
   }
   </script>
 
+  <!-- Overlay del Cotizador -->
+  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[98] hidden"></div>
+
   <!-- Inicializar Cotizador -->
   <script>
+    // Funciones globales para controlar el overlay (similar a accordion)
+    window.showQuoterOverlay = function() {
+      var overlay = document.getElementById('quoter-overlay');
+      if (overlay) {
+        overlay.classList.remove('hidden');
+        console.log('✅ Overlay mostrado');
+      }
+    };
+
+    window.hideQuoterOverlay = function() {
+      var overlay = document.getElementById('quoter-overlay');
+      if (overlay) {
+        overlay.classList.add('hidden');
+        console.log('✅ Overlay ocultado');
+      }
+    };
+
     (function() {
       // Configuración de Brasil
       var geoConfig = {
@@ -409,13 +429,70 @@ const singleSpaScripts = `
             return;
           }
           
+          // Estados para el quoter (simulando useState)
+          var quoterState = {
+            isOpen: false,
+            overlay: false,
+            openMod: null
+          };
+          
+          // Callbacks para los setters (usando funciones globales)
+          var setIsOpen = function(value) {
+            quoterState.isOpen = value;
+            console.log('setIsOpen:', value);
+          };
+          
+          var setOverlay = function(value) {
+            quoterState.overlay = value;
+            console.log('setOverlay:', value);
+            // Usar funciones globales para controlar overlay
+            if (value) {
+              window.showQuoterOverlay();
+            } else {
+              window.hideQuoterOverlay();
+            }
+          };
+          
+          var setOpenMod = function(value) {
+            quoterState.openMod = value;
+            console.log('setOpenMod:', value);
+          };
+          
+          // Configuración del quoter (similar a APP_CONFIGURATION en home)
+          var quoterConfig = {
+            country_code: 'BR',
+            entity_id: '3',
+            country_id: '31',
+            language: 'pt'
+          };
+          
+          // Función fetchProducts (puede ser vacía por ahora)
+          var fetchProducts = function(e) {
+            console.log('fetchProducts:', e);
+          };
+          
+          // Props completos para el Quoter
+          var quoterProps = {
+            fetchProducts: fetchProducts,
+            init: quoterConfig,
+            mode: 'default',
+            isOpen: quoterState.isOpen,
+            setIsOpen: setIsOpen,
+            setOverlay: setOverlay,
+            overlay: quoterState.overlay,
+            openMod: quoterState.openMod,
+            setOpenMod: setOpenMod,
+            visible: true,
+            geo: 'BR'
+          };
+          
           // Montar el componente directamente con ReactDOM
           ReactDOM.render(
-            React.createElement(Quoter, { geo: 'BR' }),
+            React.createElement(Quoter, quoterProps),
             container
           );
           
-          console.log('✅ Cotizador montado correctamente (localhost)');
+          console.log('✅ Cotizador montado correctamente con todos los props (localhost)');
         }).catch(function(err) {
           console.error('❌ Error cargando cotizador:', err);
         });

@@ -6,11 +6,11 @@ echo ""
 echo "Generando todas las secciones..."
 echo ""
 
-node build-complete.mjs && \
-node build-quoter.mjs && \
-node build-complete-part2.mjs && \
-node build-complete-part3.mjs && \
-node build-complete-final.mjs
+node scripts/build-complete.mjs && \
+node scripts/build-quoter.mjs && \
+node scripts/build-complete-part2.mjs && \
+node scripts/build-complete-part3.mjs && \
+node scripts/build-complete-final.mjs
 
 echo ""
 echo "✅ ¡Listo! Revisa el archivo: a365/brasil.html"

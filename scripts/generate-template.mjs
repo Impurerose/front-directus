@@ -18,10 +18,28 @@ console.log('3. Click derecho → "Ver código fuente" o "Inspeccionar"');
 console.log('4. Copia TODO el HTML renderizado');
 console.log('5. Pégalo en el template que generaremos\n');
 
-// Data de destinos
+// Data de destinos con configuración de geo
 const destinations = {
   mexico: {
-    destino: 'México'
+    destino: 'México',
+    geo: 'MX',
+    entity_id: 2,
+    country_id: 142,
+    lang: 'es'
+  },
+  brasil: {
+    destino: 'Brasil',
+    geo: 'BR',
+    entity_id: 3,
+    country_id: 31,
+    lang: 'pt'
+  },
+  argentina: {
+    destino: 'Argentina',
+    geo: 'AR',
+    entity_id: 1,
+    country_id: 11,
+    lang: 'es'
   }
 };
 
@@ -33,7 +51,7 @@ function loadDestinationData(destination) {
 }
 
 // Template HTML base con CDNs y scripts
-function generateHTMLWrapper(destino, destinationKey) {
+function generateHTMLWrapper(destino, destinationKey, geoConfig) {
   const data = loadDestinationData(destinationKey);
   
   return `<!DOCTYPE html>
@@ -48,6 +66,9 @@ function generateHTMLWrapper(destino, destinationKey) {
   
   <!-- Phosphor Icons CDN -->
   <script src="https://unpkg.com/@phosphor-icons/web"><\/script>
+  
+  <!-- Quoter CSS -->
+  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/quoter.min.css">
   
   <!-- Tailwind Config -->
   <script>
@@ -188,6 +209,66 @@ function generateHTMLWrapper(destino, destinationKey) {
       
       item.classList.remove('border', 'border-[#c2dfff]');
     }
+  <\/script>
+
+  <!-- Single-SPA Stack para Cotizador -->
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"><\/script>
+  <script src="https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js"><\/script>
+  <script src="https://cdn.jsdelivr.net/npm/single-spa-react@5.1.4/lib/system/single-spa-react.min.js"><\/script>
+
+  <!-- SystemJS Import Map -->
+  <script type="systemjs-importmap">
+  {
+    "imports": {
+      "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+      "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+      "@a365/quoter": "https://assistcdn.s3.us-west-1.amazonaws.com/quoter/a365-quoter.js"
+    }
+  }
+  <\/script>
+
+  <!-- Inicializar Cotizador -->, destData);
+      const outputPath = path.join(distPath, `${key}.html`);
+      
+      fs.writeFileSync(outputPath, htmlTemplate, 'utf-8');
+      
+      console.log(`✅ Template creado: dist/${key}.html`);
+      console.log(`   Geo: ${destData.geo} | Entity: ${destData.entity_id} | Country: ${destData.country_id}
+        entity_id: '${geoConfig.entity_id}',
+        country_id: '${geoConfig.country_id}',
+        language: '${geoConfig.lang}'
+      };
+
+      // Guardar en localStorage
+      Object.keys(geoConfig).forEach(function(key) {
+        localStorage.setItem(key, geoConfig[key]);
+      });
+
+      // Montar cotizador cuando cargue la página
+      window.addEventListener('load', function() {
+        console.log('🚀 Cargando cotizador...');
+        
+        System.import('@a365/quoter').then(function() {
+          singleSpa.registerApplication({
+            name: '@a365/quoter',
+            app: function() { 
+              return System.import('@a365/quoter'); 
+            },
+            activeWhen: function() { 
+              return true; 
+            },
+            customProps: {
+              domElement: document.getElementById('quoter-mount')
+            }
+          });
+          
+          singleSpa.start();
+          console.log('✅ Cotizador montado correctamente');
+        }).catch(function(err) {
+          console.error('❌ Error cargando cotizador:', err);
+        });
+      });
+    })();
   <\/script>
 </body>
 </html>`;

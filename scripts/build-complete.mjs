@@ -22,6 +22,10 @@ const section1 = `<!DOCTYPE html>
   <title>Seguro de viaje a ${destino} - Assist 365</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Quoter CSS -->
+  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/quoter.min.css">
+  
   <script>
     tailwind.config = { theme: { extend: { screens: { '2xl': '1440px' } } } }
   </script>

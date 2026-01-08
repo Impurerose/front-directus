@@ -7,6 +7,8 @@ const __dirname = path.dirname(__filename);
 
 console.log('🚀 Ensamblando HTML completo...\n');
 
+const destino = 'Brasil';
+
 // SECCIÓN 8: Plans
 const section8 = `
 <section class="w-full bg-[#E3DEF9] py-12 lg:py-20">
@@ -330,6 +332,7 @@ const javascript = `
 
 // Leer todas las secciones
 const section1 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section1.txt'), 'utf-8');
+const sectionQuoter = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section-quoter.txt'), 'utf-8');
 const section2 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section2.txt'), 'utf-8');
 const section3 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section3.txt'), 'utf-8');
 const section4 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section4.txt'), 'utf-8');
@@ -337,15 +340,82 @@ const section5 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-sect
 const section6 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section6.txt'), 'utf-8');
 const section7 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section7.txt'), 'utf-8');
 
-// Combinar todo
-const completeHTML = section1 + section2 + section3 + section4 + section5 + section6 + section7 + section8 + section9 + javascript;
+// Scripts de Single-SPA para el cotizador
+const singleSpaScripts = `
+  <!-- Single-SPA Stack para Cotizador -->
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/single-spa-react@5.1.4/lib/system/single-spa-react.min.js"></script>
+
+  <!-- SystemJS Import Map -->
+  <script type="systemjs-importmap">
+  {
+    "imports": {
+      "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+      "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+      "@a365/quoter": "https://assistcdn.s3.us-west-1.amazonaws.com/quoter/a365-quoter.js"
+    }
+  }
+  </script>
+
+  <!-- Inicializar Cotizador -->
+  <script>
+    (function() {
+      // Configuración de Brasil
+      var geoConfig = {
+        country_code: 'BR',
+        entity_id: '3',
+        country_id: '31',
+        language: 'pt'
+      };
+
+      // Guardar en localStorage
+      Object.keys(geoConfig).forEach(function(key) {
+        localStorage.setItem(key, geoConfig[key]);
+      });
+
+      // Montar cotizador cuando cargue la página
+      window.addEventListener('load', function() {
+        console.log('🚀 Cargando cotizador para ${destino}...');
+        console.log('📍 Geo:', geoConfig);
+        
+        System.import('@a365/quoter').then(function() {
+          singleSpa.registerApplication({
+            name: '@a365/quoter',
+            app: function() { 
+              return System.import('@a365/quoter'); 
+            },
+            activeWhen: function() { 
+              return true; 
+            },
+            customProps: {
+              domElement: document.getElementById('quoter-mount')
+            }
+          });
+          
+          singleSpa.start();
+          console.log('✅ Cotizador montado correctamente');
+        }).catch(function(err) {
+          console.error('❌ Error cargando cotizador:', err);
+        });
+      });
+    })();
+  </script>
+`;
+
+// Combinar todo (Cotizador va como 2da sección, justo después del Hero)
+const completeHTML = section1 + sectionQuoter + section2 + section3 + section4 + section5 + section6 + section7 + section8 + section9 + javascript + singleSpaScripts;
 
 // Guardar archivo completo
 fs.writeFileSync(path.join(__dirname, '..', 'a365', 'brasil.html'), completeHTML, 'utf-8');
 
+console.log('✅ Sección Cotizador cargada (posición 2)');
 console.log('✅ Sección 8 (Plans) generada');
 console.log('✅ Sección 9 (PreFooter) generada');
 console.log('✅ JavaScript de accordions incluido');
+console.log('✅ Single-SPA scripts incluidos');
 console.log('\n🎉 ¡Archivo completo generado: a365/brasil.html!\n');
 console.log('📁 Archivo listo para usar en Directus');
 console.log('🔧 Incluye todas las secciones con accordions funcionales');
+console.log('🎯 Cotizador integrado con Single-SPA (React 17)');
+console.log('🌎 Configurado para Brasil (BR, entity:3, country:31)');

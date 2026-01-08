@@ -7,6 +7,7 @@ import PreFooter from "./components/PreFooter";
 import SectionCards from "./components/SectionCards";
 import SectionPlans from "./components/SectionPlans";
 import SectionRequirements from "./components/SectionRequirements";
+import SectionQuoter from "./components/SectionQuoter";
 
 // Data por defecto para desarrollo (modo dev)
 const defaultAccordionItems = [
@@ -60,7 +61,7 @@ const defaultFaqItems = [
   },
 ];
 
-function App({ destino = "[Destino]", accordionItems = defaultAccordionItems, faqItems = defaultFaqItems } = {}) {
+function App({ destino = "[Destino]", geo = "ar", accordionItems = defaultAccordionItems, faqItems = defaultFaqItems } = {}) {
   // Usar data recibida por props o fallback a defaults
   return (
     <>
@@ -106,7 +107,11 @@ function App({ destino = "[Destino]", accordionItems = defaultAccordionItems, fa
         title={`Todo lo que necesitás saber para viajar a ${destino}`}
         items={faqItems}
       />
-      <SectionBlog geo="ar" />
+      
+      {/* Cotizador - En dev muestra placeholder, en producción se monta con Single-SPA */}
+      <SectionQuoter destino={destino} geo={geo} />
+      
+      <SectionBlog geo={geo} />
       <SectionCards />
       <SectionRequirements />
       <SectionPlans />

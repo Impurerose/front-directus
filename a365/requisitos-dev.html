@@ -310,7 +310,7 @@
 </div>
 
 <!-- Blog Section -->
-<div class="w-full flex items-center justify-center py-16">
+<div class="w-full flex items-center justify-center py-16" data-blog-section>
   <div class="w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[1296px]">
     <div class="bg-[#CFF6FF] rounded-3xl p-6 2xl:p-12 flex flex-col 2xl:flex-row gap-8 2xl:gap-[86px]">
       
@@ -454,7 +454,7 @@
 </script>
 
 <script>
-  // Fetch desde localhost:3001 (DEV)
+  // Fetch desde API de producción
   (async function loadBlogPosts() {
     const geo = 'br';
     const blogContainer = document.querySelector('[data-blog-section]');
@@ -465,7 +465,7 @@
     }
     
     try {
-      const url = 'http://localhost:3001/' + geo + '/wp-json/wp/v2/posts?per_page=3';
+      const url = 'https://assist-365.com/blog/' + geo + '/wp-json/wp/v2/posts?per_page=3';
       const response = await fetch(url);
       
       if (!response.ok) throw new Error('Error fetching posts');

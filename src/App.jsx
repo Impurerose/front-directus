@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import HeroLandings from "./components/HeroLandings";
 import SectionImageText from "./components/SectionImageText";
 import SectionAccordion from "./components/SectionAccordion";
@@ -8,6 +9,7 @@ import SectionCards from "./components/SectionCards";
 import SectionPlans from "./components/SectionPlans";
 import SectionRequirements from "./components/SectionRequirements";
 import SectionQuoter from "./components/SectionQuoter";
+import AppRequisitos from "./AppRequisitos";
 
 // Data por defecto para desarrollo (modo dev)
 const defaultAccordionItems = [
@@ -61,8 +63,26 @@ const defaultFaqItems = [
   },
 ];
 
-function App({ destino = "[Destino]", geo = "ar", accordionItems = defaultAccordionItems, faqItems = defaultFaqItems } = {}) {
-  // Usar data recibida por props o fallback a defaults
+function App({ destino = "Brasil", geo = "br", accordionItems = defaultAccordionItems, faqItems = defaultFaqItems } = {}) {
+  const [template, setTemplate] = useState("brasil");
+
+  useEffect(() => {
+    // Detectar URL param ?template=requisitos
+    const params = new URLSearchParams(window.location.search);
+    const templateParam = params.get("template");
+    if (templateParam === "requisitos") {
+      setTemplate("requisitos");
+    } else {
+      setTemplate("brasil");
+    }
+  }, []);
+
+  // Renderizar template según URL param
+  if (template === "requisitos") {
+    return <AppRequisitos destino={destino} geo={geo} />;
+  }
+
+  // Template Brasil (default)
   return (
     <>
       <HeroLandings destino={destino} />

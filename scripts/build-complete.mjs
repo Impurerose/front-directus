@@ -20,6 +20,9 @@ const section1 = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seguro de viaje a ${destino} - Assist 365</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   
@@ -28,7 +31,7 @@ const section1 = `<!DOCTYPE html>
   <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/quoter.min.css">
   
   <script>
-    tailwind.config = { theme: { extend: { screens: { '2xl': '1440px' } } } }
+    tailwind.config = { theme: { extend: { screens: { '2xl': '1440px' }, fontFamily: { sans: ['Titillium Web', 'sans-serif'] } } } }
   </script>
   <style>
     .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterMobile.jpg') no-repeat; background-size: cover; background-position: center; }

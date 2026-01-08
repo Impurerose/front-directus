@@ -1,10 +1,10 @@
 /**
  * SectionQuoter - Placeholder para el cotizador
- * 
+ *
  * En DESARROLLO (npm run dev):
  *   - Muestra un placeholder visual del cotizador
  *   - No carga el cotizador real (evita conflictos React 17 vs 19)
- * 
+ *
  * En PRODUCCIÓN (HTML generado):
  *   - El div#quoter-mount será usado por Single-SPA
  *   - El placeholder se reemplaza por el cotizador real
@@ -12,18 +12,13 @@
 
 const SectionQuoter = ({ destino = "[Destino]", geo = "ar" }) => {
   return (
-    <section className="bg-bg-alt-secondary py-4">
-      <div className="container mx-auto px-4 lg:px-0 max-w-[358px] md:max-w-[548px] lg:max-w-[1200px]">
-        
+    <div className="w-full py-6 bg-bg-alt-secondary max-w-full md:max-w-[834px] xl:max-w-[1366px] mx-auto">
+      <div className="py-6 px-4 max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto lg:px-0">
         {/* 
           Mount Point del Cotizador
           En producción, Single-SPA montará el cotizador aquí
         */}
-        <div 
-          id="quoter-mount"
-          data-geo={geo}
-          className="max-w-4xl mx-auto"
-        >
+        <div id="quoter-mount" data-geo={geo} className="mx-auto">
           {/* 
             PLACEHOLDER VISUAL (solo visible en desarrollo)
             En producción este contenido será reemplazado por el cotizador real
@@ -31,17 +26,17 @@ const SectionQuoter = ({ destino = "[Destino]", geo = "ar" }) => {
           <div className="bg-white/80 rounded-2xl p-6 shadow-lg">
             <div className="text-center py-12">
               <div className="inline-block mb-4">
-                <svg 
-                  className="w-16 h-16 text-[#0059BA] animate-pulse" 
-                  fill="none" 
-                  stroke="currentColor" 
+                <svg
+                  className="w-16 h-16 text-[#0059BA] animate-pulse"
+                  fill="none"
+                  stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" 
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
               </div>
@@ -51,11 +46,13 @@ const SectionQuoter = ({ destino = "[Destino]", geo = "ar" }) => {
               <p className="text-gray-500 text-sm">
                 En el HTML final, aquí se cargará el cotizador interactivo
               </p>
-              
+
               {/* Mockup visual del formulario */}
               <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
                 <div className="bg-gray-100 rounded-lg p-4 h-14 flex items-center text-left">
-                  <span className="text-gray-400 text-sm">¿A dónde viajás?</span>
+                  <span className="text-gray-400 text-sm">
+                    ¿A dónde viajás?
+                  </span>
                 </div>
                 <div className="bg-gray-100 rounded-lg p-4 h-14 flex items-center text-left">
                   <span className="text-gray-400 text-sm">¿Cuándo viajás?</span>
@@ -67,16 +64,15 @@ const SectionQuoter = ({ destino = "[Destino]", geo = "ar" }) => {
                   <span className="text-white font-semibold">Cotizar</span>
                 </div>
               </div>
-              
+
               <div className="mt-6 text-xs text-gray-400">
                 💡 Modo desarrollo - El cotizador real se carga en producción
               </div>
             </div>
           </div>
         </div>
-        
       </div>
-    </section>
+    </div>
   );
 };
 

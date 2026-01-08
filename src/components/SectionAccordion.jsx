@@ -9,8 +9,9 @@ export default function SectionAccordion({ title, items }) {
   };
 
   return (
-    <div className="bg-[#f2f2f2] w-full py-8 2xl:py-16 px-4 2xl:px-[185px]">
-      <div className="max-w-[390px] md:max-w-[548px] 2xl:max-w-[792px] flex flex-col mx-auto">
+    <div className="bg-[#f2f2f2] mx-auto w-bg-[#f2f2f2]full py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px]">
+      <div className="max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] mx-auto px-4 2xl:px-[185px]">
+        <div className="max-w-[792px] flex flex-col mx-auto">
         <div className="flex flex-col gap-10 w-full">
           {/* Title */}
           <div className="w-full">
@@ -77,6 +78,7 @@ export default function SectionAccordion({ title, items }) {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

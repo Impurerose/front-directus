@@ -48,6 +48,22 @@
   </div>
 </div>
 
+
+<div class="w-full py-6 bg-bg-alt-secondary max-w-full md:max-w-[834px] xl:max-w-[1366px] mx-auto">
+  <div class="py-6 px-4 max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto lg:px-0">
+    
+    <!-- Mount Point del Cotizador -->
+    <div 
+      id="quoter-mount"
+      data-geo="BR"
+      class="mx-auto"
+    >
+      <!-- Este div será reemplazado por el cotizador real cuando se cargue Single-SPA -->
+    </div>
+    
+  </div>
+</div>
+
 <!-- ImageText Principal - ¿Qué necesito para viajar? -->
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
   <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
@@ -65,76 +81,62 @@
 <div class="w-full py-8 2xl:py-16">
   <div class="bg-[#f2f2f2] max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] mx-auto px-4 2xl:px-[185px]">
     <div class="max-w-[792px] flex flex-col mx-auto">
-    <div class="flex flex-col gap-10 w-full">
-      <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba]">Documentos necesarios para ingresar a Brasil</h2>
-      <div class="flex flex-col gap-4 w-full" data-accordion-group>
-        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
-          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
-            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Pasaporte vigente</h3>
-            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
-          </button>
-          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Tu pasaporte debe tener una validez mínima de 6 meses desde la fecha de ingreso a Brasil. Asegúrate de verificar la fecha de vencimiento antes de viajar y que tenga al menos dos páginas en blanco para los sellos de entrada y salida.</p></div>
+      <div class="flex flex-col gap-10 w-full">
+        <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba]">Documentos necesarios para ingresar a Brasil</h2>
+        <div class="flex flex-col gap-4 w-full" data-accordion-group>
+          <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+            <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+              <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+              <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Pasaporte vigente</h3>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Tu pasaporte debe tener una validez mínima de 6 meses desde la fecha de ingreso a Brasil. Asegúrate de verificar la fecha de vencimiento antes de viajar y que tenga al menos dos páginas en blanco para los sellos de entrada y salida.</p></div>
+            </div>
           </div>
-        </div>
-        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
-          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
-            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Seguro de viaje</h3>
-            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
-          </button>
-          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Es altamente recomendable contratar un seguro de viaje que cubra gastos médicos, cancelaciones y pérdida de equipaje durante tu estadía en Brasil. Algunos seguros también incluyen asistencia legal y repatriación sanitaria.</p></div>
+          <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+            <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+              <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+              <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Seguro de viaje</h3>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Es altamente recomendable contratar un seguro de viaje que cubra gastos médicos, cancelaciones y pérdida de equipaje durante tu estadía en Brasil. Algunos seguros también incluyen asistencia legal y repatriación sanitaria.</p></div>
+            </div>
           </div>
-        </div>
-        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
-          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
-            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Comprobante de alojamiento</h3>
-            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
-          </button>
-          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Reserva de hotel, Airbnb o carta de invitación si te hospedas con familiares o amigos en Brasil. Este documento debe incluir las fechas de tu estadía y la dirección completa del lugar donde te alojarás.</p></div>
+          <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+            <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+              <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+              <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Comprobante de alojamiento</h3>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Reserva de hotel, Airbnb o carta de invitación si te hospedas con familiares o amigos en Brasil. Este documento debe incluir las fechas de tu estadía y la dirección completa del lugar donde te alojarás.</p></div>
+            </div>
           </div>
-        </div>
-        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
-          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
-            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Pasaje de regreso</h3>
-            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
-          </button>
-          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Ticket aéreo o comprobante de viaje que demuestre tu fecha de salida de Brasil. Esto garantiza a las autoridades migratorias que planeas abandonar el país dentro del período permitido de tu visa o exención de visa.</p></div>
+          <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
+            <button data-accordion-button class="flex items-center gap-2 w-full text-left">
+              <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
+              <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Pasaje de regreso</h3>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Ticket aéreo o comprobante de viaje que demuestre tu fecha de salida de Brasil. Esto garantiza a las autoridades migratorias que planeas abandonar el país dentro del período permitido de tu visa o exención de visa.</p></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-</div>
-<div class="w-full py-4">
-  <div class="bg-bg-alt-secondary max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto px-4 lg:px-0">
-    
-    <!-- Mount Point del Cotizador -->
-    <div 
-      id="quoter-mount"
-      data-geo="BR"
-      class="max-w-4xl mx-auto relative z-[99]"
-    >
-      <!-- Este div será reemplazado por el cotizador real cuando se cargue Single-SPA -->
-    </div>
-    
-  </div>
 </div>
 
 <!-- ImageText - ¿Es obligatorio el seguro? -->
-<div class="bg-white w-full py-9 2xl:py-16">
-  <div class="flex flex-col 2xl:flex-row-reverse 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+<div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
+  <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
       <img alt="Seguro de viaje" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
     </div>
@@ -146,7 +148,7 @@
 </div>
 
 <!-- ImageText - ¿Necesitas Visa? -->
-<div class="bg-white w-full py-9 2xl:py-16">
+<div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
   <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
       <img alt="Visa para viajar" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
@@ -159,8 +161,8 @@
 </div>
 
 <!-- ImageText - ¿Qué vacunas son obligatorias? -->
-<div class="bg-white w-full py-9 2xl:py-16">
-  <div class="flex flex-col 2xl:flex-row-reverse 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+<div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
+  <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
       <img alt="Vacunas obligatorias" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
     </div>

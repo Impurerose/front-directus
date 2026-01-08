@@ -18,7 +18,7 @@ const SectionQuoter = ({ destino = "[Destino]", geo = "ar" }) => {
           Mount Point del Cotizador
           En producción, Single-SPA montará el cotizador aquí
         */}
-        <div id="quoter-mount" data-geo={geo} className="mx-auto">
+        <div id="quoter-mount" data-geo={geo} className="max-w-[926px] mx-auto">
           {/* 
             PLACEHOLDER VISUAL (solo visible en desarrollo)
             En producción este contenido será reemplazado por el cotizador real

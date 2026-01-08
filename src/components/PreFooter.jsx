@@ -4,6 +4,10 @@ import Button from './Button';
 import './PreFooter.css';
 
 const PreFooter = () => {
+  const handleCotizar = () => {
+    window.location.href = 'https://assist-365.com/products';
+  };
+
   return (
     <div className="w-full flex justify-center">
       <div className="w-full max-w-[1366px] prefooter-container h-[340px] flex flex-col items-center justify-end pb-8">
@@ -25,6 +29,7 @@ const PreFooter = () => {
             iconPosition="right"
             size="large"
             classes="w-full lg:w-auto flex justify-start mt-4 lg:mt-0"
+            onClick={handleCotizar}
           >
             Cotizá tu asistencia
           </Button>

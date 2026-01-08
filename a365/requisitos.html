@@ -351,7 +351,7 @@
         <!-- Secondary cards container -->
         <div class="flex flex-col gap-4 2xl:w-[440px]">
           
-          <!-- Secondary card 2 (blogPosts[1]) with AirplaneTilt icon -->
+          <!-- Secondary card 2 (blogPosts[1]) with Files icon -->
           <div class="bg-white border border-[#E7F2FF] rounded-xl p-6 flex gap-6" data-blog-secondary-1>
             <div class="flex-shrink-0">
               <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 40px;"></i>
@@ -454,7 +454,7 @@
 </script>
 
 <script>
-  // Fetch desde API de producción
+  // Fetch y renderizado del blog desde WordPress API
   (async function loadBlogPosts() {
     const geo = 'ar';
     const blogContainer = document.querySelector('[data-blog-section]');
@@ -472,6 +472,7 @@
       
       const posts = await response.json();
       
+      // Procesar posts
       const processedPosts = posts.map(post => {
         let thumbnailUrl = '';
         if (post.schema && post.schema['@graph']) {
@@ -511,7 +512,7 @@
         if (link) link.href = processedPosts[2].link;
       }
       
-      // Actualizar posts secundarios
+      // Actualizar post secundario 1 (índice 1)
       const secondaryPost1 = blogContainer.querySelector('[data-blog-secondary-1]');
       if (secondaryPost1 && processedPosts[1]) {
         const title = secondaryPost1.querySelector('[data-blog-title]');
@@ -523,6 +524,7 @@
         if (link) link.href = processedPosts[1].link;
       }
       
+      // Actualizar post secundario 2 (índice 0)
       const secondaryPost2 = blogContainer.querySelector('[data-blog-secondary-2]');
       if (secondaryPost2 && processedPosts[0]) {
         const title = secondaryPost2.querySelector('[data-blog-title]');
@@ -546,7 +548,7 @@
   <!-- SystemJS para cargar módulos -->
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
 
-  <!-- SystemJS Import Map (LOCALHOST) -->
+  <!-- SystemJS Import Map -->
   <script type="systemjs-importmap">
   {
     "imports": {
@@ -554,11 +556,11 @@
       "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
       "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
       "react-router-dom": "https://cdn.jsdelivr.net/npm/react-router-dom@6.26.2/dist/umd/react-router-dom.production.min.js",
-      "@a365/api": "http://localhost:5001/a365-api.js",
-      "@a365/authorization-sdk": "http://localhost:4046/a365-authorization-sdk.js",
-      "@a365/core": "http://localhost:5049/a365-core.js",
-      "@a365/dsys": "http://localhost:5057/a365-dsys.js",
-      "@a365/quoter": "http://localhost:5007/a365-quoter.js"
+      "@a365/api": "https://assist-365.com/api/a365-api.js?v=101",
+      "@a365/authorization-sdk": "https://assist-365.com/modules/authorization-sdk/a365-authorization-sdk.js?v=101",
+      "@a365/core": "https://assist-365.com/core/a365-core.js?v=101",
+      "@a365/dsys": "https://assist-365.com/dsys/a365-dsys.js?v=101",
+      "@a365/quoter": "https://assist-365.com/quoter/a365-quoter.js?v=101"
     }
   }
   </script>
@@ -591,7 +593,7 @@
       });
 
       window.addEventListener('load', function() {
-        console.log('🚀 Cargando cotizador para Brasil (DEV MODE)...');
+        console.log('🚀 Cargando cotizador para Brasil...');
         
         Promise.all([
           System.import('react'),
@@ -654,7 +656,7 @@
             container
           );
           
-          console.log('✅ Cotizador montado correctamente (DEV)');
+          console.log('✅ Cotizador montado correctamente');
         }).catch(function(err) {
           console.error('❌ Error cargando cotizador:', err);
         });

@@ -24,7 +24,7 @@ const section3 = `
       <div class="flex flex-col gap-4 w-full" data-accordion-group>
 ${accordionAduanas.map(item => `        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
           <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <i class="ph-duotone ph-airplane-takeoff text-[#7BD0C2]" style="font-size: 32px;"></i>
+            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
             <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">${item.title}</h3>
             <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
             <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>

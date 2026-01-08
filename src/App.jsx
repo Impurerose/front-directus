@@ -63,7 +63,7 @@ const defaultFaqItems = [
   },
 ];
 
-function App({ destino = "Brasil", geo = "br", accordionItems = defaultAccordionItems, faqItems = defaultFaqItems } = {}) {
+function App({ destino = "Brasil", geo = "ar", accordionItems = defaultAccordionItems, faqItems = defaultFaqItems } = {}) {
   const [template, setTemplate] = useState("brasil");
 
   useEffect(() => {

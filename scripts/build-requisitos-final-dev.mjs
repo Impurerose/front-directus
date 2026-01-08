@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 console.log('🚀 Ensamblando HTML completo de Requisitos (DEV MODE)...\n');
 
 const destino = 'Brasil';
-const geo = 'br';
+const geo = 'ar';
 
 // Leer data de requisitos
 const dataPath = path.join(__dirname, '..', 'src', 'data', 'requisitos.json');
@@ -92,7 +92,7 @@ const sectionBlog = `
               <h3 class="text-xl font-semibold text-[#31363A]" data-blog-title>Cargando artículo...</h3>
               <p class="text-base text-[#70777C] leading-6" data-blog-desc>Cargando descripción...</p>
             </div>
-            <a href="#" data-blog-link class="inline-flex items-center gap-2 px-4 py-2 bg-[#F2F2F2] text-[#31363A] font-semibold rounded-xl hover:bg-[#E7F2FF] transition-colors w-fit text-sm">
+            <a href="#" data-blog-link class="inline-flex items-center justify-center gap-2 px-4 py-[10px] h-[48px] text-lg font-semibold rounded-xl bg-white border-2 border-[#006FE8] text-[#006FE8] hover:border-[#0059BA] hover:text-[#0059BA] transition-all duration-300 w-fit focus:outline-none focus:ring-4 focus:ring-[#006FE8] focus:ring-opacity-100">
               Leer más
               <i class="ph ph-arrow-right" style="font-size: 16px; font-weight: bold;"></i>
             </a>
@@ -105,14 +105,14 @@ const sectionBlog = `
           <!-- Secondary card 2 (blogPosts[1]) with AirplaneTilt icon -->
           <div class="bg-white border border-[#E7F2FF] rounded-xl p-6 flex gap-6" data-blog-secondary-1>
             <div class="flex-shrink-0">
-              <i class="ph ph-airplane-tilt text-[#7BD0C2]" style="font-size: 40px;"></i>
+              <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 40px;"></i>
             </div>
             <div class="flex flex-col gap-4">
               <div class="flex flex-col gap-1">
                 <h3 class="text-xl font-semibold text-[#31363A]" data-blog-title>Cargando artículo...</h3>
                 <p class="text-base text-[#70777C] leading-6" data-blog-desc>Cargando descripción...</p>
               </div>
-              <a href="#" data-blog-link class="inline-flex items-center gap-2 px-4 py-2 bg-[#F2F2F2] text-[#31363A] font-semibold rounded-xl hover:bg-[#E7F2FF] transition-colors w-fit text-sm">
+              <a href="#" data-blog-link class="inline-flex items-center justify-center gap-2 px-4 py-[10px] h-[48px] text-lg font-semibold rounded-xl bg-white border-2 border-[#006FE8] text-[#006FE8] hover:border-[#0059BA] hover:text-[#0059BA] transition-all duration-300 w-fit focus:outline-none focus:ring-4 focus:ring-[#006FE8] focus:ring-opacity-100">
                 Leer más
                 <i class="ph ph-arrow-right" style="font-size: 16px; font-weight: bold;"></i>
               </a>
@@ -129,7 +129,7 @@ const sectionBlog = `
                 <h3 class="text-xl font-semibold text-[#31363A]" data-blog-title>Cargando artículo...</h3>
                 <p class="text-base text-[#70777C] leading-6" data-blog-desc>Cargando descripción...</p>
               </div>
-              <a href="#" data-blog-link class="inline-flex items-center gap-2 px-4 py-2 bg-[#F2F2F2] text-[#31363A] font-semibold rounded-xl hover:bg-[#E7F2FF] transition-colors w-fit text-sm">
+              <a href="#" data-blog-link class="inline-flex items-center justify-center gap-2 px-4 py-[10px] h-[48px] text-lg font-semibold rounded-xl bg-white border-2 border-[#006FE8] text-[#006FE8] hover:border-[#0059BA] hover:text-[#0059BA] transition-all duration-300 w-fit focus:outline-none focus:ring-4 focus:ring-[#006FE8] focus:ring-opacity-100">
                 Leer más
                 <i class="ph ph-arrow-right" style="font-size: 16px; font-weight: bold;"></i>
               </a>
@@ -164,7 +164,7 @@ const sectionPreFooter = `
       </h2>
       
       <div class="w-full lg:w-auto flex justify-start mt-4 lg:mt-0">
-        <button class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-lg py-[10px] h-[48px] bg-[#006FE8] focus:bg-[#0059BA] text-white hover:bg-[#0059BA] active:bg-[#004A9C] focus:ring-[#C2DFFF] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
+        <button onclick="window.location.href='https://assist-365.com/products'" class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-lg py-[10px] h-[48px] bg-[#006FE8] focus:bg-[#0059BA] text-white hover:bg-[#0059BA] active:bg-[#004A9C] focus:ring-[#C2DFFF] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
           Cotizá tu asistencia
           <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 20px; font-weight: bold;"></i>
         </button>

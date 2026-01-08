@@ -9,17 +9,18 @@ const SectionBlog = ({ geo = "ar" }) => {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        const url = `https://assist-365.com/blog/${geo}/wp-json/wp/v2/posts?per_page=3`;
+        const geoLower = (geo || "ar").toLowerCase();
+        const url = `https://assist-365.com/blog/${geoLower}/wp-json/wp/v2/posts?per_page=3`;
         const response = await fetch(url);
         if (!response.ok) throw new Error("Error fetching posts");
 
         const allPosts = await response.json();
 
         const processedPosts = allPosts.map((post) => {
-          // Buscar la URL de la miniatura en schema.@graph
+          // Buscar la URL de la miniatura en yoast_head_json.schema.@graph
           let thumbnailUrl = "";
-          if (post.schema && post.schema["@graph"]) {
-            const graphItem = post.schema["@graph"].find(
+          if (post.yoast_head_json?.schema?.["@graph"]) {
+            const graphItem = post.yoast_head_json.schema["@graph"].find(
               (item) => item.thumbnailUrl
             );
             if (graphItem) {
@@ -63,6 +64,12 @@ const SectionBlog = ({ geo = "ar" }) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
+  const handleOpenPost = (link) => {
+    if (link && link !== "#") {
+      window.open(link, "_blank", "noopener,noreferrer");
+    }
+  };
+
   if (loading) {
     return (
       <div className="w-full flex items-center justify-center py-16">
@@ -73,9 +80,33 @@ const SectionBlog = ({ geo = "ar" }) => {
     );
   }
 
-  if (!blogPosts || blogPosts.length === 0) {
-    return null;
-  }
+  // Mostrar sección aunque no haya posts (con placeholders)
+  const displayPosts =
+    blogPosts.length > 0
+      ? blogPosts
+      : [
+          {
+            id: 1,
+            title: "Cargando artículo...",
+            description: "Cargando descripción...",
+            link: "#",
+            thumbnailUrl: "https://placehold.co/328x184",
+          },
+          {
+            id: 2,
+            title: "Cargando artículo...",
+            description: "Cargando descripción...",
+            link: "#",
+            thumbnailUrl: "https://placehold.co/328x184",
+          },
+          {
+            id: 3,
+            title: "Cargando artículo...",
+            description: "Cargando descripción...",
+            link: "#",
+            thumbnailUrl: "https://placehold.co/328x184",
+          },
+        ];
 
   return (
     <div className="w-full flex items-center justify-center py-16">
@@ -87,7 +118,8 @@ const SectionBlog = ({ geo = "ar" }) => {
               Guías y consejos para viajeros
             </h2>
             <p className="text-2xl text-[#31363A] leading-8 2xl:mb-6">
-              Explorá nuestro blog para descubrir destinos y prepararte mejor para cada aventura.
+              Explorá nuestro blog para descubrir destinos y prepararte mejor
+              para cada aventura.
             </p>
             <Button
               variant="default"
@@ -105,32 +137,32 @@ const SectionBlog = ({ geo = "ar" }) => {
           {/* Right section - Blog cards */}
           <div className="flex flex-col 2xl:flex-row gap-4 flex-1">
             {/* Primary card - First post */}
-            {blogPosts[2] && (
+            {displayPosts[2] && (
               <div className="bg-white rounded-xl p-6 flex flex-col gap-6 2xl:max-w-[376px] flex-1">
                 <div className="w-full h-[184px] overflow-hidden rounded-lg">
                   <img
-                    src={blogPosts[2].thumbnailUrl || "https://placehold.co/328x184"}
-                    alt={blogPosts[2].title}
+                    src={
+                      displayPosts[2].thumbnailUrl ||
+                      "https://placehold.co/328x184"
+                    }
+                    alt={displayPosts[2].title}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-1">
                     <h3 className="text-xl font-semibold text-[#31363A]">
-                      {blogPosts[2].title}
+                      {displayPosts[2].title}
                     </h3>
                     <p className="text-base text-[#70777C] leading-6">
-                      {blogPosts[2].description}
+                      {displayPosts[2].description}
                     </p>
                   </div>
                   <Button
-                    variant="default"
                     color="secondary"
-                    size="small"
                     icon={<ArrowRight size={16} weight="bold" />}
                     iconPosition="right"
-                    classes="w-fit"
-                    onClick={() => window.open(blogPosts[2].link, "_blank", "noopener,noreferrer")}
+                    onClick={() => handleOpenPost(displayPosts[2].link)}
                   >
                     Leer más
                   </Button>
@@ -141,7 +173,7 @@ const SectionBlog = ({ geo = "ar" }) => {
             {/* Secondary cards container */}
             <div className="flex flex-col gap-4 2xl:w-[440px]">
               {/* Secondary card 2 */}
-              {blogPosts[1] && (
+              {displayPosts[1] && (
                 <div className="bg-white border border-[#E7F2FF] rounded-xl p-6 flex gap-6">
                   <div className="flex-shrink-0">
                     <AirplaneTilt size={40} className="text-[#7BD0C2]" />
@@ -149,20 +181,17 @@ const SectionBlog = ({ geo = "ar" }) => {
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-1">
                       <h3 className="text-xl font-semibold text-[#31363A]">
-                        {blogPosts[1].title}
+                        {displayPosts[1].title}
                       </h3>
                       <p className="text-base text-[#70777C] leading-6">
-                        {blogPosts[1].description}
+                        {displayPosts[1].description}
                       </p>
                     </div>
                     <Button
-                      variant="default"
                       color="secondary"
-                      size="small"
                       icon={<ArrowRight size={16} weight="bold" />}
                       iconPosition="right"
-                      classes="w-fit"
-                      onClick={() => window.open(blogPosts[1].link, "_blank", "noopener,noreferrer")}
+                      onClick={() => handleOpenPost(displayPosts[1].link)}
                     >
                       Leer más
                     </Button>
@@ -171,7 +200,7 @@ const SectionBlog = ({ geo = "ar" }) => {
               )}
 
               {/* Secondary card 3 */}
-              {blogPosts[0] && (
+              {displayPosts[0] && (
                 <div className="bg-white border border-[#E7F2FF] rounded-xl p-6 flex gap-6">
                   <div className="flex-shrink-0">
                     <Mountains size={40} className="text-[#7BD0C2]" />
@@ -179,20 +208,17 @@ const SectionBlog = ({ geo = "ar" }) => {
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-1">
                       <h3 className="text-xl font-semibold text-[#31363A]">
-                        {blogPosts[0].title}
+                        {displayPosts[0].title}
                       </h3>
                       <p className="text-base text-[#70777C] leading-6">
-                        {blogPosts[0].description}
+                        {displayPosts[0].description}
                       </p>
                     </div>
                     <Button
-                      variant="default"
                       color="secondary"
-                      size="small"
                       icon={<ArrowRight size={16} weight="bold" />}
                       iconPosition="right"
-                      classes="w-fit"
-                      onClick={() => window.open(blogPosts[0].link, "_blank", "noopener,noreferrer")}
+                      onClick={() => handleOpenPost(displayPosts[0].link)}
                     >
                       Leer más
                     </Button>

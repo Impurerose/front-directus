@@ -24,6 +24,7 @@ const section1 = `<!DOCTYPE html>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   
   <!-- Quoter CSS -->
+  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/core_tailwind.css">
   <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/quoter.min.css">
   
   <script>

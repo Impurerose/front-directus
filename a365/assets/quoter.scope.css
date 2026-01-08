@@ -1,0 +1,10 @@
+.quoter {
+  /* Esto restablece algunos estilos que podrían interferir */
+  all: initial;
+  font-family: "Titillium Web", sans-serif;
+  box-sizing: border-box;
+}
+
+.quoter * {
+  box-sizing: border-box;
+}

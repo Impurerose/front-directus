@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🚀 Ensamblando HTML completo...\n');
+console.log('🚀 Ensamblando HTML completo (DEV MODE)...\n');
 
 const destino = 'Brasil';
 
@@ -55,13 +55,10 @@ const section8 = `
         </div>
       </div>
 
-      <!-- Plan 2: Premium cover (con badge) -->
+      <!-- Plan 2: World cover (sin badge) -->
       <div class="flex flex-col relative">
-        <div class="absolute left-4 -top-5 px-3 py-2 rounded-full z-10" style="background-color: #D3EFD4;">
-          <p class="text-sm font-semibold text-[#31363A]">El más elegido</p>
-        </div>
-        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #31319B;">
-          <h3 class="text-white font-semibold text-3xl">Premium cover</h3>
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #0059BA;">
+          <h3 class="text-white font-semibold text-3xl">World cover</h3>
         </div>
         <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
           <div class="flex items-start gap-2">
@@ -340,25 +337,25 @@ const section5 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-sect
 const section6 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section6.txt'), 'utf-8');
 const section7 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil-section7.txt'), 'utf-8');
 
-// Scripts de Single-SPA para el cotizador
+// Scripts de Single-SPA para el cotizador (LOCAL)
 const singleSpaScripts = `
-  <!-- Single-SPA Stack para Cotizador -->
+  <!-- Single-SPA Stack para Cotizador (DEV MODE - Assets locales) -->
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/single-spa-react@5.1.4/lib/system/single-spa-react.min.js"></script>
 
-  <!-- SystemJS Import Map -->
+  <!-- SystemJS Import Map (LOCAL) -->
   <script type="systemjs-importmap">
   {
     "imports": {
       "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js",
       "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
       "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
-      "@a365/api": "https://assist-365.com/api/a365-api.js?v=101",
-      "@a365/authorization-sdk": "https://assist-365.com/modules/authorization-sdk/a365-authorization-sdk.js?v=101",
-      "@a365/core": "https://assist-365.com/core/a365-core.js?v=101",
-      "@a365/dsys": "https://assist-365.com/dsys/a365-dsys.js?v=101",
-      "@a365/quoter": "https://assist-365.com/quoter/a365-quoter.js?v=101"
+      "@a365/api": "http://localhost:5001/a365-api.js",
+      "@a365/authorization-sdk": "http://localhost:4046/a365-authorization-sdk.js",
+      "@a365/core": "http://localhost:5049/a365-core.js",
+      "@a365/dsys": "http://localhost:5057/a365-dsys.js",
+      "@a365/quoter": "http://localhost:5007/a365-quoter.js"
     }
   }
   </script>
@@ -381,7 +378,7 @@ const singleSpaScripts = `
 
       // Montar cotizador cuando cargue la página
       window.addEventListener('load', function() {
-        console.log('🚀 Cargando cotizador para ${destino}...');
+        console.log('🚀 Cargando cotizador para ${destino}... (DEV MODE)');
         console.log('📍 Geo:', geoConfig);
         
         System.import('@a365/quoter').then(function() {
@@ -399,7 +396,7 @@ const singleSpaScripts = `
           });
           
           singleSpa.start();
-          console.log('✅ Cotizador montado correctamente');
+          console.log('✅ Cotizador montado correctamente (assets locales)');
         }).catch(function(err) {
           console.error('❌ Error cargando cotizador:', err);
         });
@@ -412,15 +409,16 @@ const singleSpaScripts = `
 const completeHTML = section1 + sectionQuoter + section2 + section3 + section4 + section5 + section6 + section7 + section8 + section9 + javascript + singleSpaScripts;
 
 // Guardar archivo completo
-fs.writeFileSync(path.join(__dirname, '..', 'a365', 'brasil.html'), completeHTML, 'utf-8');
+fs.writeFileSync(path.join(__dirname, '..', 'a365', 'brasil-dev.html'), completeHTML, 'utf-8');
 
 console.log('✅ Sección Cotizador cargada (posición 2)');
 console.log('✅ Sección 8 (Plans) generada');
 console.log('✅ Sección 9 (PreFooter) generada');
 console.log('✅ JavaScript de accordions incluido');
-console.log('✅ Single-SPA scripts incluidos');
-console.log('\n🎉 ¡Archivo completo generado: a365/brasil.html!\n');
-console.log('📁 Archivo listo para usar en Directus');
+console.log('✅ Single-SPA scripts incluidos (LOCAL MODE)');
+console.log('\n🎉 ¡Archivo completo generado: a365/brasil-dev.html!\n');
+console.log('📁 Archivo listo para desarrollo local');
 console.log('🔧 Incluye todas las secciones con accordions funcionales');
 console.log('🎯 Cotizador integrado con Single-SPA (React 17)');
 console.log('🌎 Configurado para Brasil (BR, entity:3, country:31)');
+console.log('⚠️  Assets cargados desde ./assets/ (copiar archivos del quoter)');

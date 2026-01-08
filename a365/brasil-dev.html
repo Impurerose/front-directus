@@ -7,9 +7,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   
-  <!-- Quoter CSS -->
-  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/core_tailwind.css">
-  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/quoter.min.css">
+  <!-- Quoter CSS (DEV - localhost) -->
+  <link rel="stylesheet" href="http://localhost:5057/core_tailwind.css">
+  <link rel="stylesheet" href="http://localhost:5007/quoter.min.css">
   
   <script>
     tailwind.config = { theme: { extend: { screens: { '2xl': '1440px' } } } }
@@ -33,68 +33,98 @@
 </div>
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
   <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
-    <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
-      <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+    <div class="flex items-center justify-center px-4 mb-5 md:px-0 md:mb-0">
+      <img src="https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/products/seguro-viaje-brasil-800x600.jpg" alt="Brasil" class="2xl:w-[560px] 2xl:h-[420px] md:w-[358px] md:h-[268px] w-[358px] h-[268px] rounded-2xl object-cover">
     </div>
-    <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
-      <h2 class="2xl:text-5xl leading-[56px] font-semibold text-[#0059ba] text-3xl pt-8 pb-4">¿Qué necesito para viajar a Brasil?</h2>
-      <p class="text-base leading-6 text-[#70777c]">Lorem ipsum dolor sit amet consectetur. Dictum molestie in tellus vitae.</p>
+    <div class="flex flex-col w-full max-w-[358px] md:max-w-full 2xl:max-w-[564px] px-4 md:px-0 2xl:px-0">
+      <h2 class="text-4xl font-semibold text-[#0059BA] mb-8">Información general de Brasil</h2>
+      <p class="text-[#31363A] text-base">
+        Viajar a Brasil abre las puertas a un universo de diversidad cultural, paisajes impresionantes y una energía contagiosa.
+        Desde las playas de Copacabana hasta la selva amazónica, este país ofrece experiencias únicas para todos los gustos.
+        Prepararte adecuadamente con un seguro de viaje te permitirá disfrutar al máximo de tu aventura brasileña.
+      </p>
     </div>
   </div>
 </div>
-<div class="bg-[#f2f2f2] w-full py-8 2xl:py-16 px-4 2xl:px-[185px]">
-  <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[792px] flex flex-col mx-auto">
-    <div class="flex flex-col gap-10 w-full">
-      <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba]">Documentos necesarios para ingresar a Brasil</h2>
-      <div class="flex flex-col gap-4 w-full" data-accordion-group>
-        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
-          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
-            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
-            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
-          </button>
-          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
-          </div>
+
+<div class="bg-white w-full py-9 2xl:py-16" data-accordion-group>
+  <div class="2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+    <div class="flex items-center justify-center mb-4 md:mb-8">
+      <h2 class="text-4xl font-semibold text-[#0059BA] px-4">Requisitos para viajar a Brasil</h2>
+    </div>
+    
+    
+    <div class="border-b border-[#E7F2FF] px-4" data-accordion-item>
+      <button class="w-full flex items-center justify-between py-4 text-left" data-accordion-button>
+        <h3 class="text-lg font-semibold text-[#31363A]">undefined</h3>
+        <div class="flex-shrink-0 ml-4">
+          <i class="ph ph-caret-down text-[#0059BA] hidden" style="font-size: 24px;" data-icon-down></i>
+          <i class="ph ph-caret-up text-[#0059BA] " style="font-size: 24px;" data-icon-up></i>
         </div>
-        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
-          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
-            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
-            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
-          </button>
-          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
-          </div>
-        </div>
-        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
-          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
-            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
-            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
-          </button>
-          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
-          </div>
-        </div>
-        <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
-          <button data-accordion-button class="flex items-center gap-2 w-full text-left">
-            <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>
-            <h3 class="flex-1 text-base font-semibold leading-6 text-[#31363a]">Item requisito</h3>
-            <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-            <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
-          </button>
-          <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
-            <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Lorem ipsum dolor sit amet consectetur. Venenatis etiam commodo sed vitae pretium luctus. Egestas pharetra ipsum non nunc. Ut velit ridiculus dolor leo placerat. Penatibus enim nunc enim placerat. Erat sed neque duis dictumst ac vitae. Mattis non turpis quam eu ut. Tellus ultricies ipsum pellentesque accumsan leo nunc luctus.</p></div>
+      </button>
+      <div class="accordion-content overflow-hidden grid-rows-[1fr] opacity-100" data-accordion-content>
+        <div class="overflow-hidden">
+          <div class="pb-4">
+            <p class="text-[#70777C] text-base">undefined</p>
           </div>
         </div>
       </div>
     </div>
+    
+    <div class="border-b border-[#E7F2FF] px-4" data-accordion-item>
+      <button class="w-full flex items-center justify-between py-4 text-left" data-accordion-button>
+        <h3 class="text-lg font-semibold text-[#31363A]">undefined</h3>
+        <div class="flex-shrink-0 ml-4">
+          <i class="ph ph-caret-down text-[#0059BA] " style="font-size: 24px;" data-icon-down></i>
+          <i class="ph ph-caret-up text-[#0059BA] hidden" style="font-size: 24px;" data-icon-up></i>
+        </div>
+      </button>
+      <div class="accordion-content overflow-hidden grid-rows-[0fr] opacity-0" data-accordion-content>
+        <div class="overflow-hidden">
+          <div class="pb-4">
+            <p class="text-[#70777C] text-base">undefined</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-b border-[#E7F2FF] px-4" data-accordion-item>
+      <button class="w-full flex items-center justify-between py-4 text-left" data-accordion-button>
+        <h3 class="text-lg font-semibold text-[#31363A]">undefined</h3>
+        <div class="flex-shrink-0 ml-4">
+          <i class="ph ph-caret-down text-[#0059BA] " style="font-size: 24px;" data-icon-down></i>
+          <i class="ph ph-caret-up text-[#0059BA] hidden" style="font-size: 24px;" data-icon-up></i>
+        </div>
+      </button>
+      <div class="accordion-content overflow-hidden grid-rows-[0fr] opacity-0" data-accordion-content>
+        <div class="overflow-hidden">
+          <div class="pb-4">
+            <p class="text-[#70777C] text-base">undefined</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-b border-[#E7F2FF] px-4" data-accordion-item>
+      <button class="w-full flex items-center justify-between py-4 text-left" data-accordion-button>
+        <h3 class="text-lg font-semibold text-[#31363A]">undefined</h3>
+        <div class="flex-shrink-0 ml-4">
+          <i class="ph ph-caret-down text-[#0059BA] " style="font-size: 24px;" data-icon-down></i>
+          <i class="ph ph-caret-up text-[#0059BA] hidden" style="font-size: 24px;" data-icon-up></i>
+        </div>
+      </button>
+      <div class="accordion-content overflow-hidden grid-rows-[0fr] opacity-0" data-accordion-content>
+        <div class="overflow-hidden">
+          <div class="pb-4">
+            <p class="text-[#70777C] text-base">undefined</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </div>
+
 <section id="quoter-section" class="bg-gradient-to-b from-gray-50 to-white py-12 lg:py-20">
   <div class="container mx-auto px-4 lg:px-0 max-w-[358px] md:max-w-[548px] lg:max-w-[1200px]">
     
@@ -551,13 +581,10 @@
         </div>
       </div>
 
-      <!-- Plan 2: Premium cover (con badge) -->
+      <!-- Plan 2: World cover (sin badge) -->
       <div class="flex flex-col relative">
-        <div class="absolute left-4 -top-5 px-3 py-2 rounded-full z-10" style="background-color: #D3EFD4;">
-          <p class="text-sm font-semibold text-[#31363A]">El más elegido</p>
-        </div>
-        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #31319B;">
-          <h3 class="text-white font-semibold text-3xl">Premium cover</h3>
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #0059BA;">
+          <h3 class="text-white font-semibold text-3xl">World cover</h3>
         </div>
         <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
           <div class="flex items-start gap-2">
@@ -819,23 +846,23 @@
 </script>
 </body>
 </html>
-  <!-- Single-SPA Stack para Cotizador -->
+  <!-- Single-SPA Stack para Cotizador (DEV MODE - Assets locales) -->
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/single-spa-react@5.1.4/lib/system/single-spa-react.min.js"></script>
 
-  <!-- SystemJS Import Map -->
+  <!-- SystemJS Import Map (LOCAL) -->
   <script type="systemjs-importmap">
   {
     "imports": {
       "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js",
       "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
       "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
-      "@a365/api": "https://assist-365.com/api/a365-api.js?v=101",
-      "@a365/authorization-sdk": "https://assist-365.com/modules/authorization-sdk/a365-authorization-sdk.js?v=101",
-      "@a365/core": "https://assist-365.com/core/a365-core.js?v=101",
-      "@a365/dsys": "https://assist-365.com/dsys/a365-dsys.js?v=101",
-      "@a365/quoter": "https://assist-365.com/quoter/a365-quoter.js?v=101"
+      "@a365/api": "http://localhost:5001/a365-api.js",
+      "@a365/authorization-sdk": "http://localhost:4046/a365-authorization-sdk.js",
+      "@a365/core": "http://localhost:5049/a365-core.js",
+      "@a365/dsys": "http://localhost:5057/a365-dsys.js",
+      "@a365/quoter": "http://localhost:5007/a365-quoter.js"
     }
   }
   </script>
@@ -858,7 +885,7 @@
 
       // Montar cotizador cuando cargue la página
       window.addEventListener('load', function() {
-        console.log('🚀 Cargando cotizador para Brasil...');
+        console.log('🚀 Cargando cotizador para Brasil... (DEV MODE)');
         console.log('📍 Geo:', geoConfig);
         
         System.import('@a365/quoter').then(function() {
@@ -876,7 +903,7 @@
           });
           
           singleSpa.start();
-          console.log('✅ Cotizador montado correctamente');
+          console.log('✅ Cotizador montado correctamente (assets locales)');
         }).catch(function(err) {
           console.error('❌ Error cargando cotizador:', err);
         });

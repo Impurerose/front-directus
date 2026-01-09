@@ -39,11 +39,16 @@
   </style>
 </head>
 <body>
+<!-- Navbar Mount Point -->
+<nav id="navbar-mount"></nav>
+
+<!-- Main Content -->
+<main>
 <!-- Hero Section - Requisitos para viajar -->
 <div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200">
-  <div class="flex flex-col 2xl:items-start 2xl:justify-center pt-[44px] 2xl:pt-0 bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
-    <h1 class="flex flex-row 2xl:flex-col gap-3 text-4xl 2xl:text-7xl text-white pl-4 md:pl-[142px] 2xl:pl-[84px] py-16 2xl:py-[118px]">
-      <span>Requisitos para viajar a </span><span class="font-semibold">Brasil</span><span> en 2025</span>
+  <div class="flex flex-col md:items-start justify-start 2xl:justify-center pt-[44px] 2xl:pt-0 bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
+    <h1 class="text-4xl 2xl:text-7xl text-white pl-4 md:pl-[144px] max-w-full 2xl:max-w-[588px]">
+      Requisitos para viajar a <span class="font-semibold">Brasil</span> en 2025
     </h1>
   </div>
 </div>
@@ -419,6 +424,11 @@
     </div>
   </div>
 </div>
+</main>
+
+<!-- Footer Mount Point -->
+<footer id="footer-mount"></footer>
+
 <script>
   // Inicializar accordions
   document.addEventListener('DOMContentLoaded', function() {
@@ -558,9 +568,12 @@
       "react-router-dom": "https://cdn.jsdelivr.net/npm/react-router-dom@6.26.2/dist/umd/react-router-dom.production.min.js",
       "@a365/api": "https://assist-365.com/api/a365-api.js?v=101",
       "@a365/authorization-sdk": "https://assist-365.com/modules/authorization-sdk/a365-authorization-sdk.js?v=101",
+      "@a365/auth-session": "https://assist-365.com/modules/auth-session/a365-auth-session.js?v=101",
       "@a365/core": "https://assist-365.com/core/a365-core.js?v=101",
       "@a365/dsys": "https://assist-365.com/dsys/a365-dsys.js?v=101",
-      "@a365/quoter": "https://assist-365.com/quoter/a365-quoter.js?v=101"
+      "@a365/quoter": "https://assist-365.com/quoter/a365-quoter.js?v=101",
+      "a365-navbarv2": "https://assist-365.com/layout/navbarv2/a365-navbarv2.js?v=101",
+      "a365-footerv2": "https://assist-365.com/layout/footerv2/a365-footerv2.js?v=101"
     }
   }
   </script>
@@ -660,6 +673,52 @@
           console.log('✅ Cotizador montado correctamente');
         }).catch(function(err) {
           console.error('❌ Error cargando cotizador:', err);
+        });
+      });
+    })();
+  </script>
+
+  <!-- Inicializar Navbar y Footer -->
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        console.log('🚀 Cargando navbar y footer...');
+        
+        Promise.all([
+          System.import('react'),
+          System.import('react-dom'),
+          System.import('@a365/core'),
+          System.import('a365-navbarv2'),
+          System.import('a365-footerv2')
+        ]).then(function(modules) {
+          var React = modules[0];
+          var ReactDOM = modules[1];
+          var navbarModule = modules[3];
+          var footerModule = modules[4];
+          
+          // Montar Navbar
+          var navbarContainer = document.getElementById('navbar-mount');
+          var Navbar = navbarModule.default || navbarModule;
+          if (navbarContainer && Navbar) {
+            ReactDOM.render(
+              React.createElement(Navbar),
+              navbarContainer
+            );
+            console.log('✅ Navbar montado correctamente');
+          }
+          
+          // Montar Footer
+          var footerContainer = document.getElementById('footer-mount');
+          var Footer = footerModule.default || footerModule;
+          if (footerContainer && Footer) {
+            ReactDOM.render(
+              React.createElement(Footer),
+              footerContainer
+            );
+            console.log('✅ Footer montado correctamente');
+          }
+        }).catch(function(err) {
+          console.error('❌ Error cargando navbar/footer:', err);
         });
       });
     })();

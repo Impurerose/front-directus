@@ -55,6 +55,11 @@ const section1 = `<!DOCTYPE html>
   </style>
 </head>
 <body>
+<!-- Navbar Mount Point -->
+<nav id="navbar-mount"></nav>
+
+<!-- Main Content -->
+<main>
 <!-- Hero Section - Requisitos para viajar -->
 <div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200">
   <div class="flex flex-col md:items-start justify-start 2xl:justify-center pt-[44px] 2xl:pt-0 bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">

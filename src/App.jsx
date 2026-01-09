@@ -85,8 +85,13 @@ function App({ destino = "Brasil", geo = "ar", accordionItems = defaultAccordion
   // Template Brasil (default)
   return (
     <>
-      <HeroLandings destino={destino} />
-      <SectionImageText
+      {/* Navbar mount point - System.import cargará el navbar aquí */}
+      <nav id="navbar-mount"></nav>
+
+      {/* Main Content */}
+      <main>
+        <HeroLandings destino={destino} />
+        <SectionImageText
         title={`¿Qué necesito para viajar a ${destino}?`}
         description="Lorem ipsum dolor sit amet consectetur. Dictum molestie in tellus vitae. At amet tortor viverra mi faucibus feugiat aliquet vitae sed. Ipsum urna amet facilisis lectus mauris mi nisl risus. Donec nibh metus luctus massa eget nulla sit odio nibh. Quisque dignissim imperdiet id senectus quis volutpat porttitor eu. Viverra bibendum pellentesque nunc ut. Fames diam quam viverra eu dui nec nam blandit vestibulum. At cum aliquam nibh nunc at cras. Viverra commodo nisl volutpat et netus. Ut cursus pretium mi at. Eget odio nunc ullamcorper commodo. Mauris dictum duis luctus non. Phasellus in fringilla massa adipiscing volutpat mauris maecenas."
         imageSrc="https://placehold.co/486x360"
@@ -132,10 +137,14 @@ function App({ destino = "Brasil", geo = "ar", accordionItems = defaultAccordion
       <SectionQuoter destino={destino} geo={geo} />
       
       <SectionBlog geo={geo} />
-      <SectionCards />
-      <SectionRequirements />
-      <SectionPlans />
-      <PreFooter />
+        <SectionCards />
+        <SectionRequirements />
+        <SectionPlans />
+        <PreFooter />
+      </main>
+
+      {/* Footer mount point - System.import cargará el footer aquí */}
+      <footer id="footer-mount"></footer>
     </>
   );
 }

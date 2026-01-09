@@ -7,10 +7,94 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
-    <title>app</title>
+    
+    <!-- CSS de módulos Single-SPA (DESARROLLO) -->
+    <link rel="stylesheet" href="http://localhost:5057/core_tailwind.css">
+    
+    <!-- SystemJS para cargar microfrontends -->
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
+    
+    <!-- Import map para Single-SPA (DESARROLLO) -->
+    <script type="systemjs-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "react-dom/client": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "react-router-dom": "https://cdn.jsdelivr.net/npm/react-router-dom@6.26.2/dist/umd/react-router-dom.production.min.js",
+        "@a365/auth-session": "http://localhost:5101/a365-auth-session.js",
+        "@a365/core": "http://localhost:5049/a365-core.js",
+        "@a365/dsys": "http://localhost:5057/a365-dsys.js",
+        "@a365/api": "http://localhost:5001/a365-api.js",
+        "@a365/authorization-sdk": "http://localhost:4046/a365-authorization-sdk.js",
+        "a365-navbarv2": "http://localhost:3020/a365-navbarv2.js",
+        "a365-footerv2": "http://localhost:3021/a365-footerv2.js"
+      }
+    }
+    </script>
+    
+    <title>Assist 365 - Landings Dev</title>
   </head>
   <body>
+    <!-- React App monta aquí (incluye mount points para navbar y footer) -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Inicializar Navbar y Footer (después de que React monte) -->
+    <script>
+      (function() {
+        // Esperar a que React monte los divs
+        var checkAndMount = function() {
+          var navbarContainer = document.getElementById('navbar-mount');
+          var footerContainer = document.getElementById('footer-mount');
+          
+          if (!navbarContainer || !footerContainer) {
+            setTimeout(checkAndMount, 50);
+            return;
+          }
+          
+          console.log('🚀 Cargando navbar y footer...');
+          
+          Promise.all([
+            System.import('react'),
+            System.import('react-dom/client'),
+            System.import('@a365/core'),
+            System.import('a365-navbarv2'),
+            System.import('a365-footerv2')
+          ]).then(function(modules) {
+            var React = modules[0];
+            var ReactDOMClient = modules[1];
+            var navbarModule = modules[3];
+            var footerModule = modules[4];
+            
+            // Montar Navbar con React 18 API
+            var Navbar = navbarModule.default || navbarModule;
+            if (navbarContainer && Navbar) {
+              var navbarRoot = ReactDOMClient.createRoot(navbarContainer);
+              navbarRoot.render(React.createElement(Navbar));
+              console.log('✅ Navbar montado correctamente (localhost:3020)');
+            }
+            
+            // Montar Footer con React 18 API
+            var Footer = footerModule.default || footerModule;
+            if (footerContainer && Footer) {
+              var footerRoot = ReactDOMClient.createRoot(footerContainer);
+              footerRoot.render(React.createElement(Footer));
+              console.log('✅ Footer montado correctamente (localhost:3021)');
+            }
+          }).catch(function(err) {
+            console.error('❌ Error cargando navbar/footer:', err);
+          });
+        };
+        
+        // Iniciar el chequeo cuando el DOM esté listo
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', checkAndMount);
+        } else {
+          checkAndMount();
+        }
+      })();
+    </script>
   </body>
 </html>

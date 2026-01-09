@@ -316,9 +316,13 @@ const singleSpaScripts = `
       "react-router-dom": "https://cdn.jsdelivr.net/npm/react-router-dom@6.26.2/dist/umd/react-router-dom.production.min.js",
       "@a365/api": "http://localhost:5001/a365-api.js",
       "@a365/authorization-sdk": "http://localhost:4046/a365-authorization-sdk.js",
+      "@a365/auth-session": "http://localhost:5101/a365-auth-session.js",
       "@a365/core": "http://localhost:5049/a365-core.js",
       "@a365/dsys": "http://localhost:5057/a365-dsys.js",
-      "@a365/quoter": "http://localhost:5007/a365-quoter.js"
+      "@a365/shared-ui": "http://localhost:4047/a365-shared-ui.js",
+      "@a365/quoter": "http://localhost:5007/a365-quoter.js",
+      "a365-navbarv2": "http://localhost:3020/a365-navbarv2.js",
+      "a365-footerv2": "http://localhost:3021/a365-footerv2.js"
     }
   }
   </script>
@@ -422,6 +426,108 @@ const singleSpaScripts = `
       });
     })();
   </script>
+
+  <!-- Interceptor para mockear API update-banner -->
+  <script>
+    (function() {
+      const originalFetch = window.fetch;
+      window.fetch = function(...args) {
+        const url = args[0];
+        
+        // Interceptar llamadas a update-banner y devolver mock
+        if (typeof url === 'string' && url.includes('update-banner')) {
+          console.log('🔄 Interceptado update-banner, devolviendo mock');
+          return Promise.resolve({
+            ok: true,
+            status: 200,
+            json: () => Promise.resolve({ json: {} })
+          });
+        }
+        
+        return originalFetch.apply(this, args);
+      };
+    })();
+  </script>
+
+  <!-- Inicializar Navbar y Footer como aplicaciones Single-SPA embebidas -->
+  <script>
+    (function() {
+      console.log('🚀 Inicializando Single-SPA para navbar y footer...');
+      
+      // Primero cargar Single-SPA y crear contexto global
+      System.import('single-spa').then(function(singleSpaModule) {
+        window.singleSpa = singleSpaModule;
+        console.log('✅ Single-SPA cargado');
+        
+        // Iniciar Single-SPA
+        singleSpaModule.start();
+        console.log('✅ Single-SPA iniciado');
+        
+        // Luego cargar auth-session
+        return System.import('@a365/auth-session');
+      }).then(function() {
+        console.log('✅ Auth session cargado');
+        
+        // Montar Navbar
+        var navbarContainer = document.getElementById('navbar-mount');
+        if (navbarContainer) {
+          System.import('a365-navbarv2').then(function(navbarApp) {
+            var appOrWrappedApp = navbarApp.default || navbarApp;
+            
+            // Single-SPA lifecycle: bootstrap -> mount
+            Promise.resolve()
+              .then(function() {
+                return appOrWrappedApp.bootstrap ? appOrWrappedApp.bootstrap({}) : Promise.resolve();
+              })
+              .then(function() {
+                return appOrWrappedApp.mount({
+                  name: 'a365-navbarv2',
+                  singleSpa: window.singleSpa,
+                  mountParcel: window.singleSpa.mountRootParcel,
+                  domElement: navbarContainer
+                });
+              })
+              .then(function() {
+                console.log('✅ Navbar montado correctamente (Single-SPA)');
+              })
+              .catch(function(err) {
+                console.error('❌ Error montando navbar:', err);
+              });
+          });
+        }
+        
+        // Montar Footer
+        var footerContainer = document.getElementById('footer-mount');
+        if (footerContainer) {
+          System.import('a365-footerv2').then(function(footerApp) {
+            var appOrWrappedApp = footerApp.default || footerApp;
+            
+            // Single-SPA lifecycle: bootstrap -> mount
+            Promise.resolve()
+              .then(function() {
+                return appOrWrappedApp.bootstrap ? appOrWrappedApp.bootstrap({}) : Promise.resolve();
+              })
+              .then(function() {
+                return appOrWrappedApp.mount({
+                  name: 'a365-footerv2',
+                  singleSpa: window.singleSpa,
+                  mountParcel: window.singleSpa.mountRootParcel,
+                  domElement: footerContainer
+                });
+              })
+              .then(function() {
+                console.log('✅ Footer montado correctamente (Single-SPA)');
+              })
+              .catch(function(err) {
+                console.error('❌ Error montando footer:', err);
+              });
+          });
+        }
+      }).catch(function(err) {
+        console.error('❌ Error general cargando Single-SPA:', err);
+      });
+    })();
+  </script>
 `;
 
 // Leer secciones
@@ -430,8 +536,16 @@ const sectionQuoter = fs.readFileSync(path.join(__dirname, '..', 'a365', 'brasil
 const section2 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'requisitos-section2.txt'), 'utf-8');
 const section3 = fs.readFileSync(path.join(__dirname, '..', 'a365', 'requisitos-section3.txt'), 'utf-8');
 
+// Cerrar main y agregar footer
+const mainClosing = `
+</main>
+
+<!-- Footer Mount Point -->
+<footer id="footer-mount"></footer>
+`;
+
 // Combinar todo
-const completeHTML = section1 + sectionQuoter + section2 + section3 + sectionFaqs + sectionBlog + sectionPreFooter + javascript + singleSpaScripts;
+const completeHTML = section1 + sectionQuoter + section2 + section3 + sectionFaqs + sectionBlog + sectionPreFooter + mainClosing + javascript + singleSpaScripts;
 
 // Guardar archivo completo
 fs.writeFileSync(path.join(__dirname, '..', 'a365', 'requisitos-dev.html'), completeHTML, 'utf-8');

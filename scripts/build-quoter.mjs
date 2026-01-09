@@ -13,7 +13,7 @@ console.log('🎯 Generando sección del Cotizador...\n');
 // Wrapper con bg-bg-alt-secondary para template Requisitos
 const sectionQuoter = `
 <div class="w-full py-6 bg-bg-alt-secondary max-w-full md:max-w-[834px] xl:max-w-[1366px] mx-auto relative z-[100]">
-  <div class="py-6 px-4 max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto lg:px-0">
+  <div class="px-4 max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto lg:px-0">
     
     <!-- Mount Point del Cotizador -->
     <div 

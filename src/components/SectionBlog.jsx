@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AirplaneTilt, Mountains, ArrowRight } from "@phosphor-icons/react";
 import Button from "./Button";
 
-const SectionBlog = ({ geo = "ar" }) => {
+const SectionBlog = ({ geo = "ar", blogUrl }) => {
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -56,11 +56,15 @@ const SectionBlog = ({ geo = "ar" }) => {
   }, [geo]);
 
   const goToBlog = () => {
-    const country = (geo || "").toLowerCase();
-    const url =
-      country === "br"
-        ? "https://assist-365.com/blog/br"
-        : "https://assist-365.com/blog";
+    // Si se pasa blogUrl explícitamente, usarlo
+    if (blogUrl) {
+      window.open(blogUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+    
+    // Fallback: construir URL basado en geo
+    const country = (geo || "ar").toLowerCase();
+    const url = `https://assist-365.com/blog/${country}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
 

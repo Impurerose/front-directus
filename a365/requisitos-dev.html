@@ -10,9 +10,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   
-  <!-- Quoter CSS (DEV - localhost) -->
-  <link rel="stylesheet" href="http://localhost:5057/core_tailwind.css">
-  <link rel="stylesheet" href="http://localhost:5007/quoter.min.css">
+  <!-- Quoter CSS -->
+  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/core_tailwind.css">
+  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/quoter.min.css">
   
   <script>
     tailwind.config = { 
@@ -36,26 +36,23 @@
     .accordion-content { transition: grid-template-rows 300ms, opacity 300ms; display: grid; }
     .grid-rows-\[0fr\] { grid-template-rows: 0fr; }
     .grid-rows-\[1fr\] { grid-template-rows: 1fr; }
+    .switch-language-container { display: none !important; }
   </style>
 </head>
 <body>
-<!-- Navbar Mount Point -->
+<!-- Navbar mount point - Single-SPA cargará el navbar aquí -->
 <nav id="navbar-mount"></nav>
 
-<!-- Main Content -->
-<main>
 <!-- Hero Section - Requisitos para viajar -->
 <div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200">
   <div class="flex flex-col md:items-start justify-start 2xl:justify-center pt-[44px] 2xl:pt-0 bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
-    <h1 class="text-4xl 2xl:text-7xl text-white pl-4 md:pl-[144px] max-w-full 2xl:max-w-[588px]">
+    <h1 class="text-4xl 2xl:text-7xl text-white pl-4 md:pl-[85px] max-w-full 2xl:max-w-[588px]">
       Requisitos para viajar a <span class="font-semibold">Brasil</span> en 2025
     </h1>
   </div>
 </div>
-
-
 <div class="w-full py-6 bg-bg-alt-secondary max-w-full md:max-w-[834px] xl:max-w-[1366px] mx-auto relative z-[100]">
-  <div class="py-6 px-4 max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto lg:px-0">
+  <div class="px-4 max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto lg:px-0">
     
     <!-- Mount Point del Cotizador -->
     <div 
@@ -143,7 +140,7 @@
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
   <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
-      <img alt="Seguro de viaje" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+      <img alt="Seguro de viaje" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/256x256">
     </div>
     <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
       <h2 class="2xl:text-4xl leading-[40px] font-semibold text-[#0059ba] text-3xl pt-8 pb-4">¿Es obligatorio el seguro de viaje para Brasil?</h2>
@@ -156,7 +153,7 @@
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
   <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
-      <img alt="Visa para viajar" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+      <img alt="Visa para viajar" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/256x256">
     </div>
     <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
       <h2 class="2xl:text-4xl leading-[40px] font-semibold text-[#0059ba] text-3xl pt-8 pb-4">¿Necesitas Visa para ingresar a Brasil?</h2>
@@ -169,7 +166,7 @@
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
   <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
-      <img alt="Vacunas obligatorias" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+      <img alt="Vacunas obligatorias" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/256x256">
     </div>
     <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
       <h2 class="2xl:text-4xl leading-[40px] font-semibold text-[#0059ba] text-3xl pt-8 pb-4">¿Qué vacunas son obligatorias para viajar a Brasil?</h2>
@@ -550,6 +547,20 @@
       console.error('❌ Error loading blog posts:', error);
     }
   })();
+  
+  // Blog CTA redirection
+  document.addEventListener('DOMContentLoaded', function() {
+    const blogCtas = document.querySelectorAll('[data-blog-cta]');
+    const blogUrl = 'https://assist-365.com/blog/ar';
+    
+    blogCtas.forEach(cta => {
+      cta.href = blogUrl;
+      cta.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(blogUrl, '_blank', 'noopener,noreferrer');
+      });
+    });
+  });
 </script>
 </body>
 </html>
@@ -570,6 +581,7 @@
       "@a365/core": "http://localhost:5049/a365-core.js",
       "@a365/dsys": "http://localhost:5057/a365-dsys.js",
       "@a365/shared-ui": "http://localhost:4047/a365-shared-ui.js",
+      "@a365/support-ui": "http://localhost:5042/a365-support-ui.js",
       "@a365/quoter": "http://localhost:5007/a365-quoter.js",
       "a365-navbarv2": "http://localhost:3020/a365-navbarv2.js",
       "a365-footerv2": "http://localhost:3021/a365-footerv2.js"

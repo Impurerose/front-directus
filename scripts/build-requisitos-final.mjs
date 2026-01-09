@@ -317,6 +317,20 @@ const javascript = `
       console.error('❌ Error loading blog posts:', error);
     }
   })();
+  
+  // Blog CTA redirection
+  document.addEventListener('DOMContentLoaded', function() {
+    const blogCtas = document.querySelectorAll('[data-blog-cta]');
+    const blogUrl = 'https://assist-365.com/blog/${geo}';
+    
+    blogCtas.forEach(cta => {
+      cta.href = blogUrl;
+      cta.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(blogUrl, '_blank', 'noopener,noreferrer');
+      });
+    });
+  });
 </script>
 </body>
 </html>`;
@@ -340,6 +354,7 @@ const singleSpaScripts = `
       "@a365/core": "https://assist-365.com/core/a365-core.js?v=101",
       "@a365/dsys": "https://assist-365.com/dsys/a365-dsys.js?v=101",
       "@a365/shared-ui": "https://assist-365.com/parcel/shared-ui/a365-shared-ui.js?v=101",
+      "@a365/support-ui": "https://assist-365.com/parcel/support-ui/a365-support-ui.js?v=101",
       "@a365/quoter": "https://assist-365.com/quoter/a365-quoter.js?v=101",
       "a365-navbarv2": "https://assist-365.com/layout/navbarv2/a365-navbarv2.js?v=101",
       "a365-footerv2": "https://assist-365.com/layout/footerv2/a365-footerv2.js?v=101"

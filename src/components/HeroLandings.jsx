@@ -13,7 +13,9 @@ export default function HeroLandings({
   customTitle = null,
 }) {
   return (
-    <div className="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200">
+    <div className="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px] bg-sky-200
+    bg-[url('https://placehold.co/1366x400')] bg-no-repeat bg-cover
+    ">
       <div
         className="
         flex flex-col md:items-start justify-start 2xl:justify-center pt-[44px] 2xl:pt-0
@@ -23,7 +25,7 @@ export default function HeroLandings({
         bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]"
       >
         {customTitle ? (
-          <h1 className="text-4xl 2xl:text-7xl text-white pl-4 md:pl-[144px] max-w-full 2xl:max-w-[588px]">
+          <h1 className="text-4xl 2xl:text-7xl text-white pl-4 md:pl-[85px] max-w-full 2xl:max-w-[588px]">
             {customTitle}
           </h1>
         ) : (

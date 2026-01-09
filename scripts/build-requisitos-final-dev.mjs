@@ -5,7 +5,25 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🚀 Ensamblando HTML completo de Requisitos (DEV MODE)...\n');
+// ========================================
+// 🌎 CONFIGURACIÓN DE GEO
+// ========================================
+const GEO_CONFIG = {
+  country: 'BR',      // Cambiar aquí: 'BR', 'MX', 'AR', 'US', etc.
+  autoDetect: false   // true = usar geolocalización automática
+};
+
+const GEO_DATA = {
+  BR: { country_id: 31, locale: 'pt-BR', currency: 'R$', name: 'Brasil' },
+  MX: { country_id: 28, locale: 'es-MX', currency: '$', name: 'México' },
+  AR: { country_id: 1, locale: 'es-AR', currency: '$', name: 'Argentina' },
+  US: { country_id: 36, locale: 'en-US', currency: 'USD', name: 'Estados Unidos' }
+};
+
+const currentGeo = GEO_DATA[GEO_CONFIG.country];
+
+console.log('🚀 Ensamblando HTML completo de Requisitos (DEV MODE)...');
+console.log(`🌎 Configurado para: ${currentGeo.name}\n`);
 
 const destino = 'Brasil';
 const geo = 'ar';
@@ -453,6 +471,7 @@ const singleSpaScripts = `
   <script>
     (function() {
       console.log('🚀 Inicializando Single-SPA para navbar y footer...');
+      console.log('🌎 Geo configurado: ${GEO_CONFIG.country} (${currentGeo.name})');
       
       // Primero cargar Single-SPA y crear contexto global
       System.import('single-spa').then(function(singleSpaModule) {
@@ -463,7 +482,23 @@ const singleSpaScripts = `
         singleSpaModule.start();
         console.log('✅ Single-SPA iniciado');
         
-        // Luego cargar auth-session
+        // Cargar Core y hacer fetch de geo
+        return System.import('@a365/core');
+      }).then(function(coreModule) {
+        console.log('✅ Core cargado');
+        
+        // Cargar geo desde API
+        var forceCountry = ${GEO_CONFIG.autoDetect ? 'null' : `'${GEO_CONFIG.country}'`};
+        return coreModule.loadGeo(false, false, forceCountry);
+      }).then(function(geoData) {
+        console.log('✅ Geo cargado:', geoData);
+        
+        // Esperar un momento para que processedGeo$ emita
+        return new Promise(function(resolve) {
+          setTimeout(resolve, 300);
+        });
+      }).then(function() {
+        // Cargar auth-session
         return System.import('@a365/auth-session');
       }).then(function() {
         console.log('✅ Auth session cargado');

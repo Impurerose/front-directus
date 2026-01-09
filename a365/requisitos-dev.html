@@ -703,6 +703,7 @@
   <script>
     (function() {
       console.log('🚀 Inicializando Single-SPA para navbar y footer...');
+      console.log('🌎 Geo configurado: BR (Brasil)');
       
       // Primero cargar Single-SPA y crear contexto global
       System.import('single-spa').then(function(singleSpaModule) {
@@ -713,7 +714,23 @@
         singleSpaModule.start();
         console.log('✅ Single-SPA iniciado');
         
-        // Luego cargar auth-session
+        // Cargar Core y hacer fetch de geo
+        return System.import('@a365/core');
+      }).then(function(coreModule) {
+        console.log('✅ Core cargado');
+        
+        // Cargar geo desde API
+        var forceCountry = 'BR';
+        return coreModule.loadGeo(false, false, forceCountry);
+      }).then(function(geoData) {
+        console.log('✅ Geo cargado:', geoData);
+        
+        // Esperar un momento para que processedGeo$ emita
+        return new Promise(function(resolve) {
+          setTimeout(resolve, 300);
+        });
+      }).then(function() {
+        // Cargar auth-session
         return System.import('@a365/auth-session');
       }).then(function() {
         console.log('✅ Auth session cargado');

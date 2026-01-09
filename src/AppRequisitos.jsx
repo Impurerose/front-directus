@@ -124,7 +124,7 @@ function AppRequisitos({
         <SectionImageText
           title={`¿Es obligatorio el seguro de viaje para ${destino}?`}
           description="Aunque no siempre es obligatorio, contar con un seguro de viaje es altamente recomendable para cualquier destino internacional. Un seguro te protege ante emergencias médicas, cancelaciones de vuelos, pérdida de equipaje y muchas otras situaciones imprevistas que pueden ocurrir durante tu viaje."
-          imageSrc="https://placehold.co/256x256"
+          imageSrc="https://placehold.co/256x256/0ea5e9/ffffff"
           reverse={true}
         />
 
@@ -132,7 +132,7 @@ function AppRequisitos({
         <SectionImageText
           title={`¿Necesitas Visa para ingresar a ${destino}?`}
           description="Los requisitos de visa varían según tu nacionalidad y el propósito de tu viaje. Muchos países latinoamericanos tienen acuerdos de reciprocidad que permiten el ingreso sin visa para estancias turísticas de corta duración. Es fundamental verificar los requisitos específicos para tu caso antes de comprar tus boletos."
-          imageSrc="https://placehold.co/256x256"
+          imageSrc="https://placehold.co/256x256/0ea5e9/ffffff"
           reverse={false}
         />
 
@@ -140,7 +140,7 @@ function AppRequisitos({
         <SectionImageText
           title={`¿Qué vacunas son obligatorias para viajar a ${destino}?`}
           description="Dependiendo de las zonas que planees visitar, algunas vacunas pueden ser recomendadas u obligatorias. La vacuna contra la fiebre amarilla es frecuentemente requerida para ciertas regiones. Es importante consultar con un centro de vacunación internacional con suficiente anticipación, ya que algunas vacunas requieren ser aplicadas semanas antes del viaje."
-          imageSrc="https://placehold.co/256x256"
+          imageSrc="https://placehold.co/256x256/0ea5e9/ffffff"
           reverse={true}
         />
 

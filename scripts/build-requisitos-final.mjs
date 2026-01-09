@@ -308,6 +308,14 @@ const singleSpaScripts = `
   <!-- SystemJS para cargar módulos -->
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
 
+  <!-- Ocultar switch de idioma en navbar y footer -->
+  <style>
+    #switch-language-container,
+    .switch-language-container {
+      display: none !important;
+    }
+  </style>
+
   <!-- SystemJS Import Map -->
   <script type="systemjs-importmap">
   {

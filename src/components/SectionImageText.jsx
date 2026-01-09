@@ -11,7 +11,7 @@ export default function SectionImageText({
       : "2xl:text-4xl leading-[40px]";
 
   return (
-    <div className="bg-white w-full tf-py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20">
+    <div className="bg-white w-full tf-py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
       <div
         className={`flex flex-col ${
           reverse ? "2xl:flex-row-reverse justify-end" : "2xl:flex-row"

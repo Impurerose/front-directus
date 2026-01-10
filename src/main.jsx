@@ -17,7 +17,7 @@ if (template === 'requisitos') {
   AppComponent = AppRequisitos;
   data = {
     destino: requisitosData.destino,
-    geo: 'BR',
+    geo: 'AR',
     accordionDocumentos: requisitosData.accordionDocumentos,
     accordionAduanas: requisitosData.accordionAduanas,
     faqItems: requisitosData.faqItems

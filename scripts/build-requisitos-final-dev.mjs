@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 // 🌎 CONFIGURACIÓN DE GEO
 // ========================================
 const GEO_CONFIG = {
-  country: 'BR',      // Cambiar aquí: 'BR', 'MX', 'AR', 'US', etc.
+  country: 'AR',      // Cambiar aquí: 'BR', 'MX', 'AR', 'US', etc.
   autoDetect: false   // true = usar geolocalización automática
 };
 
@@ -444,7 +444,7 @@ const singleSpaScripts = `
             openMod: quoterState.openMod,
             setOpenMod: setOpenMod,
             visible: true,
-            geo: 'BR'
+            geo: 'AR'
           };
           
           ReactDOM.render(

@@ -1,118 +1,122 @@
-import React from 'react';
-import { ShieldPlus, FirstAidKit, SuitcaseRolling } from '@phosphor-icons/react';
+import React from "react";
+import {
+  ShieldPlus,
+  FirstAidKit,
+  SuitcaseRolling,
+} from "@phosphor-icons/react";
 
 const SectionPlans = () => {
   const plans = [
     {
       id: 1,
-      name: 'World cover',
-      color: '#0059BA',
+      name: "World cover",
+      color: "#0059BA",
       badge: null,
       features: [
         {
           icon: ShieldPlus,
-          amount: 'USD 200.000',
-          description: 'de Asistencia medica',
+          amount: "USD 200.000",
+          description: "de Asistencia medica",
         },
         {
           icon: FirstAidKit,
-          amount: 'USD 10.000',
-          description: 'de Asistencia por enfermedad preexistente',
+          amount: "USD 10.000",
+          description: "de Asistencia por enfermedad preexistente",
         },
         {
           icon: SuitcaseRolling,
-          amount: 'USD 1.000',
-          description: 'por pérdida de equipaje',
+          amount: "USD 1.000",
+          description: "por pérdida de equipaje",
         },
       ],
     },
     {
       id: 2,
-      name: 'Premium cover',
-      color: '#31319B',
+      name: "Premium cover",
+      color: "#31319B",
       badge: {
-        text: 'El más elegido',
-        bgColor: '#D3EFD4',
+        text: "El más elegido",
+        bgColor: "#D3EFD4",
       },
       features: [
         {
           icon: ShieldPlus,
-          amount: 'USD 200.000',
-          description: 'de Asistencia medica',
+          amount: "USD 200.000",
+          description: "de Asistencia medica",
         },
         {
           icon: FirstAidKit,
-          amount: 'USD 10.000',
-          description: 'de Asistencia por enfermedad preexistente',
+          amount: "USD 10.000",
+          description: "de Asistencia por enfermedad preexistente",
         },
         {
           icon: SuitcaseRolling,
-          amount: 'USD 1.000',
-          description: 'por pérdida de equipaje',
+          amount: "USD 1.000",
+          description: "por pérdida de equipaje",
         },
       ],
     },
     {
       id: 3,
-      name: 'World cover',
-      color: '#0059BA',
+      name: "World cover",
+      color: "#0059BA",
       badge: null,
       features: [
         {
           icon: ShieldPlus,
-          amount: 'USD 200.000',
-          description: 'de Asistencia medica',
+          amount: "USD 200.000",
+          description: "de Asistencia medica",
         },
         {
           icon: FirstAidKit,
-          amount: 'USD 10.000',
-          description: 'de Asistencia por enfermedad preexistente',
+          amount: "USD 10.000",
+          description: "de Asistencia por enfermedad preexistente",
         },
         {
           icon: SuitcaseRolling,
-          amount: 'USD 1.000',
-          description: 'por pérdida de equipaje',
+          amount: "USD 1.000",
+          description: "por pérdida de equipaje",
         },
       ],
     },
     {
       id: 4,
-      name: 'World cover',
-      color: '#31319B',
+      name: "World cover",
+      color: "#31319B",
       badge: {
-        text: 'Plan recomendado',
-        bgColor: '#CFF6FF',
+        text: "Plan recomendado",
+        bgColor: "#CFF6FF",
       },
       features: [
         {
           icon: ShieldPlus,
-          amount: 'USD 200.000',
-          description: 'de Asistencia medica',
+          amount: "USD 200.000",
+          description: "de Asistencia medica",
         },
         {
           icon: FirstAidKit,
-          amount: 'USD 10.000',
-          description: 'de Asistencia por enfermedad preexistente',
+          amount: "USD 10.000",
+          description: "de Asistencia por enfermedad preexistente",
         },
         {
           icon: SuitcaseRolling,
-          amount: 'USD 1.000',
-          description: 'por pérdida de equipaje',
+          amount: "USD 1.000",
+          description: "por pérdida de equipaje",
         },
       ],
     },
   ];
 
   return (
-    <section className="w-full bg-[#E3DEF9] py-12 lg:py-20">
-      <div className="px-4 lg:px-0 mx-auto max-w-[358px] md:max-w-[548px] lg:max-w-[1200px]">
+    <section className="w-full bg-[#E3DEF9] py-8 2xl:py-12 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+      <div className="px-4 2xl:px-0 mx-auto max-w-[358px] md:max-w-[548px] 2xl:max-w-[1200px]">
         {/* Título */}
-        <h2 className="text-center text-[#0059BA] font-semibold text-3xl lg:text-4xl mb-8 lg:mb-12">
+        <h2 className="text-center text-[#0059BA] font-semibold text-3xl 2xl:text-4xl mb-8 2xl:mb-12">
           Nuestros planes para viajar a [Destino]
         </h2>
 
         {/* Grid de planes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-8">
           {plans.map((plan) => (
             <div key={plan.id} className="flex flex-col relative">
               {/* Badge (si existe) */}
@@ -152,9 +156,10 @@ const SectionPlans = () => {
                         />
                       </div>
                       <p className="text-sm text-[#70777C] leading-5">
-                        <span className="font-semibold">{feature.amount}</span>
-                        {' '}
-                        <span className="font-normal">{feature.description}</span>
+                        <span className="font-semibold">{feature.amount}</span>{" "}
+                        <span className="font-normal">
+                          {feature.description}
+                        </span>
                       </p>
                     </div>
                   );

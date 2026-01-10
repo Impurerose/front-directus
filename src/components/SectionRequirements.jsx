@@ -1,63 +1,63 @@
-import React from 'react';
+import React from "react";
 import {
   Laptop,
   HandHeart,
   SuitcaseRolling,
   PawPrint,
   ArrowRight,
-} from '@phosphor-icons/react';
-import Button from './Button';
+} from "@phosphor-icons/react";
+import Button from "./Button";
 
 /**
  * SectionRequirements - Grid de 4 cards con requisitos de viaje
  * Similar a Feature2 pero con 2x2 grid y botón CTA
  */
 export const SectionRequirements = ({
-  title = 'Requisitos para viajar a [Destino]',
+  title = "Requisitos para viajar a [Destino]",
   requirements = [],
-  buttonLabel = 'Ver todos los requisitos',
+  buttonLabel = "Ver todos los requisitos",
   onButtonClick = () => {},
 }) => {
   // Default requirements si no se pasan props
   const defaultRequirements = [
     {
       Icon: Laptop,
-      title: 'Requisito 1',
+      title: "Requisito 1",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.',
+        "Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.",
     },
     {
       Icon: HandHeart,
-      title: 'Requisito 2',
+      title: "Requisito 2",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.',
+        "Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.",
     },
     {
       Icon: SuitcaseRolling,
-      title: 'Requisito 3',
+      title: "Requisito 3",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.',
+        "Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.",
     },
     {
       Icon: PawPrint,
-      title: 'Requisito 4',
+      title: "Requisito 4",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.',
+        "Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.",
     },
   ];
 
   const items = requirements.length > 0 ? requirements : defaultRequirements;
 
   return (
-    <section className="w-full bg-[#F2F2F2] py-8 lg:py-16">
-      <div className="mx-auto max-w-[358px] px-4 md:max-w-[548px] lg:max-w-[996px] lg:px-0">
+    <section className="w-full bg-[#F2F2F2] py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+      <div className="mx-auto max-w-[358px] px-4 md:max-w-[548px] 2xl:max-w-[996px] 2xl:px-0">
         {/* Título */}
-        <h2 className="mb-6 mt-0 p-0 text-3xl font-semibold leading-9 text-[#0059BA] lg:mb-10 lg:text-4xl lg:leading-10">
+        <h2 className="mb-6 mt-0 p-0 text-3xl font-semibold leading-9 text-[#0059BA] 2xl:mb-10 2xl:text-4xl 2xl:leading-10">
           {title}
         </h2>
 
         {/* Grid 2x2 de requirement cards */}
-        <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mb-6 grid grid-cols-1 gap-6 2xl:grid-cols-2">
           {items.map((item, index) => {
             const Icon = item.Icon;
             return (
@@ -85,7 +85,7 @@ export const SectionRequirements = ({
         </div>
 
         {/* CTA Button */}
-        <div className="w-full lg:flex lg:justify-end">
+        <div className="w-full 2xl:flex 2xl:justify-end">
           <Button
             onClick={onButtonClick}
             variant="alt"
@@ -94,7 +94,7 @@ export const SectionRequirements = ({
             iconPosition="right"
             fullWidth={false}
             size="large"
-            classes="w-full lg:w-auto"
+            classes="w-full 2xl:w-auto"
           >
             {buttonLabel}
           </Button>

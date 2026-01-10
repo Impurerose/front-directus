@@ -61,7 +61,7 @@
     <!-- Mount Point del Cotizador -->
     <div 
       id="quoter-mount"
-      data-geo="AR"
+      data-geo="BR"
       class="max-w-[926px] mx-auto"
     >
       <!-- Este div será reemplazado por el cotizador real cuando se cargue Single-SPA -->
@@ -486,8 +486,8 @@
       // Procesar posts
       const processedPosts = posts.map(post => {
         let thumbnailUrl = '';
-        if (post.schema && post.schema['@graph']) {
-          const graphItem = post.schema['@graph'].find(item => item.thumbnailUrl);
+        if (post.yoast_head_json?.schema?.['@graph']) {
+          const graphItem = post.yoast_head_json.schema['@graph'].find(item => item.thumbnailUrl);
           if (graphItem) thumbnailUrl = graphItem.thumbnailUrl;
         }
         
@@ -721,7 +721,7 @@
   <script>
     (function() {
       console.log('🚀 Inicializando Single-SPA para navbar y footer...');
-      console.log('🌎 Geo configurado: BR (Brasil)');
+      console.log('🌎 Geo configurado: AR (Argentina)');
       
       // Primero cargar Single-SPA y crear contexto global
       System.import('single-spa').then(function(singleSpaModule) {
@@ -738,7 +738,7 @@
         console.log('✅ Core cargado');
         
         // Cargar geo desde API
-        var forceCountry = 'BR';
+        var forceCountry = 'AR';
         return coreModule.loadGeo(false, false, forceCountry);
       }).then(function(geoData) {
         console.log('✅ Geo cargado:', geoData);

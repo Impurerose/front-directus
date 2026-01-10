@@ -249,8 +249,8 @@ const javascript = `
       
       const processedPosts = posts.map(post => {
         let thumbnailUrl = '';
-        if (post.schema && post.schema['@graph']) {
-          const graphItem = post.schema['@graph'].find(item => item.thumbnailUrl);
+        if (post.yoast_head_json?.schema?.['@graph']) {
+          const graphItem = post.yoast_head_json.schema['@graph'].find(item => item.thumbnailUrl);
           if (graphItem) thumbnailUrl = graphItem.thumbnailUrl;
         }
         

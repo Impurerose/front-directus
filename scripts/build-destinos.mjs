@@ -1,0 +1,77 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const destino = 'Brasil';
+
+// Leer data de destinos
+const dataPath = path.join(__dirname, '..', 'src', 'data', 'destinos.json');
+const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+
+console.log('🚀 Generando HTML de Destinos - Sección 1...\n');
+
+// SECCIÓN 1: Header + Hero + ImageText Principal + Accordion Documentos
+const section1 = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requisitos para viajar a ${destino} en 2025 - Assist 365</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Quoter CSS -->
+  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/core_tailwind.css">
+  <link rel="stylesheet" href="https://assistcdn.s3.us-west-1.amazonaws.com/quoter/quoter.min.css">
+  
+  <script>
+    tailwind.config = { 
+      theme: { 
+        extend: { 
+          screens: { '2xl': '1440px' },
+          colors: {
+            'bg-alt-secondary': '#0059BA'
+          },
+          fontFamily: {
+            sans: ['Titillium Web', 'sans-serif']
+          }
+        } 
+      } 
+    }
+  </script>
+  <style>
+    .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterMobile.jpg') no-repeat; background-size: cover; background-position: center; }
+    @media screen and (min-width: 391px) and (max-width: 834px) { .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterTablet.jpg') no-repeat; background-size: cover; } }
+    @media screen and (min-width: 835px) { .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterDesktop.jpg') no-repeat; background-size: cover; } }
+    .accordion-content { transition: grid-template-rows 300ms, opacity 300ms; display: grid; }
+    .grid-rows-\\[0fr\\] { grid-template-rows: 0fr; }
+    .grid-rows-\\[1fr\\] { grid-template-rows: 1fr; }
+    .switch-language-container { display: none !important; }
+  </style>
+</head>
+<body>
+<!-- Navbar mount point - Single-SPA cargará el navbar aquí -->
+<nav id="navbar-mount"></nav>
+
+<!-- Hero Section - Requisitos para viajar -->
+<div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px]
+    2xl:bg-[url('https://placehold.co/1366x400')] bg-no-repeat bg-cover
+    md:bg-[url('https://placehold.co/834x426')]
+    bg-[url('https://placehold.co/390x377')]
+    ">
+  <div class="flex flex-col md:items-start justify-start 2xl:justify-center pt-[44px] 2xl:pt-0 bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
+    <h1 class="text-4xl 2xl:text-7xl text-white pl-4 md:pl-[85px] max-w-full 2xl:max-w-[588px]">
+      Requisitos para viajar a <span class="font-semibold">${destino}</span> en 2025
+    </h1>
+  </div>
+</div>`;
+
+fs.writeFileSync(path.join(__dirname, '..', 'a365', 'destinos-section1.txt'), section1);
+console.log('✅ Sección 1 guardada en a365/destinos-section1.txt');
+console.log('\n📋 Siguiente paso: node scripts/build-quoter.mjs');

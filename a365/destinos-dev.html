@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requisitos para viajar a Brasil en 2025 - Assist 365</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Quoter CSS (DEV - localhost) -->
+  <link rel="stylesheet" href="http://localhost:5057/core_tailwind.css">
+  <link rel="stylesheet" href="http://localhost:5007/quoter.min.css">
+  
+  <script>
+    tailwind.config = { 
+      theme: { 
+        extend: { 
+          screens: { '2xl': '1440px' },
+          colors: {
+            'bg-alt-secondary': '#0059BA'
+          },
+          fontFamily: {
+            sans: ['Titillium Web', 'sans-serif']
+          }
+        } 
+      } 
+    }
+  </script>
+  <style>
+    .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterMobile.jpg') no-repeat; background-size: cover; background-position: center; }
+    @media screen and (min-width: 391px) and (max-width: 834px) { .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterTablet.jpg') no-repeat; background-size: cover; } }
+    @media screen and (min-width: 835px) { .prefooter-container { background: url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/home/PreFooterDesktop.jpg') no-repeat; background-size: cover; } }
+    .accordion-content { transition: grid-template-rows 300ms, opacity 300ms; display: grid; }
+    .grid-rows-\[0fr\] { grid-template-rows: 0fr; }
+    .grid-rows-\[1fr\] { grid-template-rows: 1fr; }
+  </style>
+</head>
+<body>
+<!-- Navbar Mount Point -->
+<nav id="navbar-mount"></nav>
+
+<!-- Main Content -->
+<main>
+<!-- Hero Section - Requisitos para viajar -->
+<div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px]
+    2xl:bg-[url('https://placehold.co/1366x400')] bg-no-repeat bg-cover
+    md:bg-[url('https://placehold.co/834x426')]
+    bg-[url('https://placehold.co/390x377')]
+    ">
+  <div class="flex flex-col md:items-start justify-start 2xl:justify-center pt-[44px] 2xl:pt-0 bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualMobile.svg')] md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualTablet.svg')] 2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/temporal/HeaderLandingIndividualDesktop.svg')] bg-no-repeat md:max-w-[834px] 2xl:max-w-[910px] h-[400px]">
+    <h1 class="text-4xl 2xl:text-7xl text-white pl-4 md:pl-[85px] max-w-full 2xl:max-w-[588px]">
+      Requisitos para viajar a <span class="font-semibold">Brasil</span> en 2025
+    </h1>
+  </div>
+</div>
+
+
+<div class="w-full py-6 bg-bg-alt-secondary max-w-full md:max-w-[834px] xl:max-w-[1366px] mx-auto relative z-10">
+  <div class="px-4 max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto lg:px-0">
+    
+    <!-- Mount Point del Cotizador -->
+    <div 
+      id="quoter-mount"
+      data-geo="BR"
+      class="max-w-[926px] mx-auto"
+    >
+      <!-- Este div será reemplazado por el cotizador real cuando se cargue Single-SPA -->
+    </div>
+    
+  </div>
+</div>
+
+<!-- ImageText Principal - ¿Qué necesito para viajar? -->
+<div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
+  <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+    <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
+      <img alt="Viajar a Brasil" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
+    </div>
+    <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
+      <h2 class="2xl:text-5xl leading-[56px] font-semibold text-[#0059ba] text-3xl pt-8 pb-4">¿Qué necesito para viajar a Brasil?</h2>
+      <p class="text-base leading-6 text-[#70777c]">Viajar a este destino abre las puertas a un universo de diversidad cultural, paisajes impresionantes y una energía contagiosa. Desde las playas paradisíacas hasta la selva exuberante, este país ofrece experiencias únicas para todos los gustos. Prepararte adecuadamente con un seguro de viaje te permitirá disfrutar al máximo de tu aventura.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ImageText - ¿Es obligatorio el seguro? -->
+<div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
+  <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+    <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
+      <img alt="Seguro de viaje" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/256x256/0ea5e9/ffffff">
+    </div>
+    <div class="flex flex-col 2xl:gap-10 w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[486px] shrink-0">
+      <h2 class="2xl:text-4xl leading-[40px] font-semibold text-[#0059ba] text-3xl pt-8 pb-4">¿Es obligatorio el seguro de viaje para Brasil?</h2>
+      <p class="text-base leading-6 text-[#70777c]">Aunque no siempre es obligatorio, contar con un seguro de viaje es altamente recomendable para cualquier destino internacional. Un seguro te protege ante emergencias médicas, cancelaciones de vuelos, pérdida de equipaje y muchas otras situaciones imprevistas que pueden ocurrir durante tu viaje.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SectionCards - ¿Qué debe incluir tu seguro? -->
+<section class="w-full bg-[#F2F2F2] py-8 pb-12 mx-auto full 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px]">
+  <div class="px-4 2xl:px-0 2xl:max-w-[748px] md:max-w-[548px] max-w-[548px] mx-auto">
+    <h2 class="text-center text-[#0059BA] font-semibold leading-9 2xl:leading-10 text-3xl 2xl:text-4xl p-0 mt-0 mb-6 2xlmb-10">
+      ¿Qué debe incluir tu seguro de viaje para Brasil?
+    </h2>
+    <div class="w-full">
+      <div class="grid grid-cols-2 2xl:grid-cols-4 text-center gap-x-4 gap-y-2 2xl:gap-x-6 2xl:gap-y-8 mx-auto">
+        <div class="border border-[#E7F2FF] bg-white w-full 2xl:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 2xl:gap-y-4">
+          <div class="size-10 2xl:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-first-aid" style="font-size: 40px; color: #7BD0C2;"></i>
+          </div>
+          <span class="text-base 2xl:text-xl font-semibold text-[#31363A]">Asistencia médica</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full 2xl:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 2xl:gap-y-4">
+          <div class="size-10 2xl:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-heartbeat" style="font-size: 40px; color: #7BD0C2;"></i>
+          </div>
+          <span class="text-base 2xl:text-xl font-semibold text-[#31363A]">Enfermedades preexistentes</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full 2xl:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 2xl:gap-y-4">
+          <div class="size-10 2xl:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-suitcase" style="font-size: 40px; color: #7BD0C2;"></i>
+          </div>
+          <span class="text-base 2xl:text-xl font-semibold text-[#31363A]">Pérdida de equipaje</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full 2xl:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 2xl:gap-y-4">
+          <div class="size-10 2xl:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-pill" style="font-size: 40px; color: #7BD0C2;"></i>
+          </div>
+          <span class="text-base 2xl:text-xl font-semibold text-[#31363A]">Medicamentos</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full 2xl:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 2xl:gap-y-4">
+          <div class="size-10 2xl:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-stethoscope" style="font-size: 40px; color: #7BD0C2;"></i>
+          </div>
+          <span class="text-base 2xl:text-xl font-semibold text-[#31363A]">Médico online 24hs</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full 2xl:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 2xl:gap-y-4">
+          <div class="size-10 2xl:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-globe-hemisphere-west" style="font-size: 40px; color: #7BD0C2;"></i>
+          </div>
+          <span class="text-base 2xl:text-xl font-semibold text-[#31363A]">Cobertura mundial</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full 2xl:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 2xl:gap-y-4">
+          <div class="size-10 2xl:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-tooth" style="font-size: 40px; color: #7BD0C2;"></i>
+          </div>
+          <span class="text-base 2xl:text-xl font-semibold text-[#31363A]">Odontología</span>
+        </div>
+        <div class="border border-[#E7F2FF] bg-white w-full 2xl:h-[160px] rounded-xl flex items-center flex-col justify-center px-[10px] py-6 gap-2 2xl:gap-y-4">
+          <div class="size-10 2xl:size-10 flex-shrink-0">
+            <i class="ph-duotone ph-hospital" style="font-size: 40px; color: #7BD0C2;"></i>
+          </div>
+          <span class="text-base 2xl:text-xl font-semibold text-[#31363A]">Internaciones</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SectionPlans - Nuestros planes -->
+<section class="w-full bg-[#E3DEF9] py-8 2xl:py-12 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+  <div class="px-4 2xl:px-0 mx-auto max-w-[358px] md:max-w-[548px] 2xl:max-w-[1200px]">
+    <h2 class="text-center text-[#0059BA] font-semibold text-3xl 2xl:text-4xl mb-8 2xl:mb-12">
+      Nuestros planes para viajar a Brasil
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-8">
+      <!-- Plan 1 -->
+      <div class="flex flex-col relative">
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #0059BA;">
+          <h3 class="text-white font-semibold text-3xl">World cover</h3>
+        </div>
+        <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-shield-plus" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 200.000</span> <span class="font-normal">de Asistencia medica</span>
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-first-aid-kit" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 10.000</span> <span class="font-normal">de Asistencia por enfermedad preexistente</span>
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-suitcase-rolling" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 1.000</span> <span class="font-normal">por pérdida de equipaje</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 2 - El más elegido -->
+      <div class="flex flex-col relative">
+        <div class="absolute left-4 -top-5 px-3 py-2 rounded-full z-10" style="background-color: #D3EFD4;">
+          <p class="text-sm font-semibold text-[#31363A]">El más elegido</p>
+        </div>
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #31319B;">
+          <h3 class="text-white font-semibold text-3xl">Premium cover</h3>
+        </div>
+        <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-shield-plus" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 200.000</span> <span class="font-normal">de Asistencia medica</span>
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-first-aid-kit" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 10.000</span> <span class="font-normal">de Asistencia por enfermedad preexistente</span>
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-suitcase-rolling" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 1.000</span> <span class="font-normal">por pérdida de equipaje</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="flex flex-col relative">
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #0059BA;">
+          <h3 class="text-white font-semibold text-3xl">World cover</h3>
+        </div>
+        <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-shield-plus" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 200.000</span> <span class="font-normal">de Asistencia medica</span>
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-first-aid-kit" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 10.000</span> <span class="font-normal">de Asistencia por enfermedad preexistente</span>
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-suitcase-rolling" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 1.000</span> <span class="font-normal">por pérdida de equipaje</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 4 - Plan recomendado -->
+      <div class="flex flex-col relative">
+        <div class="absolute left-4 -top-5 px-3 py-2 rounded-full z-10" style="background-color: #CFF6FF;">
+          <p class="text-sm font-semibold text-[#31363A]">Plan recomendado</p>
+        </div>
+        <div class="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4" style="background-color: #31319B;">
+          <h3 class="text-white font-semibold text-3xl">World cover</h3>
+        </div>
+        <div class="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-shield-plus" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 200.000</span> <span class="font-normal">de Asistencia medica</span>
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-first-aid-kit" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 10.000</span> <span class="font-normal">de Asistencia por enfermedad preexistente</span>
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <div class="size-6 flex-shrink-0">
+              <i class="ph ph-suitcase-rolling" style="font-size: 24px; color: #7BD0C2;"></i>
+            </div>
+            <p class="text-sm text-[#70777C] leading-5">
+              <span class="font-semibold">USD 1.000</span> <span class="font-normal">por pérdida de equipaje</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SectionRequirements - Requisitos para viajar -->
+<section class="w-full bg-[#F2F2F2] py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+  <div class="mx-auto max-w-[358px] px-4 md:max-w-[548px] 2xl:max-w-[996px] 2xl:px-0">
+    <h2 class="mb-6 mt-0 p-0 text-3xl font-semibold leading-9 text-[#0059BA] 2xl:mb-10 2xl:text-4xl 2xl:leading-10">
+      Requisitos para viajar a Brasil
+    </h2>
+    <div class="mb-6 grid grid-cols-1 gap-6 2xl:grid-cols-2">
+      <div class="flex flex-col gap-4 rounded-xl border border-[#E7F2FF] bg-white p-6">
+        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center">
+          <i class="ph-duotone ph-laptop" style="font-size: 40px; color: #31319B;"></i>
+        </div>
+        <div class="flex w-full flex-col gap-1">
+          <h3 class="text-xl font-semibold leading-7 text-[#31363A]">Requisito 1</h3>
+          <p class="text-base leading-6 text-[#70777C]">Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 rounded-xl border border-[#E7F2FF] bg-white p-6">
+        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center">
+          <i class="ph-duotone ph-hand-heart" style="font-size: 40px; color: #31319B;"></i>
+        </div>
+        <div class="flex w-full flex-col gap-1">
+          <h3 class="text-xl font-semibold leading-7 text-[#31363A]">Requisito 2</h3>
+          <p class="text-base leading-6 text-[#70777C]">Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 rounded-xl border border-[#E7F2FF] bg-white p-6">
+        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center">
+          <i class="ph-duotone ph-suitcase-rolling" style="font-size: 40px; color: #31319B;"></i>
+        </div>
+        <div class="flex w-full flex-col gap-1">
+          <h3 class="text-xl font-semibold leading-7 text-[#31363A]">Requisito 3</h3>
+          <p class="text-base leading-6 text-[#70777C]">Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 rounded-xl border border-[#E7F2FF] bg-white p-6">
+        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center">
+          <i class="ph-duotone ph-paw-print" style="font-size: 40px; color: #31319B;"></i>
+        </div>
+        <div class="flex w-full flex-col gap-1">
+          <h3 class="text-xl font-semibold leading-7 text-[#31363A]">Requisito 4</h3>
+          <p class="text-base leading-6 text-[#70777C]">Lorem ipsum dolor sit amet consectetur. Est potenti vitae non nulla feugiat adipiscing cras. Suspendisse mi lacus risus cursus a.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full 2xl:flex 2xl:justify-end">
+      <button class="inline-flex items-center justify-center gap-2 px-4 py-[10px] h-[48px] text-lg font-semibold rounded-xl bg-[#BDEDE7] text-[#31363A] hover:bg-[#A8E5DD] active:bg-[#93DDD3] focus:bg-[#BDEDE7] focus:ring-4 focus:ring-[#7BD0C2] focus:ring-opacity-100 transition-all duration-300 w-full 2xl:w-auto focus:outline-none">
+        Ver todos los requisitos
+        <i class="ph-bold ph-arrow-right" style="font-size: 16px;"></i>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- FAQs Section -->
+<div class="relative w-full z-50 px-4 md:px-0 pb-12 2xl:pb-0 2xl:h-[520px] my-12 2xl:my-28">
+  
+  <!-- Background Shape -->
+  <div 
+    class="absolute w-full h-[646px] right-0 top-0 z-[1] mt-32 2xl:mt-0"
+    style="background-image: url(https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/home/img/faq_background.svg); background-repeat: no-repeat; background-position: top right;"
+  ></div>
+
+  <!-- Content -->
+  <div class="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] relative z-10">
+    <div class="flex flex-col 2xl:flex-row items-center 2xl:items-start justify-between mx-auto max-w-[1200px] w-full">
+      
+      <!-- Left Column - Title -->
+      <div class="flex flex-col items-start justify-start md:max-w-[548px] 2xl:max-w-full md:mt-12 lg:mt-0">
+        <i class="ph-duotone ph-info text-[#7BD0C2]" style="font-size: 48px;"></i>
+        <h2 class="text-[29px] pb-6 leading-9 2xl:text-4xl font-semibold text-[#0059ba] 2xl:max-w-[384px] sm:max-w-full mt-6 2xl:mt-8">
+          Todo lo que necesitás saber para viajar a Brasil
+        </h2>
+      </div>
+
+      <!-- Right Column - FAQs -->
+      <div class="w-full md:max-w-[548px] max-w-[690px] 2xl:min-w-[690px] mt-2 2xl:mt-0">
+        <div class="flex flex-col gap-4" data-accordion-group>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">¿Necesito visa para viajar a Brasil?</p>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Depende de tu nacionalidad. Ciudadanos de Argentina, Chile, Paraguay, Uruguay y otros países del Mercosur no necesitan visa para turismo. Otros países latinoamericanos pueden tener acuerdos específicos. Consulta con el consulado brasileño en tu país para información actualizada.</p></div>
+            </div>
+          </div>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">¿Qué vacunas necesito para ingresar a Brasil?</p>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Se recomienda la vacuna contra la fiebre amarilla si viajas a zonas selváticas o del norte de Brasil. Para algunas regiones es obligatoria y debes presentar el certificado internacional de vacunación. También se recomiendan vacunas contra hepatitis A y B, tétanos y fiebre tifoidea.</p></div>
+            </div>
+          </div>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">¿Cuánto dinero puedo ingresar a Brasil sin declarar?</p>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Puedes ingresar hasta R$ 10,000 (reales brasileños) o su equivalente en otras monedas sin necesidad de declarar. Cantidades superiores deben ser declaradas a la aduana en el formulario correspondiente al momento de tu llegada.</p></div>
+            </div>
+          </div>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">¿Cuánto tiempo puedo permanecer en Brasil como turista?</p>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Como turista, puedes permanecer hasta 90 días en territorio brasileño, prorrogables por otros 90 días previa solicitud a la Policía Federal. El período total máximo es de 180 días en un año. Para estadías más largas necesitarás otro tipo de visa.</p></div>
+            </div>
+          </div>
+          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all bg-[#f2f2f2]">
+            <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
+              <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">¿Necesito certificado de vacunación COVID-19 para ingresar a Brasil?</p>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+            </button>
+            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+              <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">Verifica los requisitos sanitarios actualizados antes de viajar, ya que las regulaciones sobre COVID-19 pueden cambiar. Consulta la página oficial del gobierno brasileño o con tu aerolínea para conocer los requisitos vigentes al momento de tu viaje.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Blog Section -->
+<div class="w-full flex items-center justify-center py-16" data-blog-section>
+  <div class="w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[1296px]">
+    <div class="bg-[#CFF6FF] rounded-3xl p-6 2xl:p-12 flex flex-col 2xl:flex-row gap-8 2xl:gap-[86px]">
+      
+      <!-- Left section - Title and CTA -->
+      <div class="flex flex-col justify-center 2xl:w-[282px] flex-shrink-0">
+        <h2 class="text-4xl font-semibold text-[#0059BA] mb-3">
+          Guías y consejos para viajeros
+        </h2>
+        <p class="text-2xl text-[#31363A] leading-8 2xl:mb-6">
+          Explorá nuestro blog para descubrir destinos y prepararte mejor para cada aventura.
+        </p>
+        <a href="#" data-blog-cta class="hidden 2xl:flex items-center justify-center gap-2 px-4 py-[10px] bg-[#006FE8] text-white font-semibold rounded-xl hover:bg-[#0059BA] transition-colors text-lg h-[48px]">
+          Ir al blog
+          <i class="ph ph-arrow-right" style="font-size: 16px; font-weight: bold;"></i>
+        </a>
+      </div>
+
+      <!-- Right section - Blog cards -->
+      <div class="flex flex-col 2xl:flex-row gap-4 flex-1">
+        
+        <!-- Primary card - First post (blogPosts[2]) -->
+        <div class="bg-white rounded-xl p-6 flex flex-col gap-6 2xl:max-w-[376px] flex-1" data-blog-main>
+          <div class="w-full h-[184px] overflow-hidden rounded-lg">
+            <img src="https://placehold.co/328x184" alt="Blog" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl font-semibold text-[#31363A]" data-blog-title>Cargando artículo...</h3>
+              <p class="text-base text-[#70777C] leading-6" data-blog-desc>Cargando descripción...</p>
+            </div>
+            <a href="#" data-blog-link target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-[10px] h-[48px] text-lg font-semibold rounded-xl bg-white border-2 border-[#006FE8] text-[#006FE8] hover:border-[#0059BA] hover:text-[#0059BA] transition-all duration-300 w-fit focus:outline-none focus:ring-4 focus:ring-[#006FE8] focus:ring-opacity-100">
+              Leer más
+              <i class="ph ph-arrow-right" style="font-size: 16px; font-weight: bold;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Secondary cards container -->
+        <div class="flex flex-col gap-4 2xl:w-[440px]">
+          
+          <!-- Secondary card 2 (blogPosts[1]) with AirplaneTilt icon -->
+          <div class="bg-white border border-[#E7F2FF] rounded-xl p-6 flex gap-6" data-blog-secondary-1>
+            <div class="flex-shrink-0">
+              <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 40px;"></i>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-xl font-semibold text-[#31363A]" data-blog-title>Cargando artículo...</h3>
+                <p class="text-base text-[#70777C] leading-6" data-blog-desc>Cargando descripción...</p>
+              </div>
+              <a href="#" data-blog-link target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-[10px] h-[48px] text-lg font-semibold rounded-xl bg-white border-2 border-[#006FE8] text-[#006FE8] hover:border-[#0059BA] hover:text-[#0059BA] transition-all duration-300 w-fit focus:outline-none focus:ring-4 focus:ring-[#006FE8] focus:ring-opacity-100">
+                Leer más
+                <i class="ph ph-arrow-right" style="font-size: 16px; font-weight: bold;"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Secondary card 3 (blogPosts[0]) with Mountains icon -->
+          <div class="bg-white border border-[#E7F2FF] rounded-xl p-6 flex gap-6" data-blog-secondary-2>
+            <div class="flex-shrink-0">
+              <i class="ph ph-mountains text-[#7BD0C2]" style="font-size: 40px;"></i>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-xl font-semibold text-[#31363A]" data-blog-title>Cargando artículo...</h3>
+                <p class="text-base text-[#70777C] leading-6" data-blog-desc>Cargando descripción...</p>
+              </div>
+              <a href="#" data-blog-link target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-[10px] h-[48px] text-lg font-semibold rounded-xl bg-white border-2 border-[#006FE8] text-[#006FE8] hover:border-[#0059BA] hover:text-[#0059BA] transition-all duration-300 w-fit focus:outline-none focus:ring-4 focus:ring-[#006FE8] focus:ring-opacity-100">
+                Leer más
+                <i class="ph ph-arrow-right" style="font-size: 16px; font-weight: bold;"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile CTA button -->
+      <a href="#" data-blog-cta class="2xl:hidden inline-flex items-center justify-center gap-2 px-4 py-[10px] bg-[#006FE8] text-white font-semibold rounded-xl hover:bg-[#0059BA] transition-colors text-lg h-[48px] w-full">
+        Ir al blog
+        <i class="ph ph-arrow-right" style="font-size: 16px; font-weight: bold;"></i>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- PreFooter Section -->
+<div class="w-full flex justify-center">
+  <div class="w-full max-w-[1366px] prefooter-container h-[340px] flex flex-col items-center justify-end pb-8">
+    <div class="w-full max-w-[358px] lg:max-w-[998px] rounded-3xl bg-white bg-opacity-85 py-4 lg:py-8 px-4 lg:px-10 flex flex-col lg:flex-row items-center lg:justify-between">
+      
+      <img src="https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/logo.svg" alt="Assist 365 Logo" class="mb-4 lg:mb-0">
+      
+      <h2 class="text-2xl lg:text-4xl font-semibold text-[#0059BA] mb-4 lg:mb-0 text-center lg:text-left px-4 lg:px-0">
+        En tu viaje, <strong>a tu lado.</strong>
+      </h2>
+      
+      <div class="w-full lg:w-auto flex justify-start mt-4 lg:mt-0">
+        <button onclick="window.location.href='https://assist-365.com/products'" class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-lg py-[10px] h-[48px] bg-[#006FE8] focus:bg-[#0059BA] text-white hover:bg-[#0059BA] active:bg-[#004A9C] focus:ring-[#C2DFFF] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
+          Cotizá tu asistencia
+          <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 20px; font-weight: bold;"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- Footer Mount Point -->
+<footer id="footer-mount"></footer>
+
+<script>
+  // Inicializar accordions
+  document.addEventListener('DOMContentLoaded', function() {
+    const groups = document.querySelectorAll('[data-accordion-group]');
+    
+    groups.forEach(group => {
+      const items = group.querySelectorAll('[data-accordion-item]');
+      
+      items.forEach(item => {
+        const button = item.querySelector('[data-accordion-button]');
+        const content = item.querySelector('[data-accordion-content]');
+        const iconUp = item.querySelector('[data-icon-up]');
+        const iconDown = item.querySelector('[data-icon-down]');
+        
+        button.addEventListener('click', () => {
+          const isOpen = content.classList.contains('grid-rows-[1fr]');
+          
+          if (isOpen) {
+            content.classList.remove('grid-rows-[1fr]', 'opacity-100');
+            content.classList.add('grid-rows-[0fr]', 'opacity-0');
+            iconUp.classList.add('hidden');
+            iconDown.classList.remove('hidden');
+          } else {
+            content.classList.remove('grid-rows-[0fr]', 'opacity-0');
+            content.classList.add('grid-rows-[1fr]', 'opacity-100');
+            iconUp.classList.remove('hidden');
+            iconDown.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<script>
+  // Fetch desde API de producción
+  (async function loadBlogPosts() {
+    const geo = 'ar';
+    const blogContainer = document.querySelector('[data-blog-section]');
+    
+    if (!blogContainer) {
+      console.warn('Blog section not found');
+      return;
+    }
+    
+    try {
+      const url = 'https://assist-365.com/blog/' + geo + '/wp-json/wp/v2/posts?per_page=3';
+      const response = await fetch(url);
+      
+      if (!response.ok) throw new Error('Error fetching posts');
+      
+      const posts = await response.json();
+      
+      const processedPosts = posts.map(post => {
+        let thumbnailUrl = '';
+        if (post.yoast_head_json?.schema?.['@graph']) {
+          const graphItem = post.yoast_head_json.schema['@graph'].find(item => item.thumbnailUrl);
+          if (graphItem) thumbnailUrl = graphItem.thumbnailUrl;
+        }
+        
+        let description = post.yoast_head_json?.description || '';
+        if (description.length > 100) {
+          description = description.substring(0, 100) + '...';
+        } else if (description.length > 0 && !description.endsWith('...')) {
+          description = description + '...';
+        }
+        
+        return {
+          title: post.title?.rendered || '',
+          description,
+          link: post.link || '',
+          thumbnailUrl: thumbnailUrl || 'https://placehold.co/328x184'
+        };
+      });
+      
+      // Actualizar post principal (índice 2)
+      const mainPost = blogContainer.querySelector('[data-blog-main]');
+      if (mainPost && processedPosts[2]) {
+        const img = mainPost.querySelector('img');
+        const title = mainPost.querySelector('[data-blog-title]');
+        const desc = mainPost.querySelector('[data-blog-desc]');
+        const link = mainPost.querySelector('[data-blog-link]');
+        
+        if (img) {
+          img.src = processedPosts[2].thumbnailUrl;
+          img.alt = processedPosts[2].title;
+        }
+        if (title) title.textContent = processedPosts[2].title;
+        if (desc) desc.textContent = processedPosts[2].description;
+        if (link) link.href = processedPosts[2].link;
+      }
+      
+      // Actualizar posts secundarios
+      const secondaryPost1 = blogContainer.querySelector('[data-blog-secondary-1]');
+      if (secondaryPost1 && processedPosts[1]) {
+        const title = secondaryPost1.querySelector('[data-blog-title]');
+        const desc = secondaryPost1.querySelector('[data-blog-desc]');
+        const link = secondaryPost1.querySelector('[data-blog-link]');
+        
+        if (title) title.textContent = processedPosts[1].title;
+        if (desc) desc.textContent = processedPosts[1].description;
+        if (link) link.href = processedPosts[1].link;
+      }
+      
+      const secondaryPost2 = blogContainer.querySelector('[data-blog-secondary-2]');
+      if (secondaryPost2 && processedPosts[0]) {
+        const title = secondaryPost2.querySelector('[data-blog-title]');
+        const desc = secondaryPost2.querySelector('[data-blog-desc]');
+        const link = secondaryPost2.querySelector('[data-blog-link]');
+        
+        if (title) title.textContent = processedPosts[0].title;
+        if (desc) desc.textContent = processedPosts[0].description;
+        if (link) link.href = processedPosts[0].link;
+      }
+      
+      console.log('✅ Blog posts loaded successfully');
+      
+    } catch (error) {
+      console.error('❌ Error loading blog posts:', error);
+    }
+  })();
+  
+  // Blog CTA redirection
+  document.addEventListener('DOMContentLoaded', function() {
+    const blogCtas = document.querySelectorAll('[data-blog-cta]');
+    const blogUrl = 'https://assist-365.com/blog/ar';
+    
+    blogCtas.forEach(cta => {
+      cta.href = blogUrl;
+      cta.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(blogUrl, '_blank', 'noopener,noreferrer');
+      });
+    });
+  });
+</script>
+</body>
+</html>
+  <!-- SystemJS para cargar módulos -->
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
+
+  <!-- SystemJS Import Map (LOCALHOST) -->
+  <script type="systemjs-importmap">
+  {
+    "imports": {
+      "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.5/lib/system/single-spa.min.js",
+      "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+      "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+      "react-router-dom": "https://cdn.jsdelivr.net/npm/react-router-dom@6.26.2/dist/umd/react-router-dom.production.min.js",
+      "@a365/api": "http://localhost:5001/a365-api.js",
+      "@a365/authorization-sdk": "http://localhost:4046/a365-authorization-sdk.js",
+      "@a365/auth-session": "http://localhost:5101/a365-auth-session.js",
+      "@a365/core": "http://localhost:5049/a365-core.js",
+      "@a365/dsys": "http://localhost:5057/a365-dsys.js",
+      "@a365/shared-ui": "http://localhost:4047/a365-shared-ui.js",
+      "@a365/support-ui": "http://localhost:5042/a365-support-ui.js",
+      "@a365/quoter": "http://localhost:5007/a365-quoter.js",
+      "a365-navbarv2": "http://localhost:3020/a365-navbarv2.js",
+      "a365-footerv2": "http://localhost:3021/a365-footerv2.js"
+    }
+  }
+  </script>
+
+  <!-- Overlay del Cotizador -->
+  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[10000] hidden"></div>
+
+  <!-- Inicializar Cotizador -->
+  <script>
+    window.showQuoterOverlay = function() {
+      var overlay = document.getElementById('quoter-overlay');
+      if (overlay) overlay.classList.remove('hidden');
+    };
+
+    window.hideQuoterOverlay = function() {
+      var overlay = document.getElementById('quoter-overlay');
+      if (overlay) overlay.classList.add('hidden');
+    };
+
+    (function() {
+      var geoConfig = {
+        country_code: 'BR',
+        entity_id: '3',
+        country_id: '31',
+        language: 'pt',
+        redirection: true
+      };
+
+      Object.keys(geoConfig).forEach(function(key) {
+        localStorage.setItem(key, geoConfig[key]);
+      });
+
+      window.addEventListener('load', function() {
+        console.log('🚀 Cargando cotizador para Brasil (DEV MODE)...');
+        
+        Promise.all([
+          System.import('react'),
+          System.import('react-dom'),
+          System.import('@a365/core'),
+          System.import('@a365/dsys'),
+          System.import('@a365/quoter')
+        ]).then(function(modules) {
+          var React = modules[0];
+          var ReactDOM = modules[1];
+          var quoterModule = modules[4];
+          
+          var Quoter = quoterModule.Quoter || quoterModule.default;
+          var container = document.getElementById('quoter-mount');
+          
+          if (!container || !Quoter) {
+            console.error('❌ Error: contenedor o componente no encontrado');
+            return;
+          }
+          
+          var quoterState = {
+            isOpen: false,
+            overlay: false,
+            openMod: null
+          };
+          
+          var setIsOpen = function(value) {
+            quoterState.isOpen = value;
+          };
+          
+          var setOverlay = function(value) {
+            quoterState.overlay = value;
+            if (value) {
+              window.showQuoterOverlay();
+            } else {
+              window.hideQuoterOverlay();
+            }
+          };
+          
+          var setOpenMod = function(value) {
+            quoterState.openMod = value;
+          };
+          
+          var quoterProps = {
+            fetchProducts: null,
+            init: geoConfig,
+            mode: 'default',
+            isOpen: quoterState.isOpen,
+            setIsOpen: setIsOpen,
+            setOverlay: setOverlay,
+            overlay: quoterState.overlay,
+            openMod: quoterState.openMod,
+            setOpenMod: setOpenMod,
+            visible: true,
+            geo: 'AR'
+          };
+          
+          ReactDOM.render(
+            React.createElement(Quoter, quoterProps),
+            container
+          );
+          
+          console.log('✅ Cotizador montado correctamente (DEV)');
+        }).catch(function(err) {
+          console.error('❌ Error cargando cotizador:', err);
+        });
+      });
+    })();
+  </script>
+
+  <!-- Interceptor para mockear API update-banner -->
+  <script>
+    (function() {
+      const originalFetch = window.fetch;
+      window.fetch = function(...args) {
+        const url = args[0];
+        
+        // Interceptar llamadas a update-banner y devolver mock
+        if (typeof url === 'string' && url.includes('update-banner')) {
+          console.log('🔄 Interceptado update-banner, devolviendo mock');
+          return Promise.resolve({
+            ok: true,
+            status: 200,
+            json: () => Promise.resolve({ json: {} })
+          });
+        }
+        
+        return originalFetch.apply(this, args);
+      };
+    })();
+  </script>
+
+  <!-- Inicializar Navbar y Footer como aplicaciones Single-SPA embebidas -->
+  <script>
+    (function() {
+      console.log('🚀 Inicializando Single-SPA para navbar y footer...');
+      console.log('🌎 Geo configurado: AR (Argentina)');
+      
+      // Primero cargar Single-SPA y crear contexto global
+      System.import('single-spa').then(function(singleSpaModule) {
+        window.singleSpa = singleSpaModule;
+        console.log('✅ Single-SPA cargado');
+        
+        // Iniciar Single-SPA
+        singleSpaModule.start();
+        console.log('✅ Single-SPA iniciado');
+        
+        // Cargar Core y hacer fetch de geo
+        return System.import('@a365/core');
+      }).then(function(coreModule) {
+        console.log('✅ Core cargado');
+        
+        // Cargar geo desde API
+        var forceCountry = 'AR';
+        return coreModule.loadGeo(false, false, forceCountry);
+      }).then(function(geoData) {
+        console.log('✅ Geo cargado:', geoData);
+        
+        // Esperar un momento para que processedGeo$ emita
+        return new Promise(function(resolve) {
+          setTimeout(resolve, 300);
+        });
+      }).then(function() {
+        // Cargar auth-session
+        return System.import('@a365/auth-session');
+      }).then(function() {
+        console.log('✅ Auth session cargado');
+        
+        // Montar Navbar
+        var navbarContainer = document.getElementById('navbar-mount');
+        if (navbarContainer) {
+          System.import('a365-navbarv2').then(function(navbarApp) {
+            var appOrWrappedApp = navbarApp.default || navbarApp;
+            
+            // Single-SPA lifecycle: bootstrap -> mount
+            Promise.resolve()
+              .then(function() {
+                return appOrWrappedApp.bootstrap ? appOrWrappedApp.bootstrap({}) : Promise.resolve();
+              })
+              .then(function() {
+                return appOrWrappedApp.mount({
+                  name: 'a365-navbarv2',
+                  singleSpa: window.singleSpa,
+                  mountParcel: window.singleSpa.mountRootParcel,
+                  domElement: navbarContainer
+                });
+              })
+              .then(function() {
+                console.log('✅ Navbar montado correctamente (Single-SPA)');
+              })
+              .catch(function(err) {
+                console.error('❌ Error montando navbar:', err);
+              });
+          });
+        }
+        
+        // Montar Footer
+        var footerContainer = document.getElementById('footer-mount');
+        if (footerContainer) {
+          System.import('a365-footerv2').then(function(footerApp) {
+            var appOrWrappedApp = footerApp.default || footerApp;
+            
+            // Single-SPA lifecycle: bootstrap -> mount
+            Promise.resolve()
+              .then(function() {
+                return appOrWrappedApp.bootstrap ? appOrWrappedApp.bootstrap({}) : Promise.resolve();
+              })
+              .then(function() {
+                return appOrWrappedApp.mount({
+                  name: 'a365-footerv2',
+                  singleSpa: window.singleSpa,
+                  mountParcel: window.singleSpa.mountRootParcel,
+                  domElement: footerContainer
+                });
+              })
+              .then(function() {
+                console.log('✅ Footer montado correctamente (Single-SPA)');
+              })
+              .catch(function(err) {
+                console.error('❌ Error montando footer:', err);
+              });
+          });
+        }
+      }).catch(function(err) {
+        console.error('❌ Error general cargando Single-SPA:', err);
+      });
+    })();
+  </script>

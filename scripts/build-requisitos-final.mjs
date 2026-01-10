@@ -363,7 +363,7 @@ const singleSpaScripts = `
   </script>
 
   <!-- Overlay del Cotizador -->
-  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[99] hidden"></div>
+  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[10000] hidden"></div>
 
   <!-- Inicializar Cotizador -->
   <script>
@@ -536,7 +536,7 @@ const singleSpaScripts = `
                   name: 'a365-navbarv2',
                   singleSpa: window.singleSpa,
                   mountParcel: window.singleSpa.mountRootParcel,
-                  domElement: footerContainer
+                  domElement: navbarContainer
                 });
               })
               .then(function() {

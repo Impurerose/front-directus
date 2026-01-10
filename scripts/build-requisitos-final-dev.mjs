@@ -361,7 +361,7 @@ const singleSpaScripts = `
   </script>
 
   <!-- Overlay del Cotizador -->
-  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[99] hidden"></div>
+  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[10000] hidden"></div>
 
   <!-- Inicializar Cotizador -->
   <script>

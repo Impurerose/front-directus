@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import HeroLandings from "./components/HeroLandings";
 import SectionQuoter from "./components/SectionQuoter";
 import SectionImageText from "./components/SectionImageText";
@@ -92,6 +93,66 @@ function AppDestinos({
   accordionAduanas = defaultAccordionAduanas,
   faqItems = defaultFaqItems,
 } = {}) {
+  const [plans, setPlans] = useState([]);
+  const [isLoadingPlans, setIsLoadingPlans] = useState(true);
+  const quoterRef = useRef(null);
+
+  const handleScrollToQuoter = () => {
+    if (quoterRef.current) {
+      quoterRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        setIsLoadingPlans(true);
+        
+        // Construir parámetros para el endpoint
+        const params = new URLSearchParams({
+          region_id: '10',
+          country_code: 'AR',
+          country_id: '164',
+          days: '20',
+          entity_id: '6723',
+          to_year: '2026',
+          insured: '1',
+          date_from: '2026-12-10',
+          date_to: '2026-12-30',
+          ages_1: '1',
+          'age[]': '38',
+          currency_country_id: '164',
+          qsource: 'bsite'
+        });
+        
+        const url = `https://app.assist-365.com/api/products?${params.toString()}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        const transformedPlans = data.map((item, index) => ({
+          id: item.product.id,
+          name: item.product.name,
+          color: index % 2 === 0 ? "#0059BA" : "#31319B",
+          badge: index === 1 ? { text: "El más elegido", bgColor: "#D3EFD4" } 
+                  : index === 3 ? { text: "Plan recomendado", bgColor: "#CFF6FF" } 
+                  : null,
+          features: item.benefit.slice(0, 3).map(benefit => ({
+            amount: benefit.price,
+            description: benefit.name,
+          }))
+        }));
+        
+        setPlans(transformedPlans);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      } finally {
+        setIsLoadingPlans(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <>
       {/* Navbar mount point - System.import cargará el navbar aquí */}
@@ -107,7 +168,9 @@ function AppDestinos({
 
         {/* 2. Cotizador - Segunda posición (después del Hero) */}
 
-        <SectionQuoter destino={destino} geo={geo} />
+        <div ref={quoterRef}>
+          <SectionQuoter destino={destino} geo={geo} />
+        </div>
 
         {/* 3. ImageText - ¿Qué necesito para viajar? */}
         <SectionImageText
@@ -130,7 +193,7 @@ function AppDestinos({
         <SectionCards />
 
         {/* 7. Plans Section - Planes de seguro recomendados */}
-        <SectionPlans />
+        <SectionPlans plans={plans} isLoading={isLoadingPlans} destino={destino} />
 
         {/* 8. Requirements Section - Requisitos destacados */}
         <SectionRequirements />
@@ -143,7 +206,7 @@ function AppDestinos({
         {/* 10. Blog - Guías y consejos */}
         <SectionBlog geo={geo} />
         {/* 11. PreFooter - CTA final */}
-        <PreFooter />
+        <PreFooter onCotizarClick={handleScrollToQuoter} />
       </main>
 
       {/* Footer mount point - System.import cargará el footer aquí */}

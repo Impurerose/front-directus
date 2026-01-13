@@ -3,9 +3,13 @@ import { ArrowRight } from '@phosphor-icons/react';
 import Button from './Button';
 import './PreFooter.css';
 
-const PreFooter = () => {
+const PreFooter = ({ onCotizarClick }) => {
   const handleCotizar = () => {
-    window.location.href = 'https://assist-365.com/products';
+    if (onCotizarClick) {
+      onCotizarClick();
+    } else {
+      window.location.href = 'https://assist-365.com/products';
+    }
   };
 
   return (

@@ -37,6 +37,18 @@
     .grid-rows-\[0fr\] { grid-template-rows: 0fr; }
     .grid-rows-\[1fr\] { grid-template-rows: 1fr; }
     .switch-language-container { display: none !important; }
+    
+    /* Forzar capitalize en nombres de productos */
+    [class*="product"] h3,
+    [class*="plan"] h3,
+    .quoter-product-name {
+      text-transform: lowercase;
+    }
+    [class*="product"] h3::first-letter,
+    [class*="plan"] h3::first-letter,
+    .quoter-product-name::first-letter {
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body>

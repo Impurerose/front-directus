@@ -5,8 +5,28 @@ import {
   SuitcaseRolling,
 } from "@phosphor-icons/react";
 
-const SectionPlans = () => {
-  const plans = [
+const SectionPlans = ({ plans = [], isLoading = false, destino = "[Destino]" }) => {
+  const getIcon = (index) => {
+    const icons = [ShieldPlus, FirstAidKit, SuitcaseRolling];
+    return icons[index % icons.length];
+  };
+
+  if (isLoading) {
+    return (
+      <section className="w-full bg-[#E3DEF9] py-8 2xl:py-12 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+        <div className="px-4 2xl:px-0 mx-auto max-w-[358px] md:max-w-[548px] 2xl:max-w-[1200px]">
+          <h2 className="text-center text-[#0059BA] font-semibold text-3xl 2xl:text-4xl mb-8 2xl:mb-12">
+            Nuestros planes para viajar a {destino}
+          </h2>
+          <div className="text-center text-[#0059BA]">
+            Cargando planes...
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  const defaultPlans = [
     {
       id: 1,
       name: "World cover",
@@ -107,17 +127,19 @@ const SectionPlans = () => {
     },
   ];
 
+  const displayPlans = plans.length > 0 ? plans : defaultPlans;
+
   return (
     <section className="w-full bg-[#E3DEF9] py-8 2xl:py-12 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
       <div className="px-4 2xl:px-0 mx-auto max-w-[358px] md:max-w-[548px] 2xl:max-w-[1200px]">
         {/* Título */}
         <h2 className="text-center text-[#0059BA] font-semibold text-3xl 2xl:text-4xl mb-8 2xl:mb-12">
-          Nuestros planes para viajar a [Destino]
+          Nuestros planes para viajar a {destino}
         </h2>
 
         {/* Grid de planes */}
         <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-8">
-          {plans.map((plan) => (
+          {displayPlans.map((plan) => (
             <div key={plan.id} className="flex flex-col relative">
               {/* Badge (si existe) */}
               {plan.badge && (
@@ -136,7 +158,7 @@ const SectionPlans = () => {
                 className="rounded-t-xl h-[100px] flex items-center justify-center px-4 pt-6 pb-4"
                 style={{ backgroundColor: plan.color }}
               >
-                <h3 className="text-white font-semibold text-3xl">
+                <h3 className="text-white font-semibold text-3xl capitalize">
                   {plan.name}
                 </h3>
               </div>
@@ -144,7 +166,7 @@ const SectionPlans = () => {
               {/* Body con features */}
               <div className="bg-white border border-[#E7F2FF] rounded-b-xl p-4 flex flex-col gap-3 flex-1">
                 {plan.features.map((feature, index) => {
-                  const Icon = feature.icon;
+                  const Icon = feature.icon || getIcon(index);
                   return (
                     <div key={index} className="flex items-start gap-2">
                       <div className="size-6 flex-shrink-0">

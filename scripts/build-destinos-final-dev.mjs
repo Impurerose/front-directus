@@ -367,12 +367,16 @@ const singleSpaScripts = `
   <script>
     window.showQuoterOverlay = function() {
       var overlay = document.getElementById('quoter-overlay');
+      var quoterMount = document.getElementById('quoter-mount');
       if (overlay) overlay.classList.remove('hidden');
+      if (quoterMount) quoterMount.style.zIndex = '9999';
     };
 
     window.hideQuoterOverlay = function() {
       var overlay = document.getElementById('quoter-overlay');
+      var quoterMount = document.getElementById('quoter-mount');
       if (overlay) overlay.classList.add('hidden');
+      if (quoterMount) quoterMount.style.zIndex = '';
     };
 
     (function() {

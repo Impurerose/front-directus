@@ -37,18 +37,6 @@
     .grid-rows-\[0fr\] { grid-template-rows: 0fr; }
     .grid-rows-\[1fr\] { grid-template-rows: 1fr; }
     .switch-language-container { display: none !important; }
-    
-    /* Forzar capitalize en nombres de productos */
-    [class*="product"] h3,
-    [class*="plan"] h3,
-    .quoter-product-name {
-      text-transform: lowercase;
-    }
-    [class*="product"] h3::first-letter,
-    [class*="plan"] h3::first-letter,
-    .quoter-product-name::first-letter {
-      text-transform: uppercase;
-    }
   </style>
 </head>
 <body>
@@ -67,14 +55,14 @@
     </h1>
   </div>
 </div>
-<div class="w-full py-6 bg-bg-alt-secondary max-w-full md:max-w-[834px] xl:max-w-[1366px] mx-auto relative z-10">
+<div class="quoter-container-wrapper w-full py-6 bg-bg-alt-secondary max-w-full md:max-w-[834px] xl:max-w-[1366px] mx-auto">
   <div class="px-4 max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto lg:px-0">
     
     <!-- Mount Point del Cotizador -->
     <div 
       id="quoter-mount"
       data-geo="BR"
-      class="max-w-[926px] mx-auto"
+      class="max-w-[926px] mx-auto relative z-[10001]"
     >
       <!-- Este div será reemplazado por el cotizador real cuando se cargue Single-SPA -->
     </div>
@@ -608,18 +596,28 @@
   </script>
 
   <!-- Overlay del Cotizador -->
-  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[10000] hidden"></div>
+  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[98] hidden"></div>
 
   <!-- Inicializar Cotizador -->
   <script>
     window.showQuoterOverlay = function() {
       var overlay = document.getElementById('quoter-overlay');
+      var quoterMount = document.getElementById('quoter-mount');
       if (overlay) overlay.classList.remove('hidden');
+      // Subir z-index SOLO del quoter-mount, no del container azul
+      if (quoterMount) {
+        quoterMount.style.zIndex = '9999';
+      }
     };
 
     window.hideQuoterOverlay = function() {
       var overlay = document.getElementById('quoter-overlay');
+      var quoterMount = document.getElementById('quoter-mount');
       if (overlay) overlay.classList.add('hidden');
+      // Restaurar z-index del quoter-mount
+      if (quoterMount) {
+        quoterMount.style.zIndex = '';
+      }
     };
 
     (function() {
@@ -791,7 +789,7 @@
                 console.error('❌ Error montando navbar:', err);
               });
           });
-      }
+        }
         
         // Montar Footer
         var footerContainer = document.getElementById('footer-mount');

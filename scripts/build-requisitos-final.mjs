@@ -363,18 +363,28 @@ const singleSpaScripts = `
   </script>
 
   <!-- Overlay del Cotizador -->
-  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[10000] hidden"></div>
+  <div id="quoter-overlay" class="fixed inset-0 bg-black/25 z-[98] hidden"></div>
 
   <!-- Inicializar Cotizador -->
   <script>
     window.showQuoterOverlay = function() {
       var overlay = document.getElementById('quoter-overlay');
+      var quoterMount = document.getElementById('quoter-mount');
       if (overlay) overlay.classList.remove('hidden');
+      // Subir z-index SOLO del quoter-mount, no del container azul
+      if (quoterMount) {
+        quoterMount.style.zIndex = '9999';
+      }
     };
 
     window.hideQuoterOverlay = function() {
       var overlay = document.getElementById('quoter-overlay');
+      var quoterMount = document.getElementById('quoter-mount');
       if (overlay) overlay.classList.add('hidden');
+      // Restaurar z-index del quoter-mount
+      if (quoterMount) {
+        quoterMount.style.zIndex = '';
+      }
     };
 
     (function() {

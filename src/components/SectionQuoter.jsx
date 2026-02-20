@@ -12,7 +12,7 @@
 
 const SectionQuoter = ({ destino = "[Destino]", geo = "ar" }) => {
   return (
-    <div className="quoter-container-wrapper w-full py-6 bg-[#0059BA] max-w-full md:max-w-[834px] xl:max-w-[1366px] mx-auto">
+    <div className="quoter-container-wrapper w-full py-6 bg-[#0059BA] max-w-full md:max-w-[834px] xl:max-w-[1600px] mx-auto">
       <div className="px-4 max-w-[390px] md:max-w-[548px] lg:max-w-[1200px] 2xl:max-w-[1366px] mx-auto lg:px-0">
         {/* 
           Mount Point del Cotizador

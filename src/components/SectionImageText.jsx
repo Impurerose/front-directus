@@ -14,8 +14,8 @@ export default function SectionImageText({
     <div className="bg-white w-full tf-py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
       <div
         className={`flex flex-col ${
-          reverse ? "2xl:flex-row-reverse justify-end" : "2xl:flex-row"
-        } 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto`}
+          reverse ? "2xl:flex-row-reverse justify-center" : "2xl:flex-row justify-center"
+        } 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1600px] mx-auto`}
       >
         {/* Imagen */}
         <div className="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">

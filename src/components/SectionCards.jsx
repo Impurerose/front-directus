@@ -50,7 +50,7 @@ const SectionCards = () => {
   ];
 
   return (
-    <section className="w-full bg-[#F2F2F2] py-8 pb-12 mx-auto full 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px]">
+    <section className="w-full bg-[#F2F2F2] py-8 pb-12 mx-auto full 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1600px]">
       <div className="px-4 2xl:px-0 2xl:max-w-[748px] md:max-w-[548px] max-w-[548px] mx-auto">
         {/* Título */}
         <h2 className="text-center text-[#0059BA] font-semibold leading-9 2xl:leading-10 text-3xl 2xl:text-4xl p-0 mt-0 mb-6 2xlmb-10">

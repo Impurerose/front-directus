@@ -185,7 +185,7 @@ function AppDestinos({
         <SectionImageText
           title={`¿Es obligatorio el seguro de viaje para ${destino}?`}
           description="Aunque no siempre es obligatorio, contar con un seguro de viaje es altamente recomendable para cualquier destino internacional. Un seguro te protege ante emergencias médicas, cancelaciones de vuelos, pérdida de equipaje y muchas otras situaciones imprevistas que pueden ocurrir durante tu viaje."
-          imageSrc="https://placehold.co/256x256/0ea5e9/ffffff"
+          imageSrc="https://placehold.co/486x360/0ea5e9/ffffff"
           reverse={true}
         />
 

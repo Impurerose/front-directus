@@ -49,7 +49,7 @@ export const SectionRequirements = ({
   const items = requirements.length > 0 ? requirements : defaultRequirements;
 
   return (
-    <section className="w-full bg-[#F2F2F2] py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+    <section className="w-full bg-[#F2F2F2] py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1600px] mx-auto">
       <div className="mx-auto max-w-[358px] px-4 md:max-w-[548px] 2xl:max-w-[996px] 2xl:px-0">
         {/* Título */}
         <h2 className="mb-6 mt-0 p-0 text-3xl font-semibold leading-9 text-[#0059BA] 2xl:mb-10 2xl:text-4xl 2xl:leading-10">

@@ -14,7 +14,7 @@ const PreFooter = ({ onCotizarClick }) => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="w-full max-w-[1366px] prefooter-container h-[340px] flex flex-col items-center justify-end pb-8">
+      <div className="w-full max-w-[1600px] prefooter-container h-[340px] flex flex-col items-center justify-end pb-8">
         <div className="w-full max-w-[358px] lg:max-w-[998px] rounded-3xl bg-white bg-opacity-85 py-4 lg:py-8 px-4 lg:px-10 flex flex-col lg:flex-row items-center lg:justify-between">
           <img
             src="https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/logo.svg"

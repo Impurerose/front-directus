@@ -130,7 +130,7 @@ const SectionPlans = ({ plans = [], isLoading = false, destino = "[Destino]" }) 
   const displayPlans = plans.length > 0 ? plans : defaultPlans;
 
   return (
-    <section className="w-full bg-[#E3DEF9] py-8 2xl:py-12 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+    <section className="w-full bg-[#E3DEF9] py-8 2xl:py-12 max-w-full md:max-w-[834px] 2xl:max-w-[1600px] mx-auto">
       <div className="px-4 2xl:px-0 mx-auto max-w-[358px] md:max-w-[548px] 2xl:max-w-[1200px]">
         {/* Título */}
         <h2 className="text-center text-[#0059BA] font-semibold text-3xl 2xl:text-4xl mb-8 2xl:mb-12">

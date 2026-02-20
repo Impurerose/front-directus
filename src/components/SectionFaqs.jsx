@@ -21,7 +21,7 @@ export default function SectionFaqs({ title, items }) {
       />
 
       {/* Content */}
-      <div className="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] relative z-10">
+      <div className="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1600px] justify-center relative z-10">
         <div className="flex flex-col 2xl:flex-row items-center 2xl:items-start justify-between mx-auto max-w-[1200px] w-full">
           {/* Left Column - Title */}
           <div className="flex flex-col items-start justify-start md:max-w-[548px] 2xl:max-w-full md:mt-12 lg:mt-0">

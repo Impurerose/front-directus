@@ -14,7 +14,7 @@ export default function HeroLandings({
   customTitle = null,
 }) {
   return (
-    <div className="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px]
+    <div className="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1600px] mx-auto min-h-[400px]
     2xl:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/affiliates/bg-1366x400.jpg')] bg-no-repeat bg-cover
     md:bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/affiliates/bg-834x426.jpg')]
     bg-[url('https://assistcdn.s3.us-west-1.amazonaws.com/assets/img/affiliates/bg-390x377.jpg')]

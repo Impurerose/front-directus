@@ -58,13 +58,13 @@ const sectionFaqs = `
       <!-- Right Column - FAQs -->
       <div class="w-full md:max-w-[548px] max-w-[690px] 2xl:min-w-[690px] mt-2 2xl:mt-0">
         <div class="flex flex-col gap-4" data-accordion-group>
-${faqItems.map(item => `          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all bg-[#f2f2f2]">
+${faqItems.map((item, index) => `          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all ${index === 0 ? 'bg-white border border-[#c2dfff]' : 'bg-[#f2f2f2]'}">
             <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
               <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">${item.title}</p>
-              <i data-icon-up class="ph ph-caret-up text-[#006fe8] hidden" style="font-size: 20px;"></i>
-              <i data-icon-down class="ph ph-caret-down text-[#006fe8]" style="font-size: 20px;"></i>
+              <i data-icon-up class="ph ph-caret-up text-[#006fe8] ${index === 0 ? '' : 'hidden'}" style="font-size: 20px;"></i>
+              <i data-icon-down class="ph ph-caret-down text-[#006fe8] ${index === 0 ? 'hidden' : ''}" style="font-size: 20px;"></i>
             </button>
-            <div data-accordion-content class="accordion-content grid grid-rows-[0fr] opacity-0">
+            <div data-accordion-content class="accordion-content grid ${index === 0 ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}">
               <div class="overflow-hidden"><p class="pt-2 text-base leading-6 text-[#31363a]">${item.content}</p></div>
             </div>
           </div>`).join('\n')}
@@ -216,11 +216,17 @@ const javascript = `
             content.classList.add('grid-rows-[0fr]', 'opacity-0');
             iconUp.classList.add('hidden');
             iconDown.classList.remove('hidden');
+            // Cambiar a gris cuando se cierra
+            item.classList.remove('bg-white', 'border', 'border-[#c2dfff]');
+            item.classList.add('bg-[#f2f2f2]');
           } else {
             content.classList.remove('grid-rows-[0fr]', 'opacity-0');
             content.classList.add('grid-rows-[1fr]', 'opacity-100');
             iconUp.classList.remove('hidden');
             iconDown.classList.add('hidden');
+            // Cambiar a blanco con borde cuando se abre
+            item.classList.remove('bg-[#f2f2f2]');
+            item.classList.add('bg-white', 'border', 'border-[#c2dfff]');
           }
         });
       });

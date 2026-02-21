@@ -5,7 +5,7 @@
     <div class="max-w-[792px] flex flex-col mx-auto">
     <div class="flex flex-col gap-10 w-full">
       <h2 class="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba]">¿Qué debes saber de las aduanas y artículos prohibidos para viajar a Brasil?</h2>
-      <div class="flex flex-col gap-4 w-full" data-accordion-group>
+      <div class="flex flex-col gap-4 w-full" data-accordion-group data-accordion-type="section">
         <div data-accordion-item class="bg-white p-4 w-full flex flex-col rounded-lg">
           <button data-accordion-button class="flex items-center gap-2 w-full text-left">
             <i class="ph-duotone ph-files text-[#7BD0C2]" style="font-size: 32px;"></i>

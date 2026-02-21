@@ -57,7 +57,7 @@ const sectionFaqs = `
 
       <!-- Right Column - FAQs -->
       <div class="w-full md:max-w-[548px] max-w-[690px] 2xl:min-w-[690px] mt-2 2xl:mt-0">
-        <div class="flex flex-col gap-4" data-accordion-group>
+        <div class="flex flex-col gap-4" data-accordion-group data-accordion-type="faq">
 ${faqItems.map((item, index) => `          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all ${index === 0 ? 'bg-white border border-[#c2dfff]' : 'bg-[#f2f2f2]'}">
             <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
               <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">${item.title}</p>
@@ -201,6 +201,8 @@ const javascript = `
     
     groups.forEach(group => {
       const items = group.querySelectorAll('[data-accordion-item]');
+      const accordionType = group.getAttribute('data-accordion-type');
+      const isFaqType = accordionType === 'faq';
       
       items.forEach(item => {
         const button = item.querySelector('[data-accordion-button]');
@@ -216,9 +218,14 @@ const javascript = `
             content.classList.add('grid-rows-[0fr]', 'opacity-0');
             iconUp.classList.add('hidden');
             iconDown.classList.remove('hidden');
-            // Cambiar a gris cuando se cierra
-            item.classList.remove('bg-white', 'border', 'border-[#c2dfff]');
-            item.classList.add('bg-[#f2f2f2]');
+            
+            // Solo FAQs cambian a gris, SectionAccordion solo quita borde
+            if (isFaqType) {
+              item.classList.remove('bg-white', 'border', 'border-[#c2dfff]');
+              item.classList.add('bg-[#f2f2f2]');
+            } else {
+              item.classList.remove('border', 'border-[#c2dfff]');
+            }
           } else {
             // CERRAR TODOS LOS OTROS ACORDEONES PRIMERO
             items.forEach(otherItem => {
@@ -231,8 +238,13 @@ const javascript = `
                 otherContent.classList.add('grid-rows-[0fr]', 'opacity-0');
                 otherIconUp.classList.add('hidden');
                 otherIconDown.classList.remove('hidden');
-                otherItem.classList.remove('bg-white', 'border', 'border-[#c2dfff]');
-                otherItem.classList.add('bg-[#f2f2f2]');
+                
+                if (isFaqType) {
+                  otherItem.classList.remove('bg-white', 'border', 'border-[#c2dfff]');
+                  otherItem.classList.add('bg-[#f2f2f2]');
+                } else {
+                  otherItem.classList.remove('border', 'border-[#c2dfff]');
+                }
               }
             });
             
@@ -241,9 +253,14 @@ const javascript = `
             content.classList.add('grid-rows-[1fr]', 'opacity-100');
             iconUp.classList.remove('hidden');
             iconDown.classList.add('hidden');
-            // Cambiar a blanco con borde cuando se abre
-            item.classList.remove('bg-[#f2f2f2]');
-            item.classList.add('bg-white', 'border', 'border-[#c2dfff]');
+            
+            // Solo FAQs cambian a blanco, SectionAccordion ya es blanco (solo agregar borde)
+            if (isFaqType) {
+              item.classList.remove('bg-[#f2f2f2]');
+              item.classList.add('bg-white', 'border', 'border-[#c2dfff]');
+            } else {
+              item.classList.add('border', 'border-[#c2dfff]');
+            }
           }
         });
       });

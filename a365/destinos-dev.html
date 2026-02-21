@@ -582,6 +582,23 @@
             item.classList.remove('bg-white', 'border', 'border-[#c2dfff]');
             item.classList.add('bg-[#f2f2f2]');
           } else {
+            // CERRAR TODOS LOS OTROS ACORDEONES PRIMERO
+            items.forEach(otherItem => {
+              if (otherItem !== item) {
+                const otherContent = otherItem.querySelector('[data-accordion-content]');
+                const otherIconUp = otherItem.querySelector('[data-icon-up]');
+                const otherIconDown = otherItem.querySelector('[data-icon-down]');
+                
+                otherContent.classList.remove('grid-rows-[1fr]', 'opacity-100');
+                otherContent.classList.add('grid-rows-[0fr]', 'opacity-0');
+                otherIconUp.classList.add('hidden');
+                otherIconDown.classList.remove('hidden');
+                otherItem.classList.remove('bg-white', 'border', 'border-[#c2dfff]');
+                otherItem.classList.add('bg-[#f2f2f2]');
+              }
+            });
+            
+            // AHORA ABRIR EL ACORDEÓN CLICKEADO
             content.classList.remove('grid-rows-[0fr]', 'opacity-0');
             content.classList.add('grid-rows-[1fr]', 'opacity-100');
             iconUp.classList.remove('hidden');

@@ -44,7 +44,7 @@ const sectionFaqs = `
   ></div>
 
   <!-- Content -->
-  <div class="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] relative z-10">
+  <div class="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1600px] relative z-10">
     <div class="flex flex-col 2xl:flex-row items-center 2xl:items-start justify-between mx-auto max-w-[1200px] w-full">
       
       <!-- Left Column - Title -->
@@ -172,7 +172,7 @@ const sectionBlog = `
 const sectionPreFooter = `
 <!-- PreFooter Section -->
 <div class="w-full flex justify-center">
-  <div class="w-full max-w-[1366px] prefooter-container h-[340px] flex flex-col items-center justify-end pb-8">
+  <div class="w-full max-w-[1600px] prefooter-container h-[340px] flex flex-col items-center justify-end pb-8">
     <div class="w-full max-w-[358px] lg:max-w-[998px] rounded-3xl bg-white bg-opacity-85 py-4 lg:py-8 px-4 lg:px-10 flex flex-col lg:flex-row items-center lg:justify-between">
       
       <img src="https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/logo.svg" alt="Assist 365 Logo" class="mb-4 lg:mb-0">

@@ -15,7 +15,7 @@ export default function SectionAccordion({ title, items }) {
         <div className="flex flex-col gap-10 w-full">
           {/* Title */}
           <div className="w-full">
-            <h2 className="text-center text-3xl 2xl:text-4xl leading-[40px] font-semibold text-[#0059ba] w-full">
+            <h2 className="text-center text-3xl 2xl:text-4xl font-semibold text-[#0059ba] w-full">
               {title}
             </h2>
           </div>

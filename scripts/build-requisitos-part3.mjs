@@ -16,7 +16,7 @@ console.log('🚀 Generando HTML de Requisitos - Sección 3...\n');
 // SECCIÓN 3: Accordion Aduanas
 const section3 = `
 <!-- Accordion - Aduanas y Artículos Prohibidos -->
-<div class="bg-[#f2f2f2] mx-auto w-full py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px]">
+<div class="bg-[#f2f2f2] mx-auto w-full py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1600px]">
   <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] mx-auto px-4 2xl:px-[185px]">
     <div class="max-w-[792px] flex flex-col mx-auto">
     <div class="flex flex-col gap-10 w-full">

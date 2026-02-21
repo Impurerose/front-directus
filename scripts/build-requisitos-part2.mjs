@@ -17,7 +17,7 @@ const { accordionDocumentos } = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 const section2 = `
 <!-- ImageText Principal - ¿Qué necesito para viajar? -->
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
-  <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+  <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1600px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
       <img alt="Viajar a ${destino}" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
     </div>
@@ -29,7 +29,7 @@ const section2 = `
 </div>
 
 <!-- Accordion - Documentos Necesarios -->
-<div class="bg-[#f2f2f2] mx-auto w-full py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px]">
+<div class="bg-[#f2f2f2] mx-auto w-full py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1600px]">
   <div class="max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] mx-auto px-4 2xl:px-[185px]">
     <div class="max-w-[792px] flex flex-col mx-auto">
       <div class="flex flex-col gap-10 w-full">
@@ -54,7 +54,7 @@ ${accordionDocumentos.map(item => `          <div data-accordion-item class="bg-
 
 <!-- ImageText - ¿Es obligatorio el seguro? -->
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
-  <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+  <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1600px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
       <img alt="Seguro de viaje" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/256x256/0ea5e9/ffffff">
     </div>
@@ -67,7 +67,7 @@ ${accordionDocumentos.map(item => `          <div data-accordion-item class="bg-
 
 <!-- ImageText - ¿Necesitas Visa? -->
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
-  <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+  <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1600px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
       <img alt="Visa para viajar" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/256x256/0ea5e9/ffffff">
     </div>
@@ -80,7 +80,7 @@ ${accordionDocumentos.map(item => `          <div data-accordion-item class="bg-
 
 <!-- ImageText - ¿Qué vacunas son obligatorias? -->
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
-  <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+  <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1600px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
       <img alt="Vacunas obligatorias" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/256x256/0ea5e9/ffffff">
     </div>

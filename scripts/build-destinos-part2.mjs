@@ -13,7 +13,7 @@ console.log('🚀 Generando HTML de Destinos - Sección 2...\n');
 const section2 = `
 <!-- ImageText Principal - ¿Qué necesito para viajar? -->
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
-  <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+  <div class="flex flex-col 2xl:flex-row 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1600px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
       <img alt="Viajar a ${destino}" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/486x360">
     </div>
@@ -26,7 +26,7 @@ const section2 = `
 
 <!-- ImageText - ¿Es obligatorio el seguro? -->
 <div class="bg-white w-full py-9 2xl:py-16 pt-12 pb-12 2xl:pb-20 px-4">
-  <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+  <div class="flex flex-col 2xl:flex-row-reverse justify-end 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1600px] mx-auto">
     <div class="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
       <img alt="Seguro de viaje" class="absolute inset-0 w-full h-full object-cover rounded-lg" src="https://placehold.co/256x256/0ea5e9/ffffff">
     </div>
@@ -38,7 +38,7 @@ const section2 = `
 </div>
 
 <!-- SectionCards - ¿Qué debe incluir tu seguro? -->
-<section class="w-full bg-[#F2F2F2] py-8 pb-12 mx-auto full 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px]">
+<section class="w-full bg-[#F2F2F2] py-8 pb-12 mx-auto full 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1600px]">
   <div class="px-4 2xl:px-0 2xl:max-w-[748px] md:max-w-[548px] max-w-[548px] mx-auto">
     <h2 class="text-center text-[#0059BA] font-semibold leading-9 2xl:leading-10 text-3xl 2xl:text-4xl p-0 mt-0 mb-6 2xlmb-10">
       ¿Qué debe incluir tu seguro de viaje para ${destino}?
@@ -99,7 +99,7 @@ const section2 = `
 </section>
 
 <!-- SectionPlans - Nuestros planes -->
-<section class="w-full bg-[#E3DEF9] py-8 2xl:py-12 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+<section class="w-full bg-[#E3DEF9] py-8 2xl:py-12 max-w-full md:max-w-[834px] 2xl:max-w-[1600px] mx-auto">
   <div class="px-4 2xl:px-0 mx-auto max-w-[358px] md:max-w-[548px] 2xl:max-w-[1200px]">
     <h2 class="text-center text-[#0059BA] font-semibold text-3xl 2xl:text-4xl mb-8 2xl:mb-12">
       Nuestros planes para viajar a ${destino}
@@ -247,7 +247,7 @@ const section2 = `
 </section>
 
 <!-- SectionRequirements - Requisitos para viajar -->
-<section class="w-full bg-[#F2F2F2] py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1366px] mx-auto">
+<section class="w-full bg-[#F2F2F2] py-8 2xl:py-16 max-w-full md:max-w-[834px] 2xl:max-w-[1600px] mx-auto">
   <div class="mx-auto max-w-[358px] px-4 md:max-w-[548px] 2xl:max-w-[996px] 2xl:px-0">
     <h2 class="mb-6 mt-0 p-0 text-3xl font-semibold leading-9 text-[#0059BA] 2xl:mb-10 2xl:text-4xl 2xl:leading-10">
       Requisitos para viajar a ${destino}

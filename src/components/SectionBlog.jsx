@@ -114,7 +114,7 @@ const SectionBlog = ({ geo = "ar", blogUrl }) => {
 
   return (
     <div className="w-full flex items-center justify-center py-16">
-      <div className="w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[1296px] -px-4 -md:px-6">
+      <div className="w-full max-w-[390px] md:max-w-[548px] 2xl:max-w-[1296px] px-4 -md:px-6">
         <div className="bg-[#CFF6FF] rounded-3xl p-6 2xl:p-12 flex flex-col 2xl:flex-row gap-8 2xl:gap-[86px]">
           {/* Left section - Title and CTA */}
           <div className="flex flex-col justify-center 2xl:w-[282px] flex-shrink-0">

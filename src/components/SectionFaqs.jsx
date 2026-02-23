@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { Info, CaretUp, CaretDown } from "@phosphor-icons/react";
+import { trackFaqDropdownClick } from "../services/analytics";
 
 export default function SectionFaqs({ title, items }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    const isOpening = openIndex !== index;
+    const newIndex = isOpening ? index : null;
+    setOpenIndex(newIndex);
+    
+    // Tracking: Disparar evento solo cuando se EXPANDE el acordeón
+    if (isOpening) {
+      trackFaqDropdownClick();
+    }
   };
 
   return (

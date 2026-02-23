@@ -6,10 +6,10 @@ echo ""
 echo "Generando todas las secciones..."
 echo ""
 
-node build-destinos.mjs && \
-node build-quoter.mjs && \
-node build-destinos-part2.mjs && \
-node build-destinos-final.mjs
+node scripts/build-destinos.mjs && \
+node scripts/build-quoter.mjs && \
+node scripts/build-destinos-part2.mjs && \
+node scripts/build-destinos-final.mjs
 
 echo ""
 echo "✅ ¡Listo! Revisa el archivo: a365/destinos.html"

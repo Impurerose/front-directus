@@ -17,20 +17,23 @@ export default function SectionFaqs({ title, items }) {
   };
 
   return (
-    <div className="relative w-full z-50 px-4 md:px-0 pb-12 2xl:pb-0 2xl:h-[520px] my-12 2xl:my-28">
+    <div className="relative w-full z-50 pb-12 2xl:pb-0 2xl:h-[520px] my-12 2xl:my-28">
       {/* Background Shape */}
+
+      <div className="relative max-w-[834px] 2xl:max-w-[1600px] w-full mx-auto">
       <div 
-        className="absolute w-full h-[646px] right-0 top-0 z-[1] mt-32 2xl:mt-0"
+        className="absolute w-full h-[600px] right-0 top-0 z-[1] mt-32 2xl:mt-0"
         style={{
           backgroundImage: "url(https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/home/img/faq_background.svg)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "top right"
         }}
       />
+      </div>
 
       {/* Content */}
-      <div className="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1600px] justify-center relative z-10">
-        <div className="flex flex-col 2xl:flex-row items-center 2xl:items-start justify-between mx-auto max-w-[1200px] w-full">
+      <div className="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1600px] justify-center relative z-10 px-4 md:px-0">
+        <div className="relative flex flex-col 2xl:flex-row items-center 2xl:items-start justify-around mx-auto max-w-[1200px] w-full pt-24">
           {/* Left Column - Title */}
           <div className="flex flex-col items-start justify-start md:max-w-[548px] 2xl:max-w-full md:mt-12 lg:mt-0">
             <Info size={48} weight="duotone" className="text-[#7BD0C2]" />
@@ -40,7 +43,7 @@ export default function SectionFaqs({ title, items }) {
           </div>
 
           {/* Right Column - FAQs */}
-          <div className="w-full md:max-w-[548px] max-w-[690px] 2xl:min-w-[690px] mt-2 2xl:mt-0">
+          <div className="w-full md:max-w-[548px] max-w-[658px] mt-2 2xl:mt-0">
             <div className="flex flex-col gap-4" data-accordion-group>
               {items.map((item, index) => (
                 <div

@@ -6,11 +6,11 @@ echo ""
 echo "Generando todas las secciones..."
 echo ""
 
-node build-requisitos-dev.mjs && \
-node build-quoter.mjs && \
-node build-requisitos-part2.mjs && \
-node build-requisitos-part3.mjs && \
-node build-requisitos-final-dev.mjs
+node scripts/build-requisitos-dev.mjs && \
+node scripts/build-quoter.mjs && \
+node scripts/build-requisitos-part2.mjs && \
+node scripts/build-requisitos-part3.mjs && \
+node scripts/build-requisitos-final-dev.mjs
 
 echo ""
 echo "✅ ¡Listo! Revisa el archivo: a365/requisitos-dev.html"

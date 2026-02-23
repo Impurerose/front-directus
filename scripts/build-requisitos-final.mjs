@@ -35,17 +35,20 @@ const { faqItems } = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 // SECCIÓN FAQs con background shape lila
 const sectionFaqs = `
 <!-- FAQs Section -->
-<div class="relative w-full z-50 px-4 md:px-0 pb-12 2xl:pb-0 2xl:h-[520px] my-12 2xl:my-28">
+<div class="relative w-full z-50 pb-12 2xl:pb-0 2xl:h-[520px] my-12 2xl:my-28">
   
   <!-- Background Shape -->
+  
+  <div class="relative max-w-[834px] 2xl:max-w-[1600px] w-full mx-auto">
   <div 
-    class="absolute w-full h-[646px] right-0 top-0 z-[1] mt-32 2xl:mt-0"
+    class="absolute w-full h-[600px] right-0 top-0 z-[1] mt-32 2xl:mt-0"
     style="background-image: url(https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/home/img/faq_background.svg); background-repeat: no-repeat; background-position: top right;"
   ></div>
+  </div>
 
   <!-- Content -->
-  <div class="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1366px] relative z-10">
-    <div class="flex flex-col 2xl:flex-row items-center 2xl:items-start justify-between mx-auto max-w-[1200px] w-full">
+  <div class="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1600px] justify-center relative z-10 px-4 md:px-0">
+    <div class="relative flex flex-col 2xl:flex-row items-center 2xl:items-start justify-around mx-auto max-w-[1200px] w-full pt-24">
       
       <!-- Left Column - Title -->
       <div class="flex flex-col items-start justify-start md:max-w-[548px] 2xl:max-w-full md:mt-12 lg:mt-0">
@@ -56,8 +59,8 @@ const sectionFaqs = `
       </div>
 
       <!-- Right Column - FAQs -->
-      <div class="w-full md:max-w-[548px] max-w-[690px] 2xl:min-w-[690px] mt-2 2xl:mt-0">
-        <div class="flex flex-col gap-4" data-accordion-group>
+      <div class="w-full md:max-w-[548px] max-w-[658px] mt-2 2xl:mt-0">
+        <div class="flex flex-col gap-4" data-accordion-group data-accordion-type="faq">
 ${faqItems.map(item => `          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all bg-[#f2f2f2]">
             <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">
               <p class="flex-1 text-base font-semibold leading-6 text-[#31363a]">${item.title}</p>
@@ -182,7 +185,7 @@ const sectionPreFooter = `
       </h2>
       
       <div class="w-full lg:w-auto flex justify-start mt-4 lg:mt-0">
-        <button onclick="window.location.href='https://assist-365.com/products'" class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-lg py-[10px] h-[48px] bg-[#006FE8] focus:bg-[#0059BA] text-white hover:bg-[#0059BA] active:bg-[#004A9C] focus:ring-[#C2DFFF] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
+        <button onclick="trackQuoteTravelInsurance(); window.location.href='https://assist-365.com/'" class="whitespace-nowrap overflow-hidden text-ellipsis font-semibold rounded-xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-offset-0 text-lg py-[10px] h-[48px] bg-[#006FE8] focus:bg-[#0059BA] text-white hover:bg-[#0059BA] active:bg-[#004A9C] focus:ring-[#C2DFFF] focus:ring-opacity-100 px-4 w-full lg:w-fit flex items-center justify-center gap-2">
           Cotizá tu asistencia
           <i class="ph ph-arrow-right flex-shrink-0" style="font-size: 20px; font-weight: bold;"></i>
         </button>
@@ -195,12 +198,82 @@ const sectionPreFooter = `
 // JavaScript para Accordions y Blog
 const javascript = `
 <script>
+  // ===== ANALYTICS TRACKING SYSTEM =====
+  function formatTimestamp() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    return year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
+  }
+
+  function getCurrentSection() {
+    try {
+      const pathname = window.location.pathname;
+      const parts = pathname.split('/').filter(function(part) { return part.length > 0; });
+      if (parts.length === 0) return 'landing';
+      const lastPart = parts[parts.length - 1];
+      return 'landing ' + lastPart;
+    } catch (error) {
+      console.error('[Analytics] Error:', error);
+      return 'landing';
+    }
+  }
+
+  function pushToDataLayer(eventData) {
+    try {
+      if (!window.dataLayer) {
+        window.dataLayer = [];
+      }
+      window.dataLayer.push(eventData);
+      console.log('📊 [Analytics] Evento:', eventData);
+    } catch (error) {
+      console.error('[Analytics] Error:', error);
+    }
+  }
+
+  function trackFaqDropdownClick() {
+    pushToDataLayer({
+      event: 'lp_click_faq_dropdown',
+      eventProperties: {
+        timestamp_event: formatTimestamp(),
+        current_section: getCurrentSection()
+      }
+    });
+  }
+
+  function trackBlogCtaClick() {
+    pushToDataLayer({
+      event: 'lp_blog_cta_click',
+      eventProperties: {
+        timestamp_event: formatTimestamp(),
+        current_section: getCurrentSection()
+      }
+    });
+  }
+
+  function trackQuoteTravelInsurance() {
+    pushToDataLayer({
+      event: 'cko_quote_travel_insurance',
+      eventProperties: {
+        timestamp_event: formatTimestamp(),
+        current_section: getCurrentSection()
+      }
+    });
+  }
+  // ===== END ANALYTICS =====
+
   // Inicializar accordions
   document.addEventListener('DOMContentLoaded', function() {
     const groups = document.querySelectorAll('[data-accordion-group]');
     
     groups.forEach(group => {
       const items = group.querySelectorAll('[data-accordion-item]');
+      const accordionType = group.getAttribute('data-accordion-type');
+      const isFaqType = accordionType === 'faq';
       
       items.forEach(item => {
         const button = item.querySelector('[data-accordion-button]');
@@ -216,11 +289,50 @@ const javascript = `
             content.classList.add('grid-rows-[0fr]', 'opacity-0');
             iconUp.classList.add('hidden');
             iconDown.classList.remove('hidden');
+            
+            // Solo FAQs cambian a gris, SectionAccordion solo quita borde
+            if (isFaqType) {
+              item.classList.remove('bg-white', 'border', 'border-[#c2dfff]');
+              item.classList.add('bg-[#f2f2f2]');
+            } else {
+              item.classList.remove('border', 'border-[#c2dfff]');
+            }
           } else {
+            // CERRAR TODOS LOS OTROS ACORDEONES PRIMERO
+            items.forEach(otherItem => {
+              if (otherItem !== item) {
+                const otherContent = otherItem.querySelector('[data-accordion-content]');
+                const otherIconUp = otherItem.querySelector('[data-icon-up]');
+                const otherIconDown = otherItem.querySelector('[data-icon-down]');
+                
+                otherContent.classList.remove('grid-rows-[1fr]', 'opacity-100');
+                otherContent.classList.add('grid-rows-[0fr]', 'opacity-0');
+                otherIconUp.classList.add('hidden');
+                otherIconDown.classList.remove('hidden');
+                
+                if (isFaqType) {
+                  otherItem.classList.remove('bg-white', 'border', 'border-[#c2dfff]');
+                  otherItem.classList.add('bg-[#f2f2f2]');
+                } else {
+                  otherItem.classList.remove('border', 'border-[#c2dfff]');
+                }
+              }
+            });
+            
+            // AHORA ABRIR EL ACORDEÓN CLICKEADO
             content.classList.remove('grid-rows-[0fr]', 'opacity-0');
             content.classList.add('grid-rows-[1fr]', 'opacity-100');
             iconUp.classList.remove('hidden');
             iconDown.classList.add('hidden');
+            
+            // Solo FAQs cambian a blanco, SectionAccordion ya es blanco (solo agregar borde)
+            if (isFaqType) {
+              trackFaqDropdownClick();
+              item.classList.remove('bg-[#f2f2f2]');
+              item.classList.add('bg-white', 'border', 'border-[#c2dfff]');
+            } else {
+              item.classList.add('border', 'border-[#c2dfff]');
+            }
           }
         });
       });
@@ -312,6 +424,21 @@ const javascript = `
       }
       
       console.log('✅ Blog posts loaded successfully');
+      
+      // ✅ TRACKING: Agregar event listeners a CTAs del blog
+      const blogCtas = document.querySelectorAll('[data-blog-cta]');
+      blogCtas.forEach(function(cta) {
+        cta.addEventListener('click', function(e) {
+          trackBlogCtaClick();
+        });
+      });
+
+      const blogLinks = document.querySelectorAll('[data-blog-link]');
+      blogLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          trackBlogCtaClick();
+        });
+      });
       
     } catch (error) {
       console.error('❌ Error loading blog posts:', error);

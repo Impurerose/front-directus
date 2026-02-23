@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AirplaneTilt, Mountains, ArrowRight } from "@phosphor-icons/react";
 import Button from "./Button";
+import { trackBlogCtaClick } from "../services/analytics";
 
 const SectionBlog = ({ geo = "ar", blogUrl }) => {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -56,6 +57,9 @@ const SectionBlog = ({ geo = "ar", blogUrl }) => {
   }, [geo]);
 
   const goToBlog = () => {
+    // Tracking: Disparar evento antes de redirigir
+    trackBlogCtaClick();
+    
     // Si se pasa blogUrl explícitamente, usarlo
     if (blogUrl) {
       window.open(blogUrl, "_blank", "noopener,noreferrer");
@@ -69,6 +73,9 @@ const SectionBlog = ({ geo = "ar", blogUrl }) => {
   };
 
   const handleOpenPost = (link) => {
+    // Tracking: Disparar evento antes de abrir el post
+    trackBlogCtaClick();
+    
     if (link && link !== "#") {
       window.open(link, "_blank", "noopener,noreferrer");
     }

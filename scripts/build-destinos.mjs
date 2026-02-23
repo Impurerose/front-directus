@@ -60,7 +60,7 @@ const section1 = `<!DOCTYPE html>
 <nav id="navbar-mount"></nav>
 
 <!-- Hero Section - Requisitos para viajar -->
-<div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1366px] mx-auto min-h-[400px]
+<div class="w-full max-w-[390px] md:max-w-[834px] 2xl:max-w-[1600px] mx-auto min-h-[400px]
     2xl:bg-[url('https://placehold.co/1366x400')] bg-no-repeat bg-cover
     md:bg-[url('https://placehold.co/834x426')]
     bg-[url('https://placehold.co/390x377')]

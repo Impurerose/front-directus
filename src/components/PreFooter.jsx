@@ -1,15 +1,14 @@
-import React from 'react';
-import { ArrowRight } from '@phosphor-icons/react';
-import Button from './Button';
-import './PreFooter.css';
+import React from "react";
+import { ArrowRight } from "@phosphor-icons/react";
+import Button from "./Button";
+import "./PreFooter.css";
+import { trackQuoteTravelInsurance } from "../services/analytics";
 
 const PreFooter = ({ onCotizarClick }) => {
   const handleCotizar = () => {
-    if (onCotizarClick) {
-      onCotizarClick();
-    } else {
-      window.location.href = 'https://assist-365.com/products';
-    }
+    // Track evento de analytics
+    trackQuoteTravelInsurance();
+    window.location.href = "https://assist-365.com/";
   };
 
   return (

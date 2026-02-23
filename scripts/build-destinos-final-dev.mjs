@@ -35,17 +35,20 @@ const { faqItems } = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 // SECCIÓN FAQs con background shape lila
 const sectionFaqs = `
 <!-- FAQs Section -->
-<div class="relative w-full z-50 px-4 md:px-0 pb-12 2xl:pb-0 2xl:h-[520px] my-12 2xl:my-28">
+<div class="relative w-full z-50 pb-12 2xl:pb-0 2xl:h-[520px] my-12 2xl:my-28">
   
   <!-- Background Shape -->
+  
+  <div class="relative max-w-[834px] 2xl:max-w-[1600px] w-full mx-auto">
   <div 
-    class="absolute w-full h-[646px] right-0 top-0 z-[1] mt-32 2xl:mt-0"
+    class="absolute w-full h-[600px] right-0 top-0 z-[1] mt-32 2xl:mt-0"
     style="background-image: url(https://assistcdn.s3.us-west-1.amazonaws.com/assets/site/home/img/faq_background.svg); background-repeat: no-repeat; background-position: top right;"
   ></div>
+  </div>
 
   <!-- Content -->
-  <div class="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1600px] relative z-10">
-    <div class="flex flex-col 2xl:flex-row items-center 2xl:items-start justify-between mx-auto max-w-[1200px] w-full">
+  <div class="w-full mx-auto max-w-[390px] md:max-w-[548px] 2xl:max-w-[1600px] justify-center relative z-10 px-4 md:px-0">
+    <div class="relative flex flex-col 2xl:flex-row items-center 2xl:items-start justify-around mx-auto max-w-[1200px] w-full pt-24">
       
       <!-- Left Column - Title -->
       <div class="flex flex-col items-start justify-start md:max-w-[548px] 2xl:max-w-full md:mt-12 lg:mt-0">
@@ -56,7 +59,7 @@ const sectionFaqs = `
       </div>
 
       <!-- Right Column - FAQs -->
-      <div class="w-full md:max-w-[548px] max-w-[690px] 2xl:min-w-[690px] mt-2 2xl:mt-0">
+      <div class="w-full md:max-w-[548px] max-w-[658px] mt-2 2xl:mt-0">
         <div class="flex flex-col gap-4" data-accordion-group data-accordion-type="faq">
 ${faqItems.map((item, index) => `          <div data-accordion-item class="p-4 w-full flex flex-col gap-2 rounded-lg transition-all ${index === 0 ? 'bg-white border border-[#c2dfff]' : 'bg-[#f2f2f2]'}">
             <button data-accordion-button class="flex items-center justify-between gap-2 w-full text-left">

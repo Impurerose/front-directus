@@ -97,3 +97,47 @@ export const trackFaqDropdownClick = () => {
     console.error('[Analytics] Error tracking FAQ click:', error);
   }
 };
+
+/**
+ * Trackea cuando el usuario hace click en el CTA del blog
+ * Se dispara al hacer click en "Ir al blog"
+ * El current_section se genera automáticamente desde la URL actual
+ * 
+ * @example
+ * trackBlogCtaClick();
+ */
+export const trackBlogCtaClick = () => {
+  try {
+    pushToDataLayer({
+      event: 'lp_blog_cta_click',
+      eventProperties: {
+        timestamp_event: formatTimestamp(),
+        current_section: getCurrentSection(),
+      }
+    });
+  } catch (error) {
+    console.error('[Analytics] Error tracking blog CTA click:', error);
+  }
+};
+
+/**
+ * Trackea cuando el usuario hace click en "Cotizá tu asistencia" desde el PreFooter
+ * Se dispara al hacer click en el CTA principal del PreFooter
+ * El current_section se genera automáticamente desde la URL actual
+ * 
+ * @example
+ * trackQuoteTravelInsurance();
+ */
+export const trackQuoteTravelInsurance = () => {
+  try {
+    pushToDataLayer({
+      event: 'cko_quote_travel_insurance',
+      eventProperties: {
+        timestamp_event: formatTimestamp(),
+        current_section: getCurrentSection(),
+      }
+    });
+  } catch (error) {
+    console.error('[Analytics] Error tracking quote travel insurance:', error);
+  }
+};

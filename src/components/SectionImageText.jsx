@@ -18,10 +18,10 @@ export default function SectionImageText({
         } 2xl:gap-32 items-center 2xl:px-20 max-w-[834px] 2xl:max-w-[1600px] mx-auto`}
       >
         {/* Imagen */}
-        <div className="h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
+        <div className="_h-[360px] w-full max-w-[390px] 2xl:max-w-[486px] shrink-0 relative">
           <img
             alt=""
-            className="absolute inset-0 w-full h-full object-cover rounded-lg"
+            className="_absolute _inset-0 w-full h-full object-cover rounded-lg"
             src={imageSrc}
           />
         </div>
